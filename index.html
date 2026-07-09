@@ -302,140 +302,254 @@
       .product-visual {
         position: relative;
         min-height: 520px;
+        perspective: 1200px;
       }
 
-      .blueprint {
+      .product-visual::before {
+        content: "";
         position: absolute;
-        inset: 20px 0 auto auto;
-        width: 86%;
-        height: 360px;
-        border: 1px solid rgba(203, 213, 223, 0.2);
+        inset: 36px -4px 110px 54px;
+        border: 1px solid rgba(203, 213, 223, 0.16);
         background:
-          linear-gradient(90deg, rgba(203, 213, 223, 0.08) 1px, transparent 1px) 0 0 / 28px 28px,
-          linear-gradient(rgba(203, 213, 223, 0.08) 1px, transparent 1px) 0 0 / 28px 28px,
-          rgba(255, 255, 255, 0.03);
+          linear-gradient(90deg, rgba(203, 213, 223, 0.07) 1px, transparent 1px) 0 0 / 30px 30px,
+          linear-gradient(rgba(203, 213, 223, 0.07) 1px, transparent 1px) 0 0 / 30px 30px,
+          linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+        transform: rotateX(58deg) rotateZ(-12deg);
+        transform-origin: 55% 75%;
       }
 
-      .blueprint::before {
+      .product-visual::after {
         content: "VALVOLINE DISTRIBUTION MAP";
         position: absolute;
-        top: 14px;
-        left: 16px;
-        color: rgba(255, 255, 255, 0.5);
+        top: 70px;
+        right: 36px;
+        color: rgba(255, 255, 255, 0.45);
         font-family: var(--mono);
         font-size: 0.68rem;
       }
 
-      .canister {
+      .flow-band {
         position: absolute;
-        right: 110px;
-        bottom: 64px;
-        width: 205px;
-        height: 310px;
-        border-radius: 18px 18px 10px 10px;
-        background: linear-gradient(145deg, #f4f6f8, #bdc7d1);
-        box-shadow: var(--shadow);
-      }
-
-      .canister::before {
-        content: "";
-        position: absolute;
-        top: -42px;
-        left: 54px;
-        width: 96px;
-        height: 64px;
-        border: 22px solid #d9e1e8;
-        border-bottom: 0;
-        border-radius: 22px 22px 0 0;
-      }
-
-      .canister::after {
-        content: "";
-        position: absolute;
-        inset: 82px 26px auto;
-        height: 142px;
-        border-radius: 6px;
+        right: -28px;
+        bottom: 78px;
+        width: 540px;
+        height: 168px;
+        border-radius: 999px;
         background:
-          linear-gradient(136deg, var(--red) 0 49%, transparent 50%),
-          linear-gradient(316deg, var(--blue) 0 49%, #ffffff 50%);
+          linear-gradient(90deg, rgba(215, 25, 32, 0.94), rgba(16, 47, 140, 0.84)),
+          var(--blue);
+        filter: drop-shadow(0 28px 44px rgba(16, 47, 140, 0.24));
+        transform: rotate(-12deg) skewX(-14deg);
+        opacity: 0.92;
       }
 
-      .canister-label {
+      .flow-band::after {
+        content: "";
         position: absolute;
-        right: 138px;
-        bottom: 104px;
-        z-index: 2;
-        width: 148px;
-        color: var(--ink);
-        font-family: var(--condensed);
-        font-size: 1rem;
-        font-weight: 800;
-        text-align: center;
+        inset: 18px 24px auto;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.28);
+      }
+
+      .product-stage {
+        position: absolute;
+        right: 8px;
+        bottom: 42px;
+        width: 470px;
+        height: 430px;
+        transform: rotateY(-11deg) rotateX(4deg);
+        transform-style: preserve-3d;
+      }
+
+      .product-stage::before {
+        content: "";
+        position: absolute;
+        left: 28px;
+        right: 24px;
+        bottom: 0;
+        height: 92px;
+        border-radius: 50%;
+        background: radial-gradient(ellipse, rgba(255, 255, 255, 0.24), rgba(16, 47, 140, 0.08) 58%, transparent 72%);
+        filter: blur(2px);
+      }
+
+      .product-card-float {
+        position: absolute;
+        left: 4px;
+        top: 24px;
+        width: 298px;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        background: rgba(16, 20, 26, 0.72);
+        box-shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(18px);
+      }
+
+      .product-card-float::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 5px;
+        pointer-events: none;
+      }
+
+      .float-label {
+        display: block;
+        margin-bottom: 10px;
+        color: #aeb9c6;
+        font-family: var(--mono);
+        font-size: 0.68rem;
         text-transform: uppercase;
       }
 
-      .drum {
-        position: absolute;
-        right: 260px;
-        bottom: 28px;
-        width: 185px;
-        height: 280px;
-        border-radius: 50% / 9%;
-        background:
-          linear-gradient(90deg, rgba(255, 255, 255, 0.28), transparent 24%, rgba(0, 0, 0, 0.16) 72%),
-          linear-gradient(180deg, #1f376e 0%, #102f8c 58%, #0c2366 100%);
-        box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+      .float-title {
+        display: block;
+        color: var(--white);
+        font-family: var(--condensed);
+        font-size: 1.62rem;
+        line-height: 0.95;
+        text-transform: uppercase;
       }
 
-      .drum::before,
-      .drum::after {
+      .float-title em {
+        color: var(--amber);
+        font-style: normal;
+      }
+
+      .product-shelf {
+        position: absolute;
+        left: 54px;
+        right: 0;
+        bottom: 38px;
+        height: 54px;
+        border-radius: 7px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.06)),
+          linear-gradient(90deg, rgba(215, 25, 32, 0.72), rgba(16, 47, 140, 0.66));
+        transform: skewX(-18deg);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      .pack {
+        position: absolute;
+        filter: drop-shadow(0 24px 38px rgba(0, 0, 0, 0.34));
+      }
+
+      .pack-badge {
+        position: absolute;
+        z-index: 3;
+        display: grid;
+        place-items: center;
+        padding: 12px 13px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.94);
+        color: var(--ink);
+        font-family: var(--condensed);
+        font-size: 1rem;
+        font-weight: 900;
+        line-height: 1.05;
+        text-align: center;
+        text-transform: uppercase;
+        box-shadow: 0 12px 24px rgba(16, 20, 26, 0.18);
+      }
+
+      .premium-pack {
+        left: 46px;
+        bottom: 58px;
+        width: 178px;
+        height: 260px;
+        border-radius: 50% / 7%;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.34), transparent 24%, rgba(0, 0, 0, 0.2) 78%),
+          linear-gradient(180deg, #294a9d 0%, #102f8c 62%, #0b1e58 100%);
+      }
+
+      .premium-pack::before,
+      .premium-pack::after {
         content: "";
         position: absolute;
         left: 0;
         right: 0;
-        height: 28px;
+        height: 30px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.14);
       }
 
-      .drum::before {
-        top: 24px;
+      .premium-pack::before {
+        top: 0;
+        background: linear-gradient(90deg, #5f79c8, #173a97 58%, #08194d);
       }
 
-      .drum::after {
-        bottom: 28px;
-      }
-
-      .drum-label {
-        position: absolute;
-        left: 18px;
-        right: 18px;
-        top: 92px;
-        padding: 18px 10px;
-        border-radius: 4px;
-        background: var(--white);
-        color: var(--ink);
-        font-family: var(--condensed);
-        font-size: 1.08rem;
-        font-weight: 850;
-        line-height: 1.05;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      .spec-plate {
-        position: absolute;
-        right: 0;
+      .premium-pack::after {
         bottom: 0;
-        width: 250px;
-        padding: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-radius: var(--radius);
-        background: rgba(16, 20, 26, 0.82);
-        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+        background: rgba(2, 10, 33, 0.24);
       }
 
-      .spec-plate span {
+      .premium-pack .pack-badge {
+        left: 28px;
+        right: 28px;
+        top: 105px;
+      }
+
+      .fleet-pack {
+        right: 34px;
+        bottom: 92px;
+        width: 178px;
+        height: 286px;
+        border-radius: 21px 21px 10px 10px;
+        background:
+          linear-gradient(120deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.16) 42%, rgba(0, 0, 0, 0.07)),
+          linear-gradient(145deg, #f4f7fa, #b9c4d0);
+      }
+
+      .fleet-pack::before {
+        content: "";
+        position: absolute;
+        top: -38px;
+        left: 46px;
+        width: 84px;
+        height: 64px;
+        border: 18px solid #d6e0e8;
+        border-bottom: 0;
+        border-radius: 22px 22px 0 0;
+      }
+
+      .fleet-pack::after {
+        content: "";
+        position: absolute;
+        inset: 72px 24px auto;
+        height: 128px;
+        border-radius: 7px;
+        background:
+          linear-gradient(136deg, var(--red) 0 49%, transparent 50%),
+          linear-gradient(316deg, var(--blue) 0 49%, #ffffff 50%);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+      }
+
+      .fleet-pack .pack-badge {
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .route-card {
+        position: absolute;
+        right: 2px;
+        bottom: 18px;
+        z-index: 4;
+        width: 245px;
+        padding: 15px 15px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(13, 17, 23, 0.84);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(12px);
+      }
+
+      .route-card span {
         display: block;
         color: #9ca9b6;
         font-family: var(--mono);
@@ -443,7 +557,7 @@
         text-transform: uppercase;
       }
 
-      .spec-plate strong {
+      .route-card strong {
         display: block;
         margin-top: 6px;
         font-family: var(--condensed);
@@ -860,6 +974,10 @@
           min-height: 430px;
         }
 
+        .product-stage {
+          right: max(0px, calc(50% - 250px));
+        }
+
         .hero-metrics,
         .benefit-grid,
         .product-grid {
@@ -901,49 +1019,104 @@
         }
 
         .product-visual {
-          min-height: 360px;
+          min-height: 410px;
         }
 
-        .blueprint {
-          width: 100%;
-          height: 280px;
+        .product-visual::before {
+          inset: 42px 6px 120px 10px;
+          transform: rotateX(61deg) rotateZ(-9deg);
         }
 
-        .drum {
-          right: 142px;
-          width: 134px;
-          height: 210px;
+        .product-visual::after {
+          top: 64px;
+          right: 18px;
+          font-size: 0.58rem;
         }
 
-        .drum-label {
-          top: 72px;
-          font-size: 0.88rem;
+        .flow-band {
+          right: -120px;
+          bottom: 70px;
+          width: 500px;
+          height: 132px;
+          transform: rotate(-14deg) skewX(-12deg);
         }
 
-        .canister {
-          right: 22px;
-          width: 148px;
-          height: 232px;
+        .product-stage {
+          right: -28px;
+          bottom: 34px;
+          width: 390px;
+          height: 350px;
+          transform: none;
         }
 
-        .canister::before {
-          left: 40px;
-          width: 66px;
-          height: 48px;
-          border-width: 15px;
+        .product-card-float {
+          left: 12px;
+          top: 8px;
+          width: 250px;
+          padding: 14px;
         }
 
-        .canister-label {
-          right: 43px;
-          bottom: 90px;
-          width: 106px;
-          font-size: 0.82rem;
+        .float-title {
+          font-size: 1.42rem;
         }
 
-        .spec-plate {
-          right: auto;
-          left: 0;
-          width: 210px;
+        .product-shelf {
+          left: 24px;
+          right: 30px;
+          bottom: 32px;
+          height: 42px;
+        }
+
+        .premium-pack {
+          left: 36px;
+          bottom: 52px;
+          width: 126px;
+          height: 188px;
+        }
+
+        .premium-pack .pack-badge {
+          left: 18px;
+          right: 18px;
+          top: 76px;
+          font-size: 0.74rem;
+        }
+
+        .fleet-pack {
+          right: 62px;
+          bottom: 78px;
+          width: 132px;
+          height: 216px;
+        }
+
+        .fleet-pack::before {
+          top: -28px;
+          left: 35px;
+          width: 62px;
+          height: 46px;
+          border-width: 13px;
+        }
+
+        .fleet-pack::after {
+          inset: 56px 18px auto;
+          height: 92px;
+        }
+
+        .fleet-pack .pack-badge {
+          left: 16px;
+          right: 16px;
+          bottom: 16px;
+          font-size: 0.76rem;
+        }
+
+        .route-card {
+          right: 20px;
+          bottom: 4px;
+          width: 202px;
+          padding: 12px;
+        }
+
+        .route-card strong {
+          font-size: 0.98rem;
         }
 
         .product-card {
@@ -1007,15 +1180,23 @@
           </div>
 
           <div class="product-visual" aria-hidden="true">
-            <div class="blueprint"></div>
-            <div class="drum">
-              <div class="drum-label">Premium Blue</div>
-            </div>
-            <div class="canister"></div>
-            <div class="canister-label">All Fleet Extra</div>
-            <div class="spec-plate">
-              <span>product route</span>
-              <strong>склад -> сервис -> клиент</strong>
+            <div class="flow-band"></div>
+            <div class="product-stage">
+              <div class="product-card-float">
+                <span class="float-label">каталог Valsar</span>
+                <span class="float-title">Premium Blue + <em>All Fleet Extra</em></span>
+              </div>
+              <div class="product-shelf"></div>
+              <div class="pack premium-pack">
+                <div class="pack-badge">Premium<br>Blue</div>
+              </div>
+              <div class="pack fleet-pack">
+                <div class="pack-badge">All Fleet<br>Extra</div>
+              </div>
+              <div class="route-card">
+                <span>product route</span>
+                <strong>склад -> сервис -> клиент</strong>
+              </div>
             </div>
           </div>
         </div>
