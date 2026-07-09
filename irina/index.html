@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Данилова Ирина Владимировна - эксперт по ДМС</title>
+    <meta
+      name="description"
+      content="Данилова Ирина Владимировна, директор по страхованию и эксперт по ДМС в компании Эльбрус Страховой Брокер."
+    >
+    <style>
+      :root {
+        --ink: #1f2c35;
+        --deep: #243947;
+        --teal: #2f6f6a;
+        --sage: #dce8df;
+        --warm: #c58f5c;
+        --gold: #e4c58d;
+        --paper: #f7f5f0;
+        --mist: #eef2f1;
+        --white: #ffffff;
+        --line: #d7dedb;
+        --muted: #65737a;
+        --shadow: 0 24px 72px rgba(31, 44, 53, 0.14);
+        --radius: 8px;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(31, 44, 53, 0.09);
+        background: rgba(247, 245, 240, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 78px;
+        gap: 28px;
+      }
+
+      .identity {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .monogram {
+        display: grid;
+        place-items: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid rgba(47, 111, 106, 0.28);
+        border-radius: 50%;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(220, 232, 223, 0.86)),
+          var(--sage);
+        color: var(--deep);
+        font-family: var(--serif);
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+
+      .identity-text {
+        display: grid;
+        line-height: 1.1;
+        min-width: 0;
+      }
+
+      .identity-text strong {
+        font-size: 0.98rem;
+        font-weight: 800;
+      }
+
+      .identity-text span {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        color: #46565e;
+        font-size: 0.94rem;
+      }
+
+      .nav-links a {
+        border-bottom: 1px solid transparent;
+      }
+
+      .nav-links a:hover {
+        border-color: var(--warm);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 750;
+        transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid rgba(197, 143, 92, 0.38);
+        outline-offset: 3px;
+      }
+
+      .btn-primary {
+        background: var(--deep);
+        color: var(--white);
+      }
+
+      .btn-secondary {
+        border-color: rgba(36, 57, 71, 0.22);
+        color: var(--deep);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 96px 0 88px;
+        background:
+          linear-gradient(90deg, rgba(36, 57, 71, 0.05) 1px, transparent 1px) 0 0 / 48px 48px,
+          linear-gradient(rgba(36, 57, 71, 0.045) 1px, transparent 1px) 0 0 / 48px 48px,
+          radial-gradient(circle at 82% 20%, rgba(47, 111, 106, 0.16), transparent 34%),
+          linear-gradient(135deg, #f7f5f0 0%, #eef2f1 52%, #f4eadc 100%);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -12% -150px 48%;
+        height: 280px;
+        background: linear-gradient(90deg, rgba(47, 111, 106, 0.2), rgba(197, 143, 92, 0.34));
+        transform: rotate(-7deg);
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.72fr);
+        gap: 58px;
+        align-items: center;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 22px;
+        color: var(--teal);
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 42px;
+        height: 2px;
+        background: var(--warm);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 22px;
+        font-family: var(--serif);
+        font-size: clamp(3.05rem, 7vw, 6.25rem);
+        font-weight: 700;
+        line-height: 0.94;
+        letter-spacing: 0;
+      }
+
+      .hero-lead {
+        max-width: 650px;
+        margin-bottom: 32px;
+        color: #40515a;
+        font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+      }
+
+      .hero-person {
+        display: grid;
+        gap: 5px;
+        max-width: 520px;
+        margin: -6px 0 30px;
+        padding-left: 16px;
+        border-left: 3px solid var(--warm);
+      }
+
+      .hero-person strong {
+        font-size: 1.08rem;
+      }
+
+      .hero-person span {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 38px;
+      }
+
+      .hero-facts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 690px;
+        border-top: 1px solid rgba(31, 44, 53, 0.14);
+        border-bottom: 1px solid rgba(31, 44, 53, 0.14);
+      }
+
+      .fact {
+        padding: 17px 18px 17px 0;
+      }
+
+      .fact + .fact {
+        padding-left: 18px;
+        border-left: 1px solid rgba(31, 44, 53, 0.14);
+      }
+
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        font-family: var(--serif);
+        font-size: 1.32rem;
+        line-height: 1.05;
+      }
+
+      .fact span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .expert-visual {
+        position: relative;
+        min-height: 540px;
+        perspective: 1100px;
+      }
+
+      .desk-plate {
+        position: absolute;
+        inset: auto 0 34px 18px;
+        height: 150px;
+        border-radius: 50%;
+        background: radial-gradient(ellipse, rgba(47, 111, 106, 0.22), rgba(197, 143, 92, 0.14) 46%, transparent 72%);
+        filter: blur(3px);
+      }
+
+      .policy-folder {
+        position: absolute;
+        left: 28px;
+        right: 28px;
+        bottom: 58px;
+        height: 360px;
+        border: 1px solid rgba(31, 44, 53, 0.12);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 242, 241, 0.88)),
+          var(--white);
+        box-shadow: var(--shadow);
+        transform: rotateY(-8deg) rotateX(5deg);
+      }
+
+      .policy-folder::before {
+        content: "";
+        position: absolute;
+        top: -28px;
+        left: 28px;
+        width: 172px;
+        height: 42px;
+        border-radius: 8px 8px 0 0;
+        background: #e5ddd1;
+        border: 1px solid rgba(31, 44, 53, 0.09);
+        border-bottom: 0;
+      }
+
+      .policy-topline {
+        position: absolute;
+        left: 32px;
+        right: 32px;
+        top: 34px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+      }
+
+      .policy-title {
+        position: absolute;
+        left: 32px;
+        right: 32px;
+        top: 78px;
+        color: var(--deep);
+        font-family: var(--serif);
+        font-size: 2.25rem;
+        line-height: 1.02;
+      }
+
+      .policy-lines {
+        position: absolute;
+        left: 32px;
+        right: 180px;
+        top: 188px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .policy-lines span {
+        height: 9px;
+        border-radius: 999px;
+        background: #d9e2df;
+      }
+
+      .policy-lines span:nth-child(2) {
+        width: 72%;
+      }
+
+      .policy-lines span:nth-child(3) {
+        width: 48%;
+      }
+
+      .medical-card {
+        position: absolute;
+        right: -6px;
+        bottom: 94px;
+        width: 224px;
+        min-height: 250px;
+        padding: 24px;
+        border: 1px solid rgba(31, 44, 53, 0.12);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, #ffffff, #edf4f1),
+          var(--white);
+        box-shadow: 0 24px 58px rgba(31, 44, 53, 0.18);
+      }
+
+      .medical-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        background: linear-gradient(140deg, rgba(47, 111, 106, 0.12), transparent 42%);
+        pointer-events: none;
+      }
+
+      .cross {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        background: var(--teal);
+      }
+
+      .cross::before,
+      .cross::after {
+        content: "";
+        position: absolute;
+        background: var(--white);
+        border-radius: 2px;
+      }
+
+      .cross::before {
+        left: 31px;
+        top: 18px;
+        width: 8px;
+        height: 34px;
+      }
+
+      .cross::after {
+        left: 18px;
+        top: 31px;
+        width: 34px;
+        height: 8px;
+      }
+
+      .medical-card strong {
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+        color: var(--deep);
+        font-size: 1.05rem;
+      }
+
+      .medical-card span {
+        position: relative;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .signature-strip {
+        position: absolute;
+        left: 52px;
+        right: 88px;
+        bottom: 74px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        align-items: center;
+        padding: 16px 18px;
+        border-radius: 8px;
+        background: rgba(36, 57, 71, 0.92);
+        color: var(--white);
+        box-shadow: 0 20px 48px rgba(31, 44, 53, 0.22);
+      }
+
+      .signature-strip span {
+        color: #cfdcda;
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+
+      .signature-strip strong {
+        font-family: var(--serif);
+        font-size: 1.05rem;
+      }
+
+      .seal {
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 56px;
+        border: 1px solid rgba(228, 197, 141, 0.52);
+        border-radius: 50%;
+        color: var(--gold);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+      }
+
+      section {
+        padding: 88px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.62fr) minmax(280px, 0.38fr);
+        gap: 42px;
+        align-items: end;
+        margin-bottom: 38px;
+      }
+
+      .section-label {
+        margin-bottom: 12px;
+        color: var(--teal);
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.2rem, 5vw, 4.3rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .section-head p {
+        margin-bottom: 0;
+        color: #526169;
+        font-size: 1.04rem;
+      }
+
+      .about {
+        background: var(--white);
+      }
+
+      .about-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.86fr) minmax(280px, 0.42fr);
+        gap: 34px;
+        align-items: stretch;
+      }
+
+      .about-text {
+        padding: 38px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: linear-gradient(180deg, #ffffff, #fbfcfb);
+      }
+
+      .about-text p {
+        color: #4a5961;
+        font-size: 1.08rem;
+      }
+
+      .about-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      .expert-note {
+        display: grid;
+        align-content: space-between;
+        min-height: 100%;
+        padding: 30px;
+        border-radius: var(--radius);
+        background: var(--deep);
+        color: var(--white);
+      }
+
+      .expert-note span {
+        color: #b9c8c7;
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+      }
+
+      .expert-note strong {
+        margin-top: 18px;
+        font-family: var(--serif);
+        font-size: 2rem;
+        line-height: 1.08;
+      }
+
+      .services {
+        background:
+          linear-gradient(90deg, rgba(36, 57, 71, 0.045) 1px, transparent 1px) 0 0 / 46px 46px,
+          var(--mist);
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .service {
+        min-height: 292px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.86);
+        box-shadow: 0 16px 44px rgba(31, 44, 53, 0.07);
+      }
+
+      .service-mark {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 28px;
+        border-radius: 50%;
+        background: var(--sage);
+        color: var(--deep);
+        font-family: var(--mono);
+        font-weight: 900;
+      }
+
+      .service h3,
+      .reason h3 {
+        margin-bottom: 12px;
+        font-family: var(--serif);
+        font-size: 1.55rem;
+        line-height: 1.08;
+      }
+
+      .service p,
+      .reason p {
+        margin-bottom: 0;
+        color: #53636b;
+      }
+
+      .reasons {
+        background: var(--white);
+      }
+
+      .reason-list {
+        display: grid;
+        border-top: 1px solid var(--line);
+      }
+
+      .reason {
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr) minmax(240px, 0.4fr);
+        gap: 28px;
+        align-items: center;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .reason code {
+        width: fit-content;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: var(--paper);
+        color: var(--teal);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .reason h3 {
+        margin: 0;
+      }
+
+      .contact {
+        background: var(--deep);
+        color: var(--white);
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.78fr) minmax(340px, 0.58fr);
+        gap: 42px;
+        align-items: start;
+      }
+
+      .contact-copy {
+        padding: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+          rgba(255, 255, 255, 0.03);
+      }
+
+      .contact-copy h2 {
+        margin-bottom: 18px;
+        font-size: clamp(2.3rem, 5vw, 4rem);
+      }
+
+      .contact-copy p {
+        color: #d3dedc;
+      }
+
+      .contact-lines {
+        display: grid;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .contact-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+      }
+
+      .contact-line span {
+        color: #a8b9b7;
+      }
+
+      .lead-form {
+        display: grid;
+        gap: 14px;
+        padding: 28px;
+        border-radius: var(--radius);
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .field span {
+        color: #40515a;
+        font-size: 0.88rem;
+        font-weight: 760;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid #cad4d1;
+        border-radius: 6px;
+        background: #fbfcfb;
+        color: var(--ink);
+      }
+
+      input,
+      select {
+        min-height: 46px;
+        padding: 0 13px;
+      }
+
+      textarea {
+        min-height: 112px;
+        padding: 12px 13px;
+        resize: vertical;
+      }
+
+      .form-note,
+      .form-status {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .form-status {
+        min-height: 22px;
+        color: var(--teal);
+        font-weight: 760;
+      }
+
+      .footer {
+        padding: 28px 0;
+        background: #17252e;
+        color: #bac9c8;
+        font-size: 0.88rem;
+      }
+
+      .footer .shell {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+
+      @media (max-width: 940px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 16px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          gap: 14px;
+        }
+
+        .identity-text strong,
+        .identity-text span {
+          max-width: calc(100vw - 96px);
+        }
+
+        .hero-grid,
+        .section-head,
+        .about-layout,
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .expert-visual {
+          min-height: 500px;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .reason {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100% - 28px, 1160px);
+        }
+
+        .hero {
+          padding: 44px 0 46px;
+        }
+
+        section {
+          padding: 64px 0;
+        }
+
+        h1 {
+          font-size: clamp(2.55rem, 13vw, 3.35rem);
+        }
+
+        .hero-lead {
+          margin-bottom: 24px;
+          font-size: 1rem;
+        }
+
+        .hero-person {
+          margin-bottom: 24px;
+        }
+
+        .hero-actions {
+          margin-bottom: 0;
+        }
+
+        .hero-actions,
+        .footer .shell {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .hero-facts {
+          display: none;
+        }
+
+        .expert-visual {
+          display: none;
+        }
+
+        .policy-folder {
+          left: 0;
+          right: 54px;
+          bottom: 20px;
+          height: 226px;
+        }
+
+        .policy-title {
+          top: 62px;
+          font-size: 1.26rem;
+        }
+
+        .policy-lines {
+          top: 138px;
+          right: 96px;
+        }
+
+        .policy-topline {
+          left: 22px;
+          right: 22px;
+          top: 24px;
+          font-size: 0.58rem;
+        }
+
+        .medical-card {
+          right: 0;
+          bottom: 52px;
+          width: 138px;
+          min-height: 160px;
+          padding: 16px;
+        }
+
+        .cross {
+          width: 46px;
+          height: 46px;
+          margin-bottom: 18px;
+        }
+
+        .cross::before {
+          left: 20px;
+          top: 12px;
+          height: 22px;
+          width: 6px;
+        }
+
+        .cross::after {
+          left: 12px;
+          top: 20px;
+          width: 22px;
+          height: 6px;
+        }
+
+        .signature-strip {
+          left: 10px;
+          right: 20px;
+          bottom: 12px;
+          grid-template-columns: 1fr;
+          padding: 13px 15px;
+        }
+
+        .seal {
+          display: none;
+        }
+
+        .about-text,
+        .expert-note,
+        .contact-copy,
+        .lead-form {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell nav">
+        <a class="identity" href="#top" aria-label="Данилова Ирина Владимировна">
+          <span class="monogram" aria-hidden="true">ДИ</span>
+          <span class="identity-text">
+            <strong>Данилова Ирина Владимировна</strong>
+            <span>Директор по страхованию, Эльбрус Страховой Брокер</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Основная навигация">
+          <a href="#about">О специалисте</a>
+          <a href="#services">Услуги</a>
+          <a href="#reasons">Почему обращаются</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div>
+            <div class="kicker">эксперт по добровольному медицинскому страхованию</div>
+            <h1 id="hero-title">ДМС без лишней сложности</h1>
+            <p class="hero-lead">
+              Данилова Ирина Владимировна помогает подобрать медицинское страхование,
+              разобраться в условиях программ и пройти весь путь от консультации до
+              сопровождения договора.
+            </p>
+            <div class="hero-person">
+              <strong>Данилова Ирина Владимировна</strong>
+              <span>Директор по страхованию, Эльбрус Страховой Брокер</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+              <a class="btn btn-secondary" href="#services">Посмотреть услуги</a>
+            </div>
+            <div class="hero-facts" aria-label="Ключевые факты">
+              <div class="fact">
+                <strong>ДМС</strong>
+                <span>подбор программ под задачи клиента</span>
+              </div>
+              <div class="fact">
+                <strong>Брокер</strong>
+                <span>работа в Эльбрус Страховой Брокер</span>
+              </div>
+              <div class="fact">
+                <strong>Сопровождение</strong>
+                <span>поддержка на всех этапах</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="expert-visual" aria-hidden="true">
+            <div class="desk-plate"></div>
+            <div class="policy-folder">
+              <div class="policy-topline">
+                <span>ДМС dossier</span>
+                <span>personal guidance</span>
+              </div>
+              <div class="policy-title">Страховая программа, понятная клиенту</div>
+              <div class="policy-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="medical-card">
+              <div class="cross"></div>
+              <strong>ДМС</strong>
+              <span>Подбор, консультация и сопровождение</span>
+            </div>
+            <div class="signature-strip">
+              <div>
+                <span>экспертное сопровождение</span>
+                <strong>Ирина Данилова</strong>
+              </div>
+              <div class="seal">ДМС</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-label">о специалисте</div>
+              <h2 id="about-title">Опыт, который экономит клиенту время и нервы</h2>
+            </div>
+            <p>
+              В ДМС важны детали: клиники, лимиты, исключения, маршрутизация,
+              условия прикрепления и реальная поддержка после оформления.
+            </p>
+          </div>
+
+          <div class="about-layout">
+            <div class="about-text">
+              <p>
+                Ирина Владимировна работает в компании «Эльбрус Страховой Брокер»
+                и занимается страхованием с фокусом на добровольное медицинское
+                страхование.
+              </p>
+              <p>
+                Её задача - не просто показать несколько вариантов, а помочь клиенту
+                понять, какая программа действительно подходит: по бюджету, уровню
+                клиник, составу услуг и требованиям к сопровождению.
+              </p>
+              <p>
+                Подход строится на спокойном разборе ситуации, понятном объяснении
+                условий и внимательном сопровождении на всех этапах.
+              </p>
+            </div>
+            <aside class="expert-note">
+              <span>позиция</span>
+              <strong>Директор по страхованию, эксперт по ДМС</strong>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services" aria-labelledby="services-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-label">услуги</div>
+              <h2 id="services-title">Страхование, которое подбирают по делу</h2>
+            </div>
+            <p>
+              Формат работы подходит частным клиентам, руководителям, HR и компаниям,
+              которым нужен понятный выбор по ДМС и страховым программам.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service">
+              <div class="service-mark">01</div>
+              <h3>Подбор ДМС</h3>
+              <p>
+                Сравнение программ, клиник, наполнения, стоимости и условий, чтобы
+                выбрать не самый громкий, а наиболее подходящий вариант.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service-mark">02</div>
+              <h3>Консультации по страхованию</h3>
+              <p>
+                Разбор вопросов по добровольному медицинскому страхованию, договорам,
+                покрытию, ограничениям и практическому использованию полиса.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service-mark">03</div>
+              <h3>Сопровождение</h3>
+              <p>
+                Помощь на этапах выбора, оформления, запуска программы и дальнейших
+                обращений, когда клиенту важен живой контакт.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="reasons" class="reasons" aria-labelledby="reasons-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-label">почему обращаются</div>
+              <h2 id="reasons-title">Доверие складывается из точности</h2>
+            </div>
+            <p>
+              В страховании профессионализм видно не по обещаниям, а по тому,
+              насколько ясно специалист объясняет условия и ведёт клиента дальше.
+            </p>
+          </div>
+
+          <div class="reason-list">
+            <article class="reason">
+              <code>надёжность</code>
+              <h3>Спокойная работа без давления</h3>
+              <p>Клиент получает понятный разбор вариантов и видит, за что платит.</p>
+            </article>
+            <article class="reason">
+              <code>опыт</code>
+              <h3>Экспертиза в ДМС</h3>
+              <p>Фокус на медицинском страховании помогает быстрее увидеть сильные и слабые места программ.</p>
+            </article>
+            <article class="reason">
+              <code>индивидуально</code>
+              <h3>Подбор под конкретную задачу</h3>
+              <p>Важны состав семьи, сотрудники, бюджет, уровень клиник и ожидаемый сценарий использования.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="shell contact-layout">
+          <div class="contact-copy">
+            <div class="section-label">контакты / заявка</div>
+            <h2 id="contact-title">Оставьте запрос на консультацию</h2>
+            <p>
+              Напишите, какой вопрос нужно решить: подобрать ДМС, сравнить программы,
+              понять условия договора или организовать сопровождение.
+            </p>
+            <div class="contact-lines">
+              <div class="contact-line">
+                <span>Специалист</span>
+                <strong>Данилова Ирина Владимировна</strong>
+              </div>
+              <div class="contact-line">
+                <span>Компания</span>
+                <strong>Эльбрус Страховой Брокер</strong>
+              </div>
+              <div class="contact-line">
+                <span>Профиль</span>
+                <strong>ДМС и страховое сопровождение</strong>
+              </div>
+            </div>
+          </div>
+
+          <form class="lead-form" id="leadForm" action="#" method="post">
+            <label class="field">
+              <span>Имя</span>
+              <input name="name" autocomplete="name" placeholder="Как к вам обращаться">
+            </label>
+            <label class="field">
+              <span>Телефон или email</span>
+              <input name="contact" autocomplete="email" placeholder="+7 ... / email">
+            </label>
+            <label class="field">
+              <span>Тема обращения</span>
+              <select name="topic">
+                <option>Подбор ДМС</option>
+                <option>Консультация по страхованию</option>
+                <option>Сопровождение договора</option>
+                <option>Корпоративное страхование</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Комментарий</span>
+              <textarea name="request" placeholder="Коротко опишите задачу: для себя, семьи, сотрудников или компании"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+            <p class="form-note">Форма готова для подключения к рабочему email или CRM.</p>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <span>Данилова Ирина Владимировна - эксперт по ДМС</span>
+        <span>Эльбрус Страховой Брокер</span>
+      </div>
+    </footer>
+
+    <script>
+      const leadForm = document.querySelector("#leadForm");
+      const formStatus = document.querySelector("#formStatus");
+
+      leadForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formStatus.textContent = "Заявка подготовлена. Подключите рабочий email или CRM, чтобы принимать обращения.";
+      });
+    </script>
+  </body>
+</html>
