@@ -3,9 +3,1219 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Привет, мир!</title>
+    <title>Valsar - дистрибуция масел Valvoline</title>
+    <meta
+      name="description"
+      content="Valsar поставляет моторные масла и смазочные материалы Valvoline для автосервисов, розницы и оптовых покупателей."
+    >
+    <style>
+      :root {
+        --ink: #10141a;
+        --panel: #171d25;
+        --panel-2: #202936;
+        --steel: #cbd5df;
+        --muted: #768391;
+        --line: #d9e1e8;
+        --paper: #f3f6f8;
+        --white: #ffffff;
+        --red: #d71920;
+        --blue: #102f8c;
+        --amber: #f0b33a;
+        --ok: #2c8f6b;
+        --radius: 8px;
+        --shadow: 0 24px 70px rgba(16, 20, 26, 0.2);
+        --sans: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        --condensed: "Arial Narrow", "Roboto Condensed", "Segoe UI", Arial, sans-serif;
+        --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(16, 20, 26, 0.94);
+        color: var(--white);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: max-content;
+      }
+
+      .brand-mark {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        background: var(--white);
+      }
+
+      .brand-mark::before,
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transform: skewX(-24deg);
+      }
+
+      .brand-mark::before {
+        left: -22px;
+        background: var(--red);
+      }
+
+      .brand-mark::after {
+        right: -22px;
+        background: var(--blue);
+      }
+
+      .brand-name {
+        display: grid;
+        line-height: 1;
+      }
+
+      .brand-name strong {
+        font-family: var(--condensed);
+        font-size: 1.15rem;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .brand-name span {
+        margin-top: 4px;
+        color: #aab5c2;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        color: #d6dee7;
+        font-size: 0.92rem;
+      }
+
+      .nav-links a {
+        border-bottom: 1px solid transparent;
+      }
+
+      .nav-links a:hover {
+        border-color: var(--red);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 750;
+        transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible,
+      a:focus-visible {
+        outline: 3px solid rgba(215, 25, 32, 0.45);
+        outline-offset: 3px;
+      }
+
+      .btn-primary {
+        background: var(--red);
+        color: var(--white);
+      }
+
+      .btn-secondary {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: var(--white);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 690px;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 46px 46px,
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 46px 46px,
+          radial-gradient(circle at 68% 32%, rgba(16, 47, 140, 0.26), transparent 34%),
+          linear-gradient(135deg, #10141a 0%, #19212c 46%, #0d1117 100%);
+        color: var(--white);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -10% -160px 42%;
+        height: 360px;
+        transform: rotate(-7deg);
+        background: linear-gradient(90deg, var(--red), var(--blue));
+        opacity: 0.82;
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
+        gap: 54px;
+        align-items: center;
+        padding: 92px 0 86px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 26px;
+        color: #c9d2df;
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 42px;
+        height: 2px;
+        background: var(--red);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 820px;
+        margin-bottom: 24px;
+        font-family: var(--condensed);
+        font-size: clamp(3.6rem, 9vw, 7.4rem);
+        line-height: 0.88;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .hero-lead {
+        max-width: 650px;
+        margin-bottom: 34px;
+        color: #d6dee8;
+        font-size: clamp(1.05rem, 2vw, 1.32rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 42px;
+      }
+
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 690px;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .metric {
+        padding: 18px 18px 18px 0;
+      }
+
+      .metric + .metric {
+        padding-left: 18px;
+        border-left: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .metric strong {
+        display: block;
+        font-family: var(--condensed);
+        font-size: 1.55rem;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 8px;
+        color: #aeb9c6;
+        font-size: 0.86rem;
+      }
+
+      .product-visual {
+        position: relative;
+        min-height: 520px;
+      }
+
+      .blueprint {
+        position: absolute;
+        inset: 20px 0 auto auto;
+        width: 86%;
+        height: 360px;
+        border: 1px solid rgba(203, 213, 223, 0.2);
+        background:
+          linear-gradient(90deg, rgba(203, 213, 223, 0.08) 1px, transparent 1px) 0 0 / 28px 28px,
+          linear-gradient(rgba(203, 213, 223, 0.08) 1px, transparent 1px) 0 0 / 28px 28px,
+          rgba(255, 255, 255, 0.03);
+      }
+
+      .blueprint::before {
+        content: "VALVOLINE DISTRIBUTION MAP";
+        position: absolute;
+        top: 14px;
+        left: 16px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+      }
+
+      .canister {
+        position: absolute;
+        right: 110px;
+        bottom: 64px;
+        width: 205px;
+        height: 310px;
+        border-radius: 18px 18px 10px 10px;
+        background: linear-gradient(145deg, #f4f6f8, #bdc7d1);
+        box-shadow: var(--shadow);
+      }
+
+      .canister::before {
+        content: "";
+        position: absolute;
+        top: -42px;
+        left: 54px;
+        width: 96px;
+        height: 64px;
+        border: 22px solid #d9e1e8;
+        border-bottom: 0;
+        border-radius: 22px 22px 0 0;
+      }
+
+      .canister::after {
+        content: "";
+        position: absolute;
+        inset: 82px 26px auto;
+        height: 142px;
+        border-radius: 6px;
+        background:
+          linear-gradient(136deg, var(--red) 0 49%, transparent 50%),
+          linear-gradient(316deg, var(--blue) 0 49%, #ffffff 50%);
+      }
+
+      .canister-label {
+        position: absolute;
+        right: 138px;
+        bottom: 104px;
+        z-index: 2;
+        width: 148px;
+        color: var(--ink);
+        font-family: var(--condensed);
+        font-size: 1rem;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .drum {
+        position: absolute;
+        right: 260px;
+        bottom: 28px;
+        width: 185px;
+        height: 280px;
+        border-radius: 50% / 9%;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.28), transparent 24%, rgba(0, 0, 0, 0.16) 72%),
+          linear-gradient(180deg, #1f376e 0%, #102f8c 58%, #0c2366 100%);
+        box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+      }
+
+      .drum::before,
+      .drum::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.14);
+      }
+
+      .drum::before {
+        top: 24px;
+      }
+
+      .drum::after {
+        bottom: 28px;
+      }
+
+      .drum-label {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        top: 92px;
+        padding: 18px 10px;
+        border-radius: 4px;
+        background: var(--white);
+        color: var(--ink);
+        font-family: var(--condensed);
+        font-size: 1.08rem;
+        font-weight: 850;
+        line-height: 1.05;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .spec-plate {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: var(--radius);
+        background: rgba(16, 20, 26, 0.82);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+      }
+
+      .spec-plate span {
+        display: block;
+        color: #9ca9b6;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+      }
+
+      .spec-plate strong {
+        display: block;
+        margin-top: 6px;
+        font-family: var(--condensed);
+        font-size: 1.2rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      section {
+        padding: 92px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.55fr) minmax(280px, 0.45fr);
+        gap: 42px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+
+      .section-label {
+        margin-bottom: 12px;
+        color: var(--red);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-family: var(--condensed);
+        font-size: clamp(2.35rem, 5vw, 4.4rem);
+        line-height: 0.96;
+        text-transform: uppercase;
+      }
+
+      .section-head p {
+        color: #556270;
+        font-size: 1.05rem;
+      }
+
+      .benefits {
+        background: var(--white);
+      }
+
+      .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .benefit {
+        min-height: 275px;
+        padding: 30px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, #ffffff, #f8fafb);
+      }
+
+      .benefit-icon {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 28px;
+        border-radius: 4px;
+        background: var(--ink);
+        color: var(--white);
+        font-family: var(--mono);
+        font-weight: 800;
+      }
+
+      .benefit h3 {
+        margin-bottom: 12px;
+        font-family: var(--condensed);
+        font-size: 1.55rem;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .benefit p {
+        margin-bottom: 0;
+        color: #596675;
+      }
+
+      .catalog {
+        background:
+          linear-gradient(90deg, rgba(16, 20, 26, 0.06) 1px, transparent 1px) 0 0 / 52px 52px,
+          var(--paper);
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .product-card {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 26px;
+        min-height: 320px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--white);
+        box-shadow: 0 18px 50px rgba(16, 20, 26, 0.08);
+      }
+
+      .packshot {
+        position: relative;
+        align-self: stretch;
+        min-height: 238px;
+      }
+
+      .packshot .mini-can {
+        position: absolute;
+        left: 18px;
+        bottom: 10px;
+        width: 104px;
+        height: 178px;
+        border-radius: 13px 13px 8px 8px;
+        background: linear-gradient(145deg, #eef2f5, #b8c3cf);
+      }
+
+      .packshot .mini-can::before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 26px;
+        width: 52px;
+        height: 38px;
+        border: 12px solid #d5dee7;
+        border-bottom: 0;
+        border-radius: 14px 14px 0 0;
+      }
+
+      .packshot .mini-can::after {
+        content: "";
+        position: absolute;
+        inset: 56px 15px auto;
+        height: 80px;
+        border-radius: 4px;
+        background:
+          linear-gradient(136deg, var(--red) 0 49%, transparent 50%),
+          linear-gradient(316deg, var(--blue) 0 49%, #ffffff 50%);
+      }
+
+      .packshot .mini-drum {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 124px;
+        height: 190px;
+        border-radius: 50% / 8%;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.28), transparent 30%, rgba(0, 0, 0, 0.18) 75%),
+          #102f8c;
+      }
+
+      .packshot .mini-drum::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 68px;
+        height: 48px;
+        border-radius: 4px;
+        background:
+          linear-gradient(136deg, var(--red) 0 49%, transparent 50%),
+          linear-gradient(316deg, var(--blue) 0 49%, #ffffff 50%);
+      }
+
+      .product-type {
+        display: inline-flex;
+        width: fit-content;
+        margin-bottom: 18px;
+        padding: 5px 9px;
+        border: 1px solid var(--line);
+        color: #657180;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+      }
+
+      .product-card h3 {
+        margin-bottom: 14px;
+        font-family: var(--condensed);
+        font-size: 2rem;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .product-card p {
+        color: #566270;
+      }
+
+      .product-list {
+        display: grid;
+        gap: 10px;
+        margin: 20px 0 0;
+        padding: 0;
+        list-style: none;
+        color: #303944;
+      }
+
+      .product-list li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .product-list li::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 8px;
+        height: 8px;
+        margin-top: 8px;
+        background: var(--ok);
+      }
+
+      .supply {
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .supply-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(300px, 0.55fr);
+        gap: 54px;
+        align-items: center;
+      }
+
+      .process {
+        display: grid;
+        gap: 12px;
+      }
+
+      .process-step {
+        display: grid;
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 18px;
+        align-items: center;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .process-step strong {
+        color: var(--amber);
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+      }
+
+      .process-step p {
+        margin: 0;
+        color: #cad3df;
+      }
+
+      .contact {
+        background: var(--white);
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(340px, 0.6fr);
+        gap: 48px;
+        align-items: start;
+      }
+
+      .contact-panel {
+        padding: 34px;
+        border-radius: var(--radius);
+        background: var(--panel);
+        color: var(--white);
+      }
+
+      .contact-panel h2 {
+        margin-bottom: 18px;
+        font-size: clamp(2.2rem, 4vw, 3.8rem);
+      }
+
+      .contact-panel p {
+        color: #c8d2de;
+      }
+
+      .contact-lines {
+        display: grid;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .contact-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .contact-line span {
+        color: #9daab8;
+      }
+
+      .lead-form {
+        display: grid;
+        gap: 14px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #f8fafb;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .field span {
+        color: #46515f;
+        font-size: 0.88rem;
+        font-weight: 750;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid #cbd5df;
+        border-radius: 4px;
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      input,
+      select {
+        min-height: 46px;
+        padding: 0 13px;
+      }
+
+      textarea {
+        min-height: 112px;
+        padding: 12px 13px;
+        resize: vertical;
+      }
+
+      .form-note {
+        margin: 4px 0 0;
+        color: #6a7685;
+        font-size: 0.9rem;
+      }
+
+      .form-status {
+        min-height: 24px;
+        margin: 0;
+        color: var(--ok);
+        font-size: 0.92rem;
+        font-weight: 750;
+      }
+
+      .footer {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+        background: var(--paper);
+        color: #687585;
+        font-size: 0.9rem;
+      }
+
+      .footer .shell {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+
+      @media (max-width: 920px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 16px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          gap: 14px;
+        }
+
+        .hero-grid,
+        .section-head,
+        .supply-layout,
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-grid {
+          padding-top: 70px;
+        }
+
+        .product-visual {
+          min-height: 430px;
+        }
+
+        .hero-metrics,
+        .benefit-grid,
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metric + .metric {
+          padding-left: 0;
+          border-left: 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .product-card {
+          grid-template-columns: 130px minmax(0, 1fr);
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100% - 28px, 1180px);
+        }
+
+        section {
+          padding: 64px 0;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero-actions,
+        .footer .shell {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .product-visual {
+          min-height: 360px;
+        }
+
+        .blueprint {
+          width: 100%;
+          height: 280px;
+        }
+
+        .drum {
+          right: 142px;
+          width: 134px;
+          height: 210px;
+        }
+
+        .drum-label {
+          top: 72px;
+          font-size: 0.88rem;
+        }
+
+        .canister {
+          right: 22px;
+          width: 148px;
+          height: 232px;
+        }
+
+        .canister::before {
+          left: 40px;
+          width: 66px;
+          height: 48px;
+          border-width: 15px;
+        }
+
+        .canister-label {
+          right: 43px;
+          bottom: 90px;
+          width: 106px;
+          font-size: 0.82rem;
+        }
+
+        .spec-plate {
+          right: auto;
+          left: 0;
+          width: 210px;
+        }
+
+        .product-card {
+          grid-template-columns: 1fr;
+        }
+
+        .packshot {
+          min-height: 190px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Привет, мир!</h1>
+    <header class="topbar">
+      <div class="shell nav">
+        <a class="brand" href="#top" aria-label="Valsar">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">
+            <strong>Valsar</strong>
+            <span>Valvoline distribution</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Основная навигация">
+          <a href="#benefits">Преимущества</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#supply">Поставки</a>
+          <a href="#contact">Заявка</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div>
+            <div class="kicker">моторные масла и смазочные материалы</div>
+            <h1 id="hero-title">Valvoline для сервиса, склада и розницы</h1>
+            <p class="hero-lead">
+              Valsar выстраивает поставки масел Valvoline для автосервисов, магазинов,
+              оптовых покупателей и корпоративных парков. Без случайного ассортимента:
+              понятная линейка, регулярное наличие и работа под B2B-задачи.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+              <a class="btn btn-secondary" href="#catalog">Смотреть каталог</a>
+            </div>
+            <div class="hero-metrics" aria-label="Ключевые направления">
+              <div class="metric">
+                <strong>СТО</strong>
+                <span>масла для сервиса и регламентных замен</span>
+              </div>
+              <div class="metric">
+                <strong>Розница</strong>
+                <span>ходовые позиции для витрины и склада</span>
+              </div>
+              <div class="metric">
+                <strong>Опт</strong>
+                <span>партии под регулярные закупки и автопарки</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-visual" aria-hidden="true">
+            <div class="blueprint"></div>
+            <div class="drum">
+              <div class="drum-label">Premium Blue</div>
+            </div>
+            <div class="canister"></div>
+            <div class="canister-label">All Fleet Extra</div>
+            <div class="spec-plate">
+              <span>product route</span>
+              <strong>склад -> сервис -> клиент</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits" aria-labelledby="benefits-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-label">почему Valsar</div>
+              <h2 id="benefits-title">Поставка, которая держит темп бизнеса</h2>
+            </div>
+            <p>
+              Покупателю масел важны не красивые обещания, а стабильное наличие,
+              предсказуемая логистика и продукт, которому доверяют механики и клиенты.
+            </p>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit">
+              <div class="benefit-icon">V</div>
+              <h3>Качество Valvoline</h3>
+              <p>
+                Линейка для легкового, коммерческого и тяжёлого транспорта.
+                Сильный бренд помогает продавать без долгого объяснения ценности.
+              </p>
+            </article>
+            <article class="benefit">
+              <div class="benefit-icon">24</div>
+              <h3>Надёжные поставки</h3>
+              <p>
+                Ассортимент собирается под реальный спрос: ходовые вязкости,
+                сервисные форматы, оптовые партии и понятный цикл пополнения.
+              </p>
+            </article>
+            <article class="benefit">
+              <div class="benefit-icon">B2B</div>
+              <h3>Опт и розница</h3>
+              <p>
+                Один партнёр для разных каналов: СТО, магазины автотоваров,
+                маркетплейс-поставки, корпоративные парки и региональные клиенты.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-label">каталог продукции</div>
+              <h2 id="catalog-title">Фокус на линейках, которые работают в продаже</h2>
+            </div>
+            <p>
+              Стартовый каталог можно расширять под конкретный канал, но базовые позиции
+              уже закрывают частые задачи сервиса, розницы и коммерческого транспорта.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="packshot" aria-hidden="true">
+                <div class="mini-drum"></div>
+              </div>
+              <div>
+                <span class="product-type">heavy duty engine oil</span>
+                <h3>Premium Blue</h3>
+                <p>
+                  Линейка для дизельной техники, коммерческого транспорта и интенсивной
+                  эксплуатации. Подходит для клиентов, где важны ресурс, защита и
+                  понятный регламент обслуживания.
+                </p>
+                <ul class="product-list">
+                  <li>форматы под сервис и оптовый склад</li>
+                  <li>позиционирование для профессионального сегмента</li>
+                  <li>удобно выводить в регулярные закупки автопарков</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="packshot" aria-hidden="true">
+                <div class="mini-can"></div>
+              </div>
+              <div>
+                <span class="product-type">fleet lubricant</span>
+                <h3>All Fleet Extra</h3>
+                <p>
+                  Универсальная рабочая линейка для смешанных парков и клиентов,
+                  которым нужна понятная номенклатура без раздувания склада.
+                </p>
+                <ul class="product-list">
+                  <li>актуально для СТО и розничной полки</li>
+                  <li>подходит для консультационных продаж</li>
+                  <li>хорошая база для стартового ассортимента</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="supply" class="supply" aria-labelledby="supply-title">
+        <div class="shell supply-layout">
+          <div>
+            <div class="section-label">модель работы</div>
+            <h2 id="supply-title">От заявки до регулярной поставки</h2>
+          </div>
+          <div class="process" aria-label="Процесс поставки">
+            <div class="process-step">
+              <strong>заявка</strong>
+              <p>Фиксируем канал продаж, объём, нужные позиции и сроки.</p>
+            </div>
+            <div class="process-step">
+              <strong>подбор</strong>
+              <p>Собираем ассортимент под сервис, розницу, опт или смешанный формат.</p>
+            </div>
+            <div class="process-step">
+              <strong>поставка</strong>
+              <p>Согласуем партию, документы, график отгрузки и точки контроля.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="shell contact-layout">
+          <div class="contact-panel">
+            <div class="section-label">контакты / заявка</div>
+            <h2 id="contact-title">Запросите условия для своего канала</h2>
+            <p>
+              Напишите, какой формат закупки нужен: СТО, розница, опт, автопарк
+              или региональная дистрибуция. В ответ можно подготовить стартовый
+              ассортимент, объём и условия поставки.
+            </p>
+            <div class="contact-lines">
+              <div class="contact-line">
+                <span>Каналы</span>
+                <strong>СТО / розница / опт</strong>
+              </div>
+              <div class="contact-line">
+                <span>Фокус</span>
+                <strong>Valvoline oils & lubricants</strong>
+              </div>
+              <div class="contact-line">
+                <span>Ответ</span>
+                <strong>подбор ассортимента</strong>
+              </div>
+            </div>
+          </div>
+
+          <form class="lead-form" id="leadForm" action="#" method="post">
+            <label class="field">
+              <span>Имя</span>
+              <input name="name" autocomplete="name" placeholder="Как к вам обращаться">
+            </label>
+            <label class="field">
+              <span>Телефон или email</span>
+              <input name="contact" autocomplete="email" placeholder="+7 ... / email">
+            </label>
+            <label class="field">
+              <span>Формат закупки</span>
+              <select name="channel">
+                <option>Автосервис</option>
+                <option>Розница</option>
+                <option>Опт</option>
+                <option>Автопарк</option>
+                <option>Другое</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Что нужно</span>
+              <textarea name="request" placeholder="Например: Premium Blue, All Fleet Extra, регулярная поставка для СТО"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+            <p class="form-note">
+              Форма подготовлена для лендинга. После подключения рабочего email или CRM
+              заявки можно принимать автоматически.
+            </p>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <span>Valsar - дистрибуция моторных масел и смазочных материалов Valvoline</span>
+        <span>Premium Blue / All Fleet Extra</span>
+      </div>
+    </footer>
+    <script>
+      const leadForm = document.querySelector("#leadForm");
+      const formStatus = document.querySelector("#formStatus");
+
+      leadForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formStatus.textContent = "Заявка подготовлена. Подключите рабочий email или CRM, чтобы принимать обращения.";
+      });
+    </script>
   </body>
 </html>
