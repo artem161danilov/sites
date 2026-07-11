@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Путешествие: Вьетнам - Япония - Сингапур</title>
+    <meta
+      name="description"
+      content="Маршрут поездки семьи Даниловых: рейсы, багаж, ручная кладь и экскурсии в Куала-Лумпуре и Сингапуре."
+    >
+    <style>
+      :root {
+        --ink: #182027;
+        --night: #111827;
+        --basalt: #26313a;
+        --paper: #f5f1e8;
+        --paper-2: #ebe3d3;
+        --porcelain: #fffaf0;
+        --line: #d9cdb8;
+        --muted: #6d6b63;
+        --japan: #d93644;
+        --malaysia: #24756d;
+        --singapore: #1f5b91;
+        --gold: #b78037;
+        --green: #628d59;
+        --white: #ffffff;
+        --shadow: 0 26px 80px rgba(24, 32, 39, 0.16);
+        --radius: 8px;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.55;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(24, 32, 39, 0.1);
+        background: rgba(245, 241, 232, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 68px;
+        gap: 20px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .stamp {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(217, 54, 68, 0.45);
+        border-radius: 50%;
+        background:
+          radial-gradient(circle, transparent 54%, rgba(217, 54, 68, 0.2) 55%, transparent 58%),
+          var(--porcelain);
+        color: var(--japan);
+        font-family: var(--serif);
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .brand-text {
+        display: grid;
+        min-width: 0;
+        line-height: 1.12;
+      }
+
+      .brand-text strong {
+        font-size: 0.98rem;
+        font-weight: 850;
+      }
+
+      .brand-text span {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: #514f49;
+        font-size: 0.9rem;
+      }
+
+      .nav-links a {
+        border-bottom: 1px solid transparent;
+      }
+
+      .nav-links a:hover {
+        border-color: var(--japan);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 680px;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          linear-gradient(90deg, rgba(17, 24, 39, 0.88), rgba(17, 24, 39, 0.52) 48%, rgba(17, 24, 39, 0.2)),
+          url("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=2200&q=82") center / cover;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 190px;
+        background: linear-gradient(0deg, var(--paper), transparent);
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(310px, 0.54fr);
+        gap: 52px;
+        align-items: end;
+        min-height: 680px;
+        padding: 78px 0 118px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        font-weight: 850;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 42px;
+        height: 2px;
+        background: var(--japan);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 830px;
+        margin-bottom: 24px;
+        font-family: var(--serif);
+        font-size: clamp(3.1rem, 8vw, 7.35rem);
+        font-weight: 700;
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin-bottom: 32px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        border-radius: 6px;
+        background: rgba(255, 250, 240, 0.12);
+        color: var(--white);
+        font-weight: 800;
+        transition: transform 160ms ease, background 160ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 250, 240, 0.2);
+      }
+
+      .btn-primary {
+        border-color: var(--japan);
+        background: var(--japan);
+      }
+
+      .btn:focus-visible,
+      a:focus-visible {
+        outline: 3px solid rgba(217, 54, 68, 0.42);
+        outline-offset: 3px;
+      }
+
+      .passport {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: var(--radius);
+        background: rgba(255, 250, 240, 0.12);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .passport img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+      }
+
+      .passport-body {
+        padding: 22px;
+      }
+
+      .passport-label {
+        color: rgba(255, 255, 255, 0.68);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .passport-route {
+        margin: 10px 0 12px;
+        font-family: var(--serif);
+        font-size: 1.72rem;
+        line-height: 1.05;
+      }
+
+      .passport-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .passport-meta div {
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 10px;
+      }
+
+      .passport-meta span {
+        display: block;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.75rem;
+      }
+
+      .passport-meta strong {
+        display: block;
+        margin-top: 2px;
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(260px, 0.36fr);
+        gap: 36px;
+        align-items: end;
+        margin-bottom: 32px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.25rem, 5vw, 4.7rem);
+        font-weight: 700;
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      .section-note {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .quick-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .quick-card {
+        min-height: 150px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--porcelain);
+      }
+
+      .quick-card span {
+        display: block;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      .quick-card strong {
+        display: block;
+        margin: 10px 0 6px;
+        font-size: 1.6rem;
+        line-height: 1;
+      }
+
+      .quick-card p {
+        margin: 0;
+        color: #514f49;
+        font-size: 0.94rem;
+      }
+
+      .map-band {
+        padding-top: 0;
+      }
+
+      .map {
+        position: relative;
+        overflow: hidden;
+        min-height: 360px;
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(36, 117, 109, 0.82), rgba(31, 91, 145, 0.86)),
+          url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=2000&q=82") center / cover;
+        color: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .route-line {
+        position: absolute;
+        inset: 52% 9% auto 9%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+      }
+
+      .route-line::before,
+      .route-line::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--white);
+        box-shadow:
+          28vw -86px 0 var(--white),
+          54vw 44px 0 var(--white),
+          76vw -48px 0 var(--white);
+      }
+
+      .route-line::before {
+        left: 0;
+      }
+
+      .route-line::after {
+        right: 0;
+      }
+
+      .map-cities {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        min-height: 360px;
+        padding: 38px;
+        align-items: end;
+      }
+
+      .city {
+        max-width: 220px;
+      }
+
+      .city:nth-child(2) {
+        align-self: start;
+        padding-top: 58px;
+      }
+
+      .city:nth-child(3) {
+        padding-bottom: 38px;
+      }
+
+      .city:nth-child(4) {
+        align-self: start;
+        padding-top: 38px;
+      }
+
+      .city span {
+        display: inline-flex;
+        margin-bottom: 9px;
+        padding: 5px 9px;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        border-radius: 999px;
+        background: rgba(17, 24, 39, 0.22);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 850;
+      }
+
+      .city strong {
+        display: block;
+        font-family: var(--serif);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .city p {
+        margin: 8px 0 0;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.92rem;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 16px;
+      }
+
+      .day {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 250, 240, 0.72);
+      }
+
+      .day-date {
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      .day-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .day-title h3 {
+        margin: 0;
+        font-size: 1.38rem;
+        line-height: 1.15;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        background: rgba(36, 117, 109, 0.12);
+        color: var(--malaysia);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .pill.red {
+        background: rgba(217, 54, 68, 0.12);
+        color: var(--japan);
+      }
+
+      .pill.blue {
+        background: rgba(31, 91, 145, 0.12);
+        color: var(--singapore);
+      }
+
+      .facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .fact {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 5px 10px;
+        border: 1px solid rgba(24, 32, 39, 0.09);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.58);
+        color: #4e4b45;
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--porcelain);
+        box-shadow: 0 18px 50px rgba(24, 32, 39, 0.08);
+      }
+
+      .card-media {
+        height: 230px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-body {
+        padding: 22px;
+      }
+
+      .card h3 {
+        margin-bottom: 8px;
+        font-size: 1.55rem;
+        line-height: 1.08;
+      }
+
+      .card p {
+        margin-bottom: 0;
+        color: #55524a;
+      }
+
+      .baggage {
+        background: var(--night);
+        color: var(--white);
+      }
+
+      .baggage .section-note {
+        color: rgba(255, 255, 255, 0.66);
+      }
+
+      .baggage-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .bag-card {
+        min-height: 260px;
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .bag-card h3 {
+        margin-bottom: 14px;
+        font-size: 1.28rem;
+      }
+
+      .bag-card ul {
+        display: grid;
+        gap: 9px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .bag-card li {
+        padding-left: 17px;
+        position: relative;
+      }
+
+      .bag-card li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--japan);
+      }
+
+      .bag-card.scoot li::before {
+        background: var(--singapore);
+      }
+
+      .bag-card.checked li::before {
+        background: var(--gold);
+      }
+
+      .footer {
+        padding: 34px 0 44px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 920px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 14px 0;
+        }
+
+        .nav-links {
+          overflow-x: auto;
+          width: 100%;
+          padding-bottom: 4px;
+          white-space: nowrap;
+        }
+
+        .hero,
+        .hero-grid {
+          min-height: auto;
+        }
+
+        .hero-grid,
+        .section-head,
+        .cards,
+        .baggage-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-grid {
+          padding: 76px 0 86px;
+        }
+
+        .quick-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .map-cities {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .route-line {
+          display: none;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100% - 28px, 1160px);
+        }
+
+        section {
+          padding: 56px 0;
+        }
+
+        h1 {
+          font-size: clamp(2.72rem, 15vw, 4.4rem);
+        }
+
+        .quick-grid,
+        .map-cities,
+        .day {
+          grid-template-columns: 1fr;
+        }
+
+        .passport-meta {
+          grid-template-columns: 1fr;
+        }
+
+        .day {
+          padding: 18px;
+        }
+
+        .city,
+        .city:nth-child(2),
+        .city:nth-child(3),
+        .city:nth-child(4) {
+          align-self: auto;
+          padding: 0;
+        }
+
+        .map-cities {
+          min-height: auto;
+          padding: 26px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell nav">
+        <a class="brand" href="#top" aria-label="К началу страницы">
+          <span class="stamp">旅</span>
+          <span class="brand-text">
+            <strong>Danilov Family Trip</strong>
+            <span>Вьетнам - Япония - Сингапур</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Разделы страницы">
+          <a href="#route">Маршрут</a>
+          <a href="#flights">Рейсы</a>
+          <a href="#baggage">Багаж</a>
+          <a href="#tours">Экскурсии</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <div class="kicker">23 июля - 2 августа 2026</div>
+            <h1>Вьетнам, Япония и Сингапур без суеты</h1>
+            <p class="lead">
+              Собрал всю рабочую информацию по поездке: перелеты, окна между городами,
+              багаж, ручную кладь и выбранные экскурсии в Куала-Лумпуре и Сингапуре.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#flights">Посмотреть рейсы</a>
+              <a class="btn" href="#baggage">Проверить багаж</a>
+            </div>
+          </div>
+          <aside class="passport" aria-label="Краткая сводка маршрута">
+            <img
+              src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=82"
+              alt="Куала-Лумпур вечером"
+            >
+            <div class="passport-body">
+              <div class="passport-label">Главный сценарий</div>
+              <div class="passport-route">CXR -> KUL -> KIX -> SIN -> CXR</div>
+              <p>
+                Туда в Японию только ручная кладь. Обратно со Scoot есть два чемодана по 20 кг.
+              </p>
+              <div class="passport-meta">
+                <div>
+                  <span>Экскурсия KL</span>
+                  <strong>24.07, 11:00-15:00</strong>
+                </div>
+                <div>
+                  <span>Экскурсия SIN</span>
+                  <strong>01.08, 17:30-21:00</strong>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="route">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Короткая карта поездки</h2>
+            <p class="section-note">
+              Отдельные билеты по маршруту, поэтому на каждом участке действуют правила своей авиакомпании.
+            </p>
+          </div>
+          <div class="quick-grid" aria-label="Ключевые числа поездки">
+            <div class="quick-card">
+              <span>Даты</span>
+              <strong>11 дней</strong>
+              <p>С 23 июля по 2 августа 2026.</p>
+            </div>
+            <div class="quick-card">
+              <span>Города</span>
+              <strong>4 точки</strong>
+              <p>Нячанг, Куала-Лумпур, Осака, Сингапур.</p>
+            </div>
+            <div class="quick-card">
+              <span>Туда</span>
+              <strong>0 багажа</strong>
+              <p>AirAsia: только ручная кладь по 7 кг.</p>
+            </div>
+            <div class="quick-card">
+              <span>Обратно</span>
+              <strong>2 x 20 кг</strong>
+              <p>Scoot: багаж куплен на Артема и Илью.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-band" aria-label="Маршрут на карте">
+        <div class="shell">
+          <div class="map">
+            <div class="route-line" aria-hidden="true"></div>
+            <div class="map-cities">
+              <div class="city">
+                <span>23.07</span>
+                <strong>Нячанг</strong>
+                <p>Старт из Камрани, рейс AirAsia в Куала-Лумпур.</p>
+              </div>
+              <div class="city">
+                <span>23-25.07</span>
+                <strong>Куала-Лумпур</strong>
+                <p>Одна ночь и дневная экскурсия 24 июля.</p>
+              </div>
+              <div class="city">
+                <span>25-31.07</span>
+                <strong>Осака</strong>
+                <p>Основная часть путешествия в Японии.</p>
+              </div>
+              <div class="city">
+                <span>31.07-02.08</span>
+                <strong>Сингапур</strong>
+                <p>Вечерняя гастрономическая экскурсия и возвращение домой.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="flights">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Рейсы и контрольные окна</h2>
+            <p class="section-note">
+              Время вылета и прилета указано местное. На ночной рейс в Осаку лучше приезжать в аэропорт около 23:20 24 июля.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <article class="day">
+              <div class="day-date">Чт, 23 июля</div>
+              <div>
+                <div class="day-title">
+                  <h3>Нячанг CXR -> Куала-Лумпур KUL</h3>
+                  <span class="pill">AirAsia AK-205</span>
+                </div>
+                <p>
+                  Вылет из Камрани в 12:00, прилет в Куала-Лумпур в 15:25. В пути 2 ч 25 мин.
+                  После прилета лучше оставить вечер на отель, ужин и восстановление.
+                </p>
+                <div class="facts">
+                  <span class="fact">CXR терминал 2</span>
+                  <span class="fact">KUL терминал 2</span>
+                  <span class="fact">Ручная кладь 7 кг</span>
+                  <span class="fact">Без багажа</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="day">
+              <div class="day-date">Пт, 24 июля</div>
+              <div>
+                <div class="day-title">
+                  <h3>Куала-Лумпур: дневная экскурсия</h3>
+                  <span class="pill">11:00-15:00</span>
+                </div>
+                <p>
+                  Хорошее окно между прилетом и ночным вылетом: спокойно посмотреть город,
+                  поужинать, забрать вещи и без спешки ехать в аэропорт.
+                </p>
+                <div class="facts">
+                  <span class="fact">Оптимальный старт 11:00</span>
+                  <span class="fact">Не затягивать после 16:00-17:00</span>
+                  <span class="fact">В аэропорт около 23:20</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="day">
+              <div class="day-date">Сб, 25 июля</div>
+              <div>
+                <div class="day-title">
+                  <h3>Куала-Лумпур KUL -> Осака KIX</h3>
+                  <span class="pill red">AirAsia X D7-532</span>
+                </div>
+                <p>
+                  Ночной рейс в Осаку: вылет перенесен на 02:20, прилет в Кансай в 09:50.
+                  В билете зарегистрированный багаж не указан.
+                </p>
+                <div class="facts">
+                  <span class="fact">В пути 6 ч 45 мин</span>
+                  <span class="fact">Ручная кладь 7 кг</span>
+                  <span class="fact">Без багажа</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="day">
+              <div class="day-date">Пт, 31 июля</div>
+              <div>
+                <div class="day-title">
+                  <h3>Осака KIX -> Сингапур SIN</h3>
+                  <span class="pill blue">Scoot TR-821</span>
+                </div>
+                <p>
+                  Вылет из Кансая в 15:50, прилет в Чанги в 21:25. В этот день после прилета лучше только отель и сон.
+                </p>
+                <div class="facts">
+                  <span class="fact">В пути 6 ч 35 мин</span>
+                  <span class="fact">Ручная кладь 10 кг</span>
+                  <span class="fact">2 чемодана по 20 кг</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="day">
+              <div class="day-date">Сб, 1 августа</div>
+              <div>
+                <div class="day-title">
+                  <h3>Сингапур: вечерняя гастрономическая экскурсия</h3>
+                  <span class="pill blue">17:30-21:00</span>
+                </div>
+                <p>
+                  Лучший выбранный слот: днем можно не спешить, а вечером поймать еду,
+                  огни, набережную, Marina Bay и атмосферу города.
+                </p>
+                <div class="facts">
+                  <span class="fact">Днем свободное окно</span>
+                  <span class="fact">После экскурсии без раннего подъема</span>
+                  <span class="fact">Вылет только на следующий день</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="day">
+              <div class="day-date">Вс, 2 августа</div>
+              <div>
+                <div class="day-title">
+                  <h3>Сингапур SIN -> Нячанг CXR</h3>
+                  <span class="pill blue">Scoot TR-542</span>
+                </div>
+                <p>
+                  Вылет из Чанги в 16:35, прилет в Камрань в 18:05. Утром можно спокойно собраться или недолго погулять рядом с отелем.
+                </p>
+                <div class="facts">
+                  <span class="fact">В пути 2 ч 30 мин</span>
+                  <span class="fact">Ручная кладь 10 кг</span>
+                  <span class="fact">2 чемодана по 20 кг</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="baggage" class="baggage">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Багаж и ручная кладь</h2>
+            <p class="section-note">
+              Главное различие простое: AirAsia туда дает 7 кг ручной клади, Scoot обратно дает 10 кг ручной клади.
+            </p>
+          </div>
+
+          <div class="baggage-grid">
+            <article class="bag-card">
+              <h3>AirAsia / AirAsia X туда</h3>
+              <ul>
+                <li>23.07 CXR -> KUL и 25.07 KUL -> KIX.</li>
+                <li>На каждого пассажира: ручная кладь суммарно до 7 кг.</li>
+                <li>Основная ручная кладь: до 56 x 36 x 23 см.</li>
+                <li>Маленькая личная вещь: до 40 x 30 x 10 см.</li>
+                <li>Зарегистрированного багажа по билетам нет.</li>
+              </ul>
+            </article>
+
+            <article class="bag-card scoot">
+              <h3>Scoot обратно</h3>
+              <ul>
+                <li>31.07 KIX -> SIN и 02.08 SIN -> CXR.</li>
+                <li>На каждого пассажира: ручная кладь до 10 кг.</li>
+                <li>Основная ручная кладь: до 54 x 38 x 23 см.</li>
+                <li>Личная вещь под сиденье: 40 x 30 x 10 см.</li>
+                <li>Именно поэтому обратно 10 кг, а не 7 кг: другая авиакомпания.</li>
+              </ul>
+            </article>
+
+            <article class="bag-card checked">
+              <h3>Чемоданы</h3>
+              <ul>
+                <li>Обратно куплено 2 места зарегистрированного багажа.</li>
+                <li>Каждое место: до 20 кг.</li>
+                <li>По билетам багаж стоит на Артема и Илью.</li>
+                <li>Ориентир по габариту чемодана: сумма трех сторон до 158 см.</li>
+                <li>Ирина и Виктория: только ручная кладь, без отдельного чемодана.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tours">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Экскурсии</h2>
+            <p class="section-note">
+              Выбраны окна, которые не конфликтуют с перелетами и не создают лишней гонки.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <img
+                class="card-media"
+                src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1400&q=82"
+                alt="Ночной вид на Куала-Лумпур"
+              >
+              <div class="card-body">
+                <div class="day-title">
+                  <h3>Куала-Лумпур</h3>
+                  <span class="pill">24 июля, 11:00-15:00</span>
+                </div>
+                <p>
+                  Оптимальное дневное окно после прилета 23 июля и перед ночным вылетом 25 июля.
+                  После экскурсии остается запас на ужин, вещи и дорогу в аэропорт.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <img
+                class="card-media"
+                src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1400&q=82"
+                alt="Marina Bay в Сингапуре"
+              >
+              <div class="card-body">
+                <div class="day-title">
+                  <h3>Гастрономический Сингапур</h3>
+                  <span class="pill blue">1 августа, 17:30-21:00</span>
+                </div>
+                <p>
+                  Самый удачный формат для Сингапура: вечер, городские огни, еда и прогулка без спешки.
+                  На следующий день вылет только в 16:35, поэтому окончание в 21:00 комфортное.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        Обновлено 11 июля 2026. На странице намеренно нет номеров документов и кодов бронирования.
+      </div>
+    </footer>
+  </body>
+</html>
