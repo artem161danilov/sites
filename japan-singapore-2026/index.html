@@ -551,7 +551,7 @@
 
       .stay-grid {
         display: grid;
-        grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.42fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px;
       }
 
@@ -610,6 +610,16 @@
 
       .stay-note .passport-label {
         color: var(--muted);
+      }
+
+      .stay-card.featured {
+        grid-column: 1 / -1;
+      }
+
+      .hotel-source {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.88rem;
       }
 
       .card {
@@ -886,9 +896,9 @@
               <p>С 19 июля по 2 августа 2026.</p>
             </div>
             <div class="quick-card">
-              <span>Отель</span>
-              <strong>4 ночи</strong>
-              <p>InterContinental Residences Nha Trang.</p>
+              <span>Отели</span>
+              <strong>4 блока</strong>
+              <p>Вьетнам, KL, Япония и Сингапур.</p>
             </div>
             <div class="quick-card">
               <span>Города</span>
@@ -944,7 +954,8 @@
           <div class="section-head">
             <h2>Отели</h2>
             <p class="section-note">
-              Данные добавлены из заявки по Вьетнаму. Номера документов и личные данные на публичной странице не размещены.
+              Добавлены подтвержденные брони и краткие описания из открытых источников.
+              Номера документов, личные данные и коды бронирования на публичной странице не размещены.
             </p>
           </div>
 
@@ -955,7 +966,9 @@
                 <span class="pill">19-23 июля</span>
               </div>
               <p>
-                Проживание в Нячанге перед перелетом в Куала-Лумпур. По заявке размещение указано для всех туристов.
+                Пляжные serviced residences при InterContinental в Нячанге: формат апартаментов с отдельной
+                жилой зоной, кухней/бытовой инфраструктурой и видом на море. Удобно как семейная база перед
+                перелетом в Куала-Лумпур.
               </p>
               <div class="stay-list">
                 <div class="stay-row">
@@ -979,21 +992,119 @@
                   <strong>Все туристы</strong>
                 </div>
               </div>
+              <p class="hotel-source">Описание сверено по открытым материалам InterContinental/IHG.</p>
             </article>
 
-            <aside class="stay-card stay-note">
+            <article class="stay-card">
               <div>
-                <div class="passport-label">Перед маршрутом</div>
-                <h3>4 ночи у моря</h3>
+                <div class="day-title">
+                  <h3>KLCC Suites by AB</h3>
+                  <span class="pill">23-25 июля</span>
+                </div>
                 <p>
-                  Этот блок закрывает старт поездки во Вьетнаме до вылета 23.07 CXR -> KUL.
-                  Дальше маршрут идет по уже добавленным рейсам и экскурсиям.
+                  Апартаментный формат в районе KLCC: практичная остановка между прилетом из Нячанга
+                  и ночным вылетом в Осаку. Главный плюс - локация рядом с центральной частью Куала-Лумпура,
+                  откуда удобно выйти на экскурсию 24 июля и вечером вернуться за вещами.
+                </p>
+              </div>
+              <div class="stay-list">
+                <div class="stay-row">
+                  <span>Страна, город</span>
+                  <strong>Малайзия, Куала-Лумпур</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Даты</span>
+                  <strong>23.07.2026 - 25.07.2026</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Бронь</span>
+                  <strong>Booking, подтверждено</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Стоимость</span>
+                  <strong>MYR 866.66</strong>
+                </div>
+              </div>
+              <p class="hotel-source">По открытым описаниям похожих KLCC suites: апартаменты, Wi-Fi, охрана, удобный доступ к центру.</p>
+            </article>
+
+            <article class="stay-card">
+              <div class="day-title">
+                <h3>Отели Киото и Осаки 4*</h3>
+                <span class="pill red">25-31 июля</span>
+              </div>
+              <p>
+                Японский блок идет через провайдера сопровождения: проживание в отелях 4* в Киото и Осаке
+                с завтраками на весь период Японии. По программе заложены два стандартных номера:
+                twin и double. Названия и адреса отелей пока нужно получить у провайдера.
+              </p>
+              <div class="stay-list">
+                <div class="stay-row">
+                  <span>Города</span>
+                  <strong>Киото и Осака</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Даты</span>
+                  <strong>25.07.2026 - 31.07.2026</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Формат</span>
+                  <strong>4*, завтраки, 2 номера</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Важно</span>
+                  <strong>Нужны точные названия и адреса</strong>
+                </div>
+              </div>
+              <p class="hotel-source">Интернет-описание добавим точнее после получения названий отелей от японского провайдера.</p>
+            </article>
+
+            <article class="stay-card">
+              <div class="day-title">
+                <h3>Mama Shelter Singapore Orchard</h3>
+                <span class="pill blue">31 июля - 2 августа</span>
+              </div>
+              <p>
+                Новый lifestyle-отель в районе Orchard/Killiney Road: яркий дизайн, затемняемые и
+                шумоизолированные номера, ресторан all-day dining, rooftop bar и sky pool. Удобная точка
+                для вечернего Сингапура, прогулок по Orchard и быстрого доступа к Somerset MRT.
+              </p>
+              <div class="stay-list">
+                <div class="stay-row">
+                  <span>Страна, город</span>
+                  <strong>Сингапур, Orchard</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Даты</span>
+                  <strong>31.07.2026 - 02.08.2026</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Бронь</span>
+                  <strong>Booking, подтверждено</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Стоимость</span>
+                  <strong>S$ 1,035.94</strong>
+                </div>
+              </div>
+              <p class="hotel-source">Описание сверено по открытым материалам Accor/Mama Shelter и Booking/Agoda.</p>
+            </article>
+
+            <aside class="stay-card stay-note featured">
+              <div>
+                <div class="passport-label">Как читать блок</div>
+                <h3>Отели закрывают логистику между рейсами</h3>
+                <p>
+                  Нячанг - база перед вылетом в KL, KLCC Suites нужен как удобная ночевка с поздним выездом
+                  перед рейсом в Осаку, Япония закрыта пакетом 4* с завтраками, Сингапур - короткая городская
+                  остановка перед возвращением во Вьетнам.
                 </p>
               </div>
               <div class="facts">
                 <span class="fact">Нячанг</span>
-                <span class="fact">19-23 июля</span>
-                <span class="fact">Все туристы</span>
+                <span class="fact">Куала-Лумпур</span>
+                <span class="fact">Киото/Осака</span>
+                <span class="fact">Сингапур</span>
               </div>
             </aside>
           </div>
