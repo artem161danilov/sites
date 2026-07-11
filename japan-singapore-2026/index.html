@@ -6,7 +6,7 @@
     <title>Путешествие: Вьетнам - Япония - Сингапур</title>
     <meta
       name="description"
-      content="Маршрут поездки семьи Даниловых: рейсы, багаж, ручная кладь и экскурсии в Куала-Лумпуре и Сингапуре."
+      content="Маршрут поездки семьи Даниловых: отели, рейсы, багаж, ручная кладь и экскурсии в Куала-Лумпуре и Сингапуре."
     >
     <style>
       :root {
@@ -330,7 +330,7 @@
 
       .quick-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 12px;
       }
 
@@ -549,6 +549,69 @@
         gap: 18px;
       }
 
+      .stay-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.42fr);
+        gap: 18px;
+      }
+
+      .stay-card {
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--porcelain);
+        box-shadow: 0 18px 50px rgba(24, 32, 39, 0.08);
+      }
+
+      .stay-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.62rem;
+        line-height: 1.08;
+      }
+
+      .stay-card p {
+        color: #55524a;
+      }
+
+      .stay-list {
+        display: grid;
+        gap: 10px;
+        margin: 18px 0 0;
+      }
+
+      .stay-row {
+        display: grid;
+        grid-template-columns: 130px minmax(0, 1fr);
+        gap: 12px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(24, 32, 39, 0.09);
+      }
+
+      .stay-row span {
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      .stay-row strong {
+        font-size: 0.98rem;
+      }
+
+      .stay-note {
+        display: grid;
+        align-content: space-between;
+        min-height: 100%;
+        background:
+          linear-gradient(135deg, rgba(36, 117, 109, 0.14), rgba(183, 128, 55, 0.14)),
+          var(--porcelain);
+      }
+
+      .stay-note .passport-label {
+        color: var(--muted);
+      }
+
       .card {
         overflow: hidden;
         border: 1px solid var(--line);
@@ -668,6 +731,7 @@
         .hero-grid,
         .section-head,
         .cards,
+        .stay-grid,
         .baggage-grid {
           grid-template-columns: 1fr;
         }
@@ -712,6 +776,11 @@
           grid-template-columns: 1fr;
         }
 
+        .stay-row {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
         .day {
           padding: 18px;
         }
@@ -751,6 +820,7 @@
         </a>
         <nav class="nav-links" aria-label="Разделы страницы">
           <a href="#route">Маршрут</a>
+          <a href="#hotels">Отели</a>
           <a href="#flights">Рейсы</a>
           <a href="#baggage">Багаж</a>
           <a href="#tours">Экскурсии</a>
@@ -762,10 +832,10 @@
       <section class="hero">
         <div class="shell hero-grid">
           <div>
-            <div class="kicker">23 июля - 2 августа 2026</div>
+            <div class="kicker">19 июля - 2 августа 2026</div>
             <h1>Вьетнам, Япония и Сингапур без суеты</h1>
             <p class="lead">
-              Собрал всю рабочую информацию по поездке: перелеты, окна между городами,
+              Собрал всю рабочую информацию по поездке: отели, перелеты, окна между городами,
               багаж, ручную кладь и выбранные экскурсии в Куала-Лумпуре и Сингапуре.
             </p>
             <div class="hero-actions">
@@ -782,7 +852,8 @@
               <div class="passport-label">Главный сценарий</div>
               <div class="passport-route">CXR -> KUL -> KIX -> SIN -> CXR</div>
               <p>
-                Туда в Японию только ручная кладь. Обратно со Scoot есть два чемодана по 20 кг.
+                Перед перелетом 4 ночи в Нячанге. Туда в Японию только ручная кладь.
+                Обратно со Scoot есть два чемодана по 20 кг.
               </p>
               <div class="passport-meta">
                 <div>
@@ -804,14 +875,20 @@
           <div class="section-head">
             <h2>Короткая карта поездки</h2>
             <p class="section-note">
-              Отдельные билеты по маршруту, поэтому на каждом участке действуют правила своей авиакомпании.
+              Начало с проживания в Нячанге, затем отдельные билеты по маршруту:
+              на каждом участке действуют правила своей авиакомпании.
             </p>
           </div>
           <div class="quick-grid" aria-label="Ключевые числа поездки">
             <div class="quick-card">
               <span>Даты</span>
-              <strong>11 дней</strong>
-              <p>С 23 июля по 2 августа 2026.</p>
+              <strong>15 дней</strong>
+              <p>С 19 июля по 2 августа 2026.</p>
+            </div>
+            <div class="quick-card">
+              <span>Отель</span>
+              <strong>4 ночи</strong>
+              <p>InterContinental Residences Nha Trang.</p>
             </div>
             <div class="quick-card">
               <span>Города</span>
@@ -838,9 +915,9 @@
             <div class="route-line" aria-hidden="true"></div>
             <div class="map-cities">
               <div class="city">
-                <span>23.07</span>
+                <span>19-23.07</span>
                 <strong>Нячанг</strong>
-                <p>Старт из Камрани, рейс AirAsia в Куала-Лумпур.</p>
+                <p>Проживание в InterContinental Residences, затем рейс AirAsia в Куала-Лумпур.</p>
               </div>
               <div class="city">
                 <span>23-25.07</span>
@@ -858,6 +935,67 @@
                 <p>Вечерняя гастрономическая экскурсия и возвращение домой.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hotels">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Отели</h2>
+            <p class="section-note">
+              Данные добавлены из заявки по Вьетнаму. Номера документов и личные данные на публичной странице не размещены.
+            </p>
+          </div>
+
+          <div class="stay-grid">
+            <article class="stay-card">
+              <div class="day-title">
+                <h3>InterContinental Residences Nha Trang 5*</h3>
+                <span class="pill">19-23 июля</span>
+              </div>
+              <p>
+                Проживание в Нячанге перед перелетом в Куала-Лумпур. По заявке размещение указано для всех туристов.
+              </p>
+              <div class="stay-list">
+                <div class="stay-row">
+                  <span>Страна, город</span>
+                  <strong>Вьетнам, Нячанг</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Категория</span>
+                  <strong>5 звезд</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Номер</span>
+                  <strong>2 Bedrooms Suite Horizon Ocean View</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Даты</span>
+                  <strong>19.07.2026 - 23.07.2026</strong>
+                </div>
+                <div class="stay-row">
+                  <span>Туристы</span>
+                  <strong>Все туристы</strong>
+                </div>
+              </div>
+            </article>
+
+            <aside class="stay-card stay-note">
+              <div>
+                <div class="passport-label">Перед маршрутом</div>
+                <h3>4 ночи у моря</h3>
+                <p>
+                  Этот блок закрывает старт поездки во Вьетнаме до вылета 23.07 CXR -> KUL.
+                  Дальше маршрут идет по уже добавленным рейсам и экскурсиям.
+                </p>
+              </div>
+              <div class="facts">
+                <span class="fact">Нячанг</span>
+                <span class="fact">19-23 июля</span>
+                <span class="fact">Все туристы</span>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
