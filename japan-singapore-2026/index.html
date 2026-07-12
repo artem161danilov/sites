@@ -548,6 +548,30 @@
         font-weight: 700;
       }
 
+      .day-plan {
+        display: grid;
+        gap: 6px;
+        margin-top: 14px;
+        padding: 12px 14px;
+        border: 1px solid rgba(31, 91, 145, 0.16);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.48);
+      }
+
+      .day-plan-row {
+        display: grid;
+        grid-template-columns: 86px minmax(0, 1fr);
+        gap: 10px;
+        font-size: 0.92rem;
+      }
+
+      .day-plan-row span {
+        color: var(--singapore);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
       .cards {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -861,7 +885,7 @@
             <h1>Вьетнам, Япония и Сингапур без суеты</h1>
             <p class="lead">
               Собрал всю рабочую информацию по поездке: отели, перелеты, окна между городами,
-              багаж, ручную кладь и выбранные экскурсии в Куала-Лумпуре и Сингапуре.
+              багаж, ручную кладь, Universal Studios Singapore и выбранные экскурсии в Куала-Лумпуре и Сингапуре.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#flights">Посмотреть рейсы</a>
@@ -1261,20 +1285,33 @@
               <div class="day-date">Сб, 1 августа</div>
               <div>
                 <div class="day-title">
-                  <h3>Сингапур: вечерняя гастрономическая экскурсия</h3>
-                  <span class="pill green">Забронировано</span>
+                  <h3>Сингапур: Universal Studios + вечерняя гастрономия</h3>
+                  <span class="pill green">Sentosa + забронировано</span>
                 </div>
                 <p>
-                  Вечерний гастрономический Сингапур: 1 августа, 17:30-21:00,
-                  гид Гузаль. Лучший выбранный слот: днем можно не спешить, а вечером
-                  поймать еду, огни, набережную, Marina Bay и атмосферу города.
+                  Дневной блок на Sentosa: Universal Studios Singapore с утра до 15:30-16:00,
+                  затем возврат в отель, душ и короткая пауза. Вечером гастрономический
+                  Сингапур: 17:30-21:00, гид Гузаль.
                 </p>
+                <div class="day-plan" aria-label="Желательный таймлайн Universal Studios Singapore">
+                  <div class="day-plan-row"><span>09:15</span><strong>Выезд из Mama Shelter на такси/Grab в сторону Resorts World Sentosa.</strong></div>
+                  <div class="day-plan-row"><span>09:45</span><strong>Вход в Universal Studios Singapore, сразу на главные аттракционы.</strong></div>
+                  <div class="day-plan-row"><span>12:30</span><strong>Обед внутри парка или рядом в Resorts World Sentosa.</strong></div>
+                  <div class="day-plan-row"><span>14:30</span><strong>Финальные аттракционы; Singapore Oceanarium только если остается энергия.</strong></div>
+                  <div class="day-plan-row"><span>15:30</span><strong>Выход с Sentosa и возврат в отель.</strong></div>
+                  <div class="day-plan-row"><span>16:00</span><strong>Душ, переодеться, короткая пауза перед вечерней экскурсией.</strong></div>
+                  <div class="day-plan-row"><span>17:30</span><strong>Старт гастрономического Сингапура с Гузалью.</strong></div>
+                </div>
                 <div class="facts">
+                  <span class="fact">Universal: 1 августа днем</span>
+                  <span class="fact">Mama Shelter -> Sentosa: такси ~15-25 мин</span>
+                  <span class="fact">MRT/Sentosa Express: ~35-45 мин</span>
+                  <span class="fact">Singapore Oceanarium рядом, 5-10 мин пешком</span>
                   <span class="fact">1 августа, 17:30-21:00</span>
                   <span class="fact">4 участника</span>
                   <span class="fact">300 USD + сервисный сбор 4.50 USD</span>
-                  <span class="fact">Днем свободное окно</span>
-                  <span class="fact">После экскурсии без раннего подъема</span>
+                  <span class="fact">Вернуться в отель до 16:00</span>
+                  <span class="fact">Часы парка проверить ближе к дате</span>
                 </div>
               </div>
             </article>
@@ -1414,6 +1451,34 @@
                 </p>
               </div>
             </article>
+
+            <article class="card">
+              <img
+                class="card-media"
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=82"
+                alt="Остров Sentosa в Сингапуре"
+              >
+              <div class="card-body">
+                <div class="day-title">
+                  <h3>
+                    <a
+                      href="https://www.rwsentosa.com/en/play/universal-studios-singapore"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >Universal Studios Singapore</a>
+                  </h3>
+                  <span class="pill blue">1 августа днем</span>
+                </div>
+                <p>
+                  Основной дневной аттракцион Сингапура. Ехать лучше на такси/Grab из Mama Shelter:
+                  ориентир 15-25 минут до Resorts World Sentosa без учета ожидания машины. На общественном
+                  транспорте через Somerset MRT, HarbourFront и Sentosa Express закладывать 35-45 минут.
+                  Singapore Oceanarium находится в том же кластере RWS, примерно 5-10 минут пешком от парка.
+                  Желательный сценарий: 09:15 выезд, 09:45 вход, 12:30 обед, 15:30 выход,
+                  16:00 отель, 17:30 вечерняя экскурсия.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1421,7 +1486,7 @@
 
     <footer class="footer">
       <div class="shell">
-        Обновлено 11 июля 2026. На странице намеренно нет номеров документов и кодов бронирования.
+        Обновлено 12 июля 2026. На странице намеренно нет номеров документов и кодов бронирования.
       </div>
     </footer>
   </body>
