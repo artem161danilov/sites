@@ -704,6 +704,115 @@
         color: #55524a;
       }
 
+      .weather {
+        background:
+          linear-gradient(135deg, rgba(31, 91, 145, 0.08), rgba(36, 117, 109, 0.1)),
+          var(--paper-2);
+      }
+
+      .weather-panel {
+        margin-bottom: 18px;
+        padding: 18px 20px;
+        border: 1px solid rgba(31, 91, 145, 0.16);
+        border-radius: var(--radius);
+        background: rgba(255, 250, 240, 0.72);
+        color: #4f4c45;
+      }
+
+      .weather-panel strong {
+        color: var(--ink);
+      }
+
+      .weather-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .weather-card {
+        display: grid;
+        align-content: start;
+        min-height: 330px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--porcelain);
+        box-shadow: 0 18px 50px rgba(24, 32, 39, 0.08);
+      }
+
+      .weather-card .day-title {
+        align-items: center;
+      }
+
+      .weather-card h3 {
+        margin: 0;
+        font-size: 1.35rem;
+      }
+
+      .weather-current {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        margin: 12px 0 14px;
+        padding: 12px;
+        border: 1px solid rgba(24, 32, 39, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.52);
+      }
+
+      .weather-icon {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .weather-temp {
+        display: block;
+        font-family: var(--serif);
+        font-size: 1.8rem;
+        line-height: 1;
+      }
+
+      .weather-desc,
+      .weather-note,
+      .weather-source {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .weather-days {
+        display: grid;
+        gap: 8px;
+      }
+
+      .weather-day {
+        display: grid;
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 10px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(24, 32, 39, 0.08);
+      }
+
+      .weather-day strong {
+        color: var(--singapore);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+      }
+
+      .weather-day span {
+        color: #514f49;
+        font-size: 0.9rem;
+      }
+
+      .weather-links {
+        margin-top: 14px;
+      }
+
+      .weather-error {
+        color: var(--japan);
+        font-weight: 800;
+      }
+
       .baggage {
         background: var(--night);
         color: var(--white);
@@ -795,6 +904,7 @@
         .section-head,
         .cards,
         .stay-grid,
+        .weather-grid,
         .baggage-grid {
           grid-template-columns: 1fr;
         }
@@ -839,7 +949,8 @@
           grid-template-columns: 1fr;
         }
 
-        .stay-row {
+        .stay-row,
+        .weather-day {
           grid-template-columns: 1fr;
           gap: 4px;
         }
@@ -885,6 +996,7 @@
           <a href="#route">Маршрут</a>
           <a href="#hotels">Отели</a>
           <a href="#flights">Рейсы</a>
+          <a href="#weather">Погода</a>
           <a href="#japan">Япония</a>
           <a href="#shopping">Шопинг</a>
           <a href="#tickets">Билеты</a>
@@ -902,10 +1014,11 @@
             <h1>Вьетнам, Япония и Сингапур без суеты</h1>
             <p class="lead">
               Собрал всю рабочую информацию по поездке: отели, перелеты, окна между городами,
-              багаж, ручную кладь, программу Японии, самостоятельный шопинг, билеты, аптечку, Universal Studios Singapore и экскурсии.
+              багаж, ручную кладь, программу Японии, погоду по датам, самостоятельный шопинг, билеты, аптечку, Universal Studios Singapore и экскурсии.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#flights">Посмотреть рейсы</a>
+              <a class="btn" href="#weather">Погода по датам</a>
               <a class="btn" href="#baggage">Проверить багаж</a>
             </div>
           </div>
@@ -1006,6 +1119,42 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="weather" class="weather">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Погода по датам поездки</h2>
+            <p class="section-note">
+              Живой прогноз подтягивается при открытии страницы и обновляется каждые 6 часов, пока вкладка открыта.
+              Горизонт погодных API обычно около 10-16 дней: дальние даты появятся автоматически ближе к поездке.
+            </p>
+          </div>
+
+          <div class="weather-panel" id="weather-status">
+            <strong>Загружаю актуальный прогноз...</strong> Если блок не загрузится из-за сети, ниже останутся прямые ссылки на живую погоду по городам.
+          </div>
+
+          <div class="weather-grid" id="weather-grid" aria-live="polite">
+            <article class="weather-card">
+              <div class="day-title"><h3>Нячанг</h3><span class="pill">18-23 июля</span></div>
+              <p class="weather-note">Прогноз загрузится автоматически.</p>
+            </article>
+            <article class="weather-card">
+              <div class="day-title"><h3>Куала-Лумпур</h3><span class="pill green">23-25 июля</span></div>
+              <p class="weather-note">Прогноз загрузится автоматически.</p>
+            </article>
+            <article class="weather-card">
+              <div class="day-title"><h3>Киото</h3><span class="pill red">25-29 июля</span></div>
+              <p class="weather-note">Прогноз загрузится автоматически.</p>
+            </article>
+          </div>
+
+          <p class="weather-source">
+            Источник динамического блока: <a class="map-link" href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>.
+            Для перепроверки по месту добавлены ссылки на wttr.in и Windy. Для тайфунов, штормовых предупреждений и решений по безопасности сверяться с местными официальными службами.
+          </p>
         </div>
       </section>
 
@@ -1945,5 +2094,246 @@
         Обновлено 16 июля 2026. На странице намеренно нет номеров документов и кодов бронирования.
       </div>
     </footer>
+
+    <script>
+      (() => {
+        const grid = document.getElementById("weather-grid");
+        const status = document.getElementById("weather-status");
+        if (!grid || !status) return;
+
+        const stops = [
+          {
+            title: "Нячанг",
+            country: "Вьетнам",
+            label: "18-23 июля",
+            start: "2026-07-18",
+            end: "2026-07-23",
+            latitude: 12.2388,
+            longitude: 109.1967,
+            timezone: "Asia/Ho_Chi_Minh",
+            pill: "",
+            wttr: "https://wttr.in/Nha+Trang",
+          },
+          {
+            title: "Куала-Лумпур",
+            country: "Малайзия",
+            label: "23-25 июля",
+            start: "2026-07-23",
+            end: "2026-07-25",
+            latitude: 3.139,
+            longitude: 101.6869,
+            timezone: "Asia/Kuala_Lumpur",
+            pill: "green",
+            wttr: "https://wttr.in/Kuala+Lumpur",
+          },
+          {
+            title: "Киото",
+            country: "Япония",
+            label: "25-29 июля",
+            start: "2026-07-25",
+            end: "2026-07-29",
+            latitude: 35.0116,
+            longitude: 135.7681,
+            timezone: "Asia/Tokyo",
+            pill: "red",
+            wttr: "https://wttr.in/Kyoto",
+          },
+          {
+            title: "Осака",
+            country: "Япония",
+            label: "29-31 июля",
+            start: "2026-07-29",
+            end: "2026-07-31",
+            latitude: 34.6937,
+            longitude: 135.5023,
+            timezone: "Asia/Tokyo",
+            pill: "red",
+            wttr: "https://wttr.in/Osaka",
+          },
+          {
+            title: "Сингапур",
+            country: "Сингапур",
+            label: "31 июля - 2 августа",
+            start: "2026-07-31",
+            end: "2026-08-02",
+            latitude: 1.3521,
+            longitude: 103.8198,
+            timezone: "Asia/Singapore",
+            pill: "blue",
+            wttr: "https://wttr.in/Singapore",
+          },
+          {
+            title: "Нячанг",
+            country: "Вьетнам",
+            label: "2-9 августа",
+            start: "2026-08-02",
+            end: "2026-08-09",
+            latitude: 12.2388,
+            longitude: 109.1967,
+            timezone: "Asia/Ho_Chi_Minh",
+            pill: "",
+            wttr: "https://wttr.in/Nha+Trang",
+          },
+        ];
+
+        const weatherText = {
+          0: ["☀️", "ясно"],
+          1: ["🌤️", "почти ясно"],
+          2: ["⛅", "переменная облачность"],
+          3: ["☁️", "пасмурно"],
+          45: ["🌫️", "туман"],
+          48: ["🌫️", "изморозь / туман"],
+          51: ["🌦️", "слабая морось"],
+          53: ["🌦️", "морось"],
+          55: ["🌧️", "сильная морось"],
+          61: ["🌦️", "слабый дождь"],
+          63: ["🌧️", "дождь"],
+          65: ["🌧️", "сильный дождь"],
+          80: ["🌦️", "кратковременный дождь"],
+          81: ["🌧️", "ливни"],
+          82: ["⛈️", "сильные ливни"],
+          95: ["⛈️", "гроза"],
+          96: ["⛈️", "гроза с градом"],
+          99: ["⛈️", "сильная гроза"],
+        };
+
+        const dateFmt = new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "short" });
+        const nowFmt = new Intl.DateTimeFormat("ru-RU", {
+          day: "numeric",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        const apiCache = new Map();
+        const apiUrl = (stop) => {
+          const params = new URLSearchParams({
+            latitude: stop.latitude,
+            longitude: stop.longitude,
+            timezone: stop.timezone,
+            forecast_days: "16",
+            current: "temperature_2m,weather_code,relative_humidity_2m,precipitation,wind_speed_10m",
+            daily: "weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max",
+          });
+          return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
+        };
+
+        const formatDate = (iso) => dateFmt.format(new Date(`${iso}T00:00:00Z`));
+        const codeInfo = (code) => weatherText[code] || ["🌡️", "погода"];
+        const inRange = (iso, stop) => iso >= stop.start && iso <= stop.end;
+        const windyUrl = (stop) => `https://www.windy.com/${stop.latitude}/${stop.longitude}?${stop.latitude},${stop.longitude},8`;
+        const rounded = (value) => Number.isFinite(value) ? Math.round(value) : "—";
+
+        async function getWeather(stop) {
+          const cacheKey = `${stop.latitude},${stop.longitude},${stop.timezone}`;
+          if (!apiCache.has(cacheKey)) {
+            apiCache.set(cacheKey, fetch(apiUrl(stop), { cache: "no-store" }).then((res) => {
+              if (!res.ok) throw new Error(`weather api ${res.status}`);
+              return res.json();
+            }));
+          }
+          return apiCache.get(cacheKey);
+        }
+
+        function renderForecastDays(stop, data) {
+          const daily = data.daily || {};
+          const times = daily.time || [];
+          const indexes = times.map((time, index) => ({ time, index })).filter(({ time }) => inRange(time, stop));
+
+          if (!indexes.length) {
+            return `<p class="weather-note">Прогноз на ${stop.label} пока вне горизонта API. Он появится здесь автоматически примерно за 10-16 дней до даты.</p>`;
+          }
+
+          const list = indexes.map(({ time, index }) => {
+            const [icon, desc] = codeInfo(daily.weather_code?.[index]);
+            const min = rounded(daily.temperature_2m_min?.[index]);
+            const max = rounded(daily.temperature_2m_max?.[index]);
+            const rainChance = daily.precipitation_probability_max?.[index];
+            const rainSum = daily.precipitation_sum?.[index];
+            const wind = rounded(daily.wind_speed_10m_max?.[index]);
+            const rain = Number.isFinite(rainChance)
+              ? `дождь ${Math.round(rainChance)}%`
+              : Number.isFinite(rainSum)
+                ? `осадки ${rainSum.toFixed(1)} мм`
+                : "осадки —";
+            return `<div class="weather-day"><strong>${formatDate(time)}</strong><span>${icon} ${desc}, ${min}…${max} °C, ${rain}, ветер до ${wind} км/ч</span></div>`;
+          }).join("");
+
+          const lastDate = indexes[indexes.length - 1].time;
+          const partial = lastDate < stop.end
+            ? `<p class="weather-note">Пока доступны даты до ${formatDate(lastDate)}; остаток периода подтянется ближе к поездке.</p>`
+            : "";
+
+          return `<div class="weather-days">${list}</div>${partial}`;
+        }
+
+        function renderCard(stop, data) {
+          const current = data.current || {};
+          const [icon, desc] = codeInfo(current.weather_code);
+          const temp = Number.isFinite(current.temperature_2m) ? `${Math.round(current.temperature_2m)} °C` : "—";
+          const humidity = Number.isFinite(current.relative_humidity_2m) ? `${Math.round(current.relative_humidity_2m)}%` : "—";
+          const wind = Number.isFinite(current.wind_speed_10m) ? `${Math.round(current.wind_speed_10m)} км/ч` : "—";
+          const currentTime = current.time ? `местное время ${current.time.replace("T", " ")}` : "обновляется при открытии";
+          const pillClass = stop.pill ? ` ${stop.pill}` : "";
+
+          return `
+            <article class="weather-card">
+              <div class="day-title">
+                <h3>${stop.title}</h3>
+                <span class="pill${pillClass}">${stop.label}</span>
+              </div>
+              <p class="weather-desc">${stop.country}</p>
+              <div class="weather-current">
+                <div class="weather-icon" aria-hidden="true">${icon}</div>
+                <div>
+                  <span class="weather-temp">${temp}</span>
+                  <span class="weather-desc">Сейчас: ${desc}, влажность ${humidity}, ветер ${wind}. ${currentTime}</span>
+                </div>
+              </div>
+              ${renderForecastDays(stop, data)}
+              <div class="facts weather-links">
+                <a class="fact map-link" href="${stop.wttr}" target="_blank" rel="noopener noreferrer">wttr.in</a>
+                <a class="fact map-link" href="${windyUrl(stop)}" target="_blank" rel="noopener noreferrer">Windy</a>
+              </div>
+            </article>
+          `;
+        }
+
+        function renderErrorCard(stop, error) {
+          const pillClass = stop.pill ? ` ${stop.pill}` : "";
+          return `
+            <article class="weather-card">
+              <div class="day-title">
+                <h3>${stop.title}</h3>
+                <span class="pill${pillClass}">${stop.label}</span>
+              </div>
+              <p class="weather-error">Не удалось загрузить прогноз автоматически.</p>
+              <p class="weather-note">Проверь живую погоду по ссылкам ниже. Техническая ошибка: ${String(error.message || error).slice(0, 90)}</p>
+              <div class="facts weather-links">
+                <a class="fact map-link" href="${stop.wttr}" target="_blank" rel="noopener noreferrer">wttr.in</a>
+                <a class="fact map-link" href="${windyUrl(stop)}" target="_blank" rel="noopener noreferrer">Windy</a>
+              </div>
+            </article>
+          `;
+        }
+
+        async function loadWeather() {
+          status.innerHTML = "<strong>Обновляю прогноз...</strong> Данные подтягиваются онлайн при открытии страницы и затем автоматически раз в 6 часов.";
+          const cards = await Promise.all(stops.map(async (stop) => {
+            try {
+              const data = await getWeather(stop);
+              return renderCard(stop, data);
+            } catch (error) {
+              return renderErrorCard(stop, error);
+            }
+          }));
+          grid.innerHTML = cards.join("");
+          status.innerHTML = `<strong>Погода обновлена:</strong> ${nowFmt.format(new Date())}. Блок использует Open-Meteo, обновляется раз в 6 часов и сам показывает только те даты поездки, которые уже попали в горизонт прогноза.`;
+        }
+
+        loadWeather();
+        window.setInterval(loadWeather, 6 * 60 * 60 * 1000);
+      })();
+    </script>
   </body>
 </html>
