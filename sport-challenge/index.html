@@ -40,7 +40,7 @@ a{color:inherit}.wrap{max-width:1240px;margin:0 auto;padding:28px}.topbar{positi
   <section class="stats" aria-label="Ключевые числа">
     <div class="stat"><div class="num"><span id="statParticipants">5</span></div><div class="label">участников уже внесены</div></div>
     <div class="stat"><div class="num"><span id="statSlots">25</span></div><div class="label">слотов целей на старт</div></div>
-    <div class="stat"><div class="num"><span id="statGoals">106</span></div><div class="label">вариантов целей в меню + новые активности</div></div>
+    <div class="stat"><div class="num"><span id="statGoals">109</span></div><div class="label">вариантов целей в меню + новые активности</div></div>
     <div class="stat"><div class="num">3</div><div class="label">горизонта: неделя, месяц, квартал</div></div>
   </section>
 
@@ -201,6 +201,7 @@ function renderCatalogLive(catalogRows){
   $('goalSelect').innerHTML=''; DATA.goals.map(g=>g.goal).forEach(v=>$('goalSelect').appendChild(opt(v)));
   if(current && DATA.goals.some(g=>g.goal===current)) $('goalSelect').value=current;
   renderCatalog(); updatePreview();
+  if($('statGoals')) $('statGoals').textContent = DATA.goals.length;
 }
 async function loadLive(){
   const status=$('liveStatus');
