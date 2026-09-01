@@ -122,7 +122,7 @@ const DEFAULT_GOALS = [
   {name:"Виталий", icon:"📏", title:"Вес 92 кг к октябрю", weekly:"1 контроль", detail:"замер на неделе"},
   {name:"Виталий", icon:"😈", title:"Личная привычка", weekly:"2× в день", detail:"ежедневный план"},
 
-  {name:"Ольга", icon:"👟", title:"Шаги", weekly:"105 000 шагов", detail:"15 000 в день"},
+  {name:"Ольга", icon:"👟", title:"Шаги", weekly:"15 000 шагов в день", detail:"каждый день в течение месяца"},
   {name:"Ольга", icon:"💪", title:"Тренировки", weekly:"3 тренировки", detail:"за неделю"},
   {name:"Ольга", icon:"🚴", title:"Велосипед", weekly:"2 раза", detail:"велотренировка/прогулка"},
   {name:"Ольга", icon:"📚", title:"Чтение перед сном", weekly:"7 вечеров", detail:"по 30 минут"},
@@ -159,10 +159,16 @@ function compactName(goal){return String(goal||'Цель').replace('Средни
 function weeklyFromSheet(g){
   const goal=String(g['Цель']||''); const target=String(g['Целевое значение']||'').trim(); const unit=String(g['Ед.']||'').trim(); const horizon=String(g['Горизонт']||'').toLowerCase();
   if(!target && !unit) return 'план уточнить';
-  if(unit.includes('/день') && /^\d+[\d\s,.]*$/.test(target)){ const n=Number(target.replace(/\s/g,'').replace(',','.')); if(Number.isFinite(n)) return new Intl.NumberFormat('ru-RU').format(n*7)+' '+unit.replace('/день','')+' за неделю'; }
+  if(unit.includes('/день') && /^\d+[\d\s,.]*$/.test(target)){ const n=Number(target.replace(/\s/g,'').replace(',','.')); if(Number.isFinite(n)) return new Intl.NumberFormat('ru-RU').format(n)+' '+unit.replace('/день','')+' в день'; }
   return [target, unit].filter(Boolean).join(' ') + (horizon && !unit.includes('нед') ? ' · '+horizon : '');
 }
-function normalizeSheetGoals(rows){return rows.filter(g=>String(g['Участник']||'').trim() && String(g['Активна']||'Да').toLowerCase()!=='нет' && String(g['Цель']||'').trim()).map(g=>({name:String(g['Участник']).trim(), icon:iconForText(g['Цель'],g['Категория']), title:compactName(g['Цель']), weekly:weeklyFromSheet(g), detail:String(g['Частота отчёта']||g['Статус']||'').replace('еженедельно','за неделю').replace('ежедневно','ежедневно')}));}
+function detailFromSheet(g){
+  const freq=String(g['Частота отчёта']||g['Статус']||'').replace('еженедельно','за неделю').replace('ежедневно','ежедневно');
+  const goal=String(g['Цель']||'').toLowerCase(); const unit=String(g['Ед.']||'').toLowerCase(); const horizon=String(g['Горизонт']||'').toLowerCase(); const name=String(g['Участник']||'').toLowerCase();
+  if((name.includes('оль')||name.includes('ол')) && goal.includes('шаг') && unit.includes('/день') && horizon.includes('месяц')) return 'каждый день в течение месяца';
+  return freq;
+}
+function normalizeSheetGoals(rows){return rows.filter(g=>String(g['Участник']||'').trim() && String(g['Активна']||'Да').toLowerCase()!=='нет' && String(g['Цель']||'').trim()).map(g=>({name:String(g['Участник']).trim(), icon:iconForText(g['Цель'],g['Категория']), title:compactName(g['Цель']), weekly:weeklyFromSheet(g), detail:detailFromSheet(g)}));}
 function goalsFor(name, goals){return goals.filter(g=>g.name===name || (name==='Виталий'&&g.name==='Виталик') || (name==='Ольга'&&g.name==='Оля') || (name==='Антонина'&&g.name==='Тоня') || (name==='Сан Саныч'&&g.name==='Саныч'));}
 function renderPeople(participants=PARTICIPANTS, goals=DEFAULT_GOALS){
   $('people').innerHTML = participants.map(p=>{ const gs=goalsFor(p.name,goals); const tasks=gs.length ? '<div class="taskList">'+gs.slice(0,6).map(g=>`<div class="task"><div class="taskTop"><span class="taskEmoji">${esc(g.icon)}</span><div><b>${esc(g.title)}</b><small>${esc(g.weekly)}</small>${g.detail?`<small>${esc(g.detail)}</small>`:''}</div></div></div>`).join('')+'</div>' : '<div class="empty">цели ещё не зафиксированы в доступных данных</div>'; return `<article class="person ${gs.length?'featured':''}"><img class="avatarImg" src="${esc(p.avatar||AVATARS[p.name]||'')}" alt="Аватар ${esc(p.name)}" loading="lazy"><h3>${esc(p.name)}</h3><div class="city"><span class="pill">📍 ${esc(p.city||'город уточнить')}</span><span class="pill">${gs.length} задач</span></div>${tasks}</article>`; }).join('');
