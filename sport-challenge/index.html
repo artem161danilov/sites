@@ -161,6 +161,10 @@ const DEFAULT_GOALS = [
   {name:"Виталий", icon:"📚", title:"Чтение", weekly:"30 минут в день", detail:"ежедневно"},
   {name:"Виталий", icon:"🪙", title:"Работа в DeFi", weekly:"30 минут в день", detail:"ежедневно"},
 
+  {name:"Антонина", icon:"💪", title:"Тренировки", weekly:"4 тренировки", detail:"за неделю"},
+  {name:"Антонина", icon:"👟", title:"Дни с 10 000+ шагов", weekly:"7 дней", detail:"ежедневно"},
+  {name:"Антонина", icon:"📚", title:"Аудиокнига «Бесы»", weekly:"15 минут в день", detail:"ежедневно"},
+
   {name:"Ольга", icon:"👟", title:"Шаги", weekly:"15 000 шагов в день", detail:"каждый день в течение месяца"},
   {name:"Ольга", icon:"💪", title:"Тренировки", weekly:"3 тренировки", detail:"за неделю"},
   {name:"Ольга", icon:"🚴", title:"Велосипед", weekly:"2 раза", detail:"велотренировка/прогулка"},
@@ -193,8 +197,8 @@ function challengeInfo(){
   const we = new Date(ws); we.setDate(ws.getDate()+6); if(we>finish) we.setTime(finish.getTime());
   return {day, week, left:Math.max(0,100-day), start:ws, end:we, pct:Math.max(1,Math.min(100,day))};
 }
-function iconForText(goal, cat){const t=(String(goal||'')+' '+String(cat||'')).toLowerCase(); if(t.includes('кур'))return'🚭'; if(t.includes('вел'))return'🚴'; if(t.includes('зал')||t.includes('фитнес'))return'🏋️'; if(t.includes('шаг'))return'👟'; if(t.includes('сон'))return'🌙'; if(t.includes('медитац')||t.includes('дых'))return'🧘'; if(t.includes('сок'))return'🥬'; if(t.includes('чтен'))return'📚'; if(t.includes('плав'))return'🏊'; if(t.includes('падел'))return'🎾'; if(t.includes('мяч'))return'⚽'; if(t.includes('вес')||t.includes('кг'))return'📏'; if(t.includes('whoop')||t.includes('strain'))return'⚡'; return '🎯';}
-function compactName(goal){return String(goal||'Цель').replace('Средние шаги в день','Шаги').replace('Велотренировка / велопрогулка','Велосипед').replace('10 минут медитации/дыхания','Медитация/дыхание').replace('Овощной сок утром 30 дней подряд','Овощной сок').replace('30 дней без курения','Без курения').replace('Сон 49+ часов за неделю','Сон').replace('Ездить на работу на велосипеде','На работу на велосипеде').replace('Ежедневные отжимания 30 раз','Отжимания').replace('Шаги 10000','Шаги').replace('Тренировка с мячом 3 раза в неделю','Тренировка с мячом');}
+function iconForText(goal, cat){const t=(String(goal||'')+' '+String(cat||'')).toLowerCase(); if(t.includes('кур'))return'🚭'; if(t.includes('вел'))return'🚴'; if(t.includes('зал')||t.includes('фитнес'))return'🏋️'; if(t.includes('шаг'))return'👟'; if(t.includes('сон'))return'🌙'; if(t.includes('медитац')||t.includes('дых'))return'🧘'; if(t.includes('сок'))return'🥬'; if(t.includes('чтен')||t.includes('книг')||t.includes('аудио'))return'📚'; if(t.includes('плав'))return'🏊'; if(t.includes('падел'))return'🎾'; if(t.includes('мяч'))return'⚽'; if(t.includes('вес')||t.includes('кг'))return'📏'; if(t.includes('whoop')||t.includes('strain'))return'⚡'; return '🎯';}
+function compactName(goal){return String(goal||'Цель').replace('Средние шаги в день','Шаги').replace('Велотренировка / велопрогулка','Велосипед').replace('10 минут медитации/дыхания','Медитация/дыхание').replace('Овощной сок утром 30 дней подряд','Овощной сок').replace('30 дней без курения','Без курения').replace('Сон 49+ часов за неделю','Сон').replace('Ездить на работу на велосипеде','На работу на велосипеде').replace('Ежедневные отжимания 30 раз','Отжимания').replace('Шаги 10000','Шаги').replace('Прослушивание аудиокниги «Бесы»','Аудиокнига «Бесы»').replace('Чтение 15 минут бумажной книги','Аудиокнига «Бесы»').replace('Тренировка с мячом 3 раза в неделю','Тренировка с мячом');}
 function weeklyFromSheet(g){
   const goal=String(g['Цель']||''); const target=String(g['Целевое значение']||'').trim(); const unit=String(g['Ед.']||'').trim(); const horizon=String(g['Горизонт']||'').toLowerCase();
   if(!target && !unit) return 'план уточнить';
