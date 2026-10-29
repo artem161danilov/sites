@@ -15,16 +15,16 @@
     :root { --ink:#17251f; --muted:#617068; --paper:#f8f6ef; --sand:#ece4d1; --card:#fffdf7; --line:#dcd6c6; --forest:#184d40; --deep:#0f3028; --sun:#ea9b3c; --coral:#cf5f45; --blue:#2e6e86; --shadow:0 18px 48px rgba(21,45,36,.11); --serif:"Playfair Display",Georgia,serif; --sans:Manrope,Arial,sans-serif; --mono:"DM Mono",monospace; }
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.58 var(--sans);overflow-x:hidden} a{color:inherit} .shell{width:min(1150px,calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(248,246,239,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,37,31,.08)}.nav{height:62px;display:flex;align-items:center;justify-content:space-between;gap:18px;overflow:hidden}.brand{display:flex;align-items:center;gap:10px;flex:none;font-weight:800;text-decoration:none}.seal{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:#fff;font-family:var(--serif);font-size:19px}.navlinks{display:flex;flex:1;min-width:0;justify-content:flex-end;gap:17px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;font-size:12px;font-weight:700;color:#526158;scrollbar-width:none;-webkit-overflow-scrolling:touch}.navlinks::-webkit-scrollbar{display:none}.navlinks a{flex:none;text-decoration:none}.navlinks a:hover{color:var(--forest)}
     .hero{min-height:670px;color:#fff;background:linear-gradient(90deg,rgba(6,25,20,.88) 0%,rgba(6,25,20,.66) 44%,rgba(6,25,20,.19) 100%),url('assets/editorial-africa.jpg') left top/200% 200% no-repeat;position:relative}.hero:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,var(--paper))}.hero-inner{position:relative;z-index:1;min-height:670px;padding:92px 0 125px;display:flex;flex-direction:column;justify-content:flex-end}.eyebrow,.mono{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em}.eyebrow{color:#f5c47a;margin-bottom:18px}.hero h1{font:700 clamp(48px,9vw,104px)/.9 var(--serif);letter-spacing:-.045em;margin:0;max-width:850px}.hero p{font-size:17px;max-width:690px;color:rgba(255,255,255,.86);margin:24px 0 30px}.hero-tags{display:flex;gap:9px;flex-wrap:wrap}.tag{border:1px solid rgba(255,255,255,.34);padding:7px 10px;border-radius:99px;font-size:12px;font-weight:700;background:rgba(0,0,0,.11);text-decoration:none;transition:background 160ms ease,transform 160ms ease}.tag:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}.tag:focus-visible{outline:2px solid #fff;outline-offset:3px}
-    main{padding-bottom:72px}.intro{margin-top:-40px;position:relative;z-index:2;display:grid;grid-template-columns:1.55fr repeat(3,1fr);background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.stat{padding:19px 20px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{display:block;font:700 25px/1 var(--serif);color:var(--forest);margin-top:6px}.stat small{color:var(--muted);font-weight:700}.section{padding-top:76px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.kicker{font:500 11px var(--mono);color:var(--coral);letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px}.section h2{font:700 clamp(30px,5vw,49px)/.98 var(--serif);letter-spacing:-.035em;margin:0}.section-copy{max-width:520px;color:var(--muted);margin:10px 0 0}.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;overflow-x:auto;padding-bottom:8px}.route-step{min-width:178px;padding:17px 18px 16px;border:1px solid var(--line);background:var(--card);position:relative}.route-step:not(:last-child):after{content:"→";position:absolute;right:-12px;top:50%;z-index:2;transform:translateY(-50%);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--sun);color:white;font-weight:800}.route-step .date{font:500 10px var(--mono);color:var(--coral)}.route-step h3{font-size:15px;margin:6px 0 3px}.route-step p{font-size:12px;color:var(--muted);margin:0}.notice{margin-top:17px;padding:14px 16px;border-left:3px solid var(--sun);background:#fff4dc;color:#5b4d36}.notice b{color:#382f22}.crew-card{display:grid;grid-template-columns:1fr;overflow:hidden;border:1px solid #ddc991;background:linear-gradient(135deg,#fff8e8,#f3e4bd);box-shadow:var(--shadow)}.crew-copy{padding:30px}.crew-stamp{display:inline-flex;align-items:center;gap:7px;border-radius:99px;background:#1b4e40;color:#fff;padding:7px 11px;font:700 11px var(--mono);letter-spacing:.07em;text-transform:uppercase}.crew-copy h2{margin:15px 0 12px;font:700 clamp(34px,4vw,55px)/.95 var(--serif);letter-spacing:-.04em;color:var(--deep)}.crew-copy p{max-width:650px;margin:0;color:#536359;font-size:15px}.crew-quote{display:block;margin-top:18px;color:#a45f14;font:600 16px/1.25 var(--serif)}.crew-photo{order:-1;display:block;width:100%;height:auto;min-height:0;object-fit:contain;background:#1d231e}.newbie-card{position:relative;min-height:190px;border-top:4px solid var(--sun);background:linear-gradient(145deg,#fffdf7,#f3efe3)}.newbie-card:nth-child(2n){border-top-color:var(--forest)}.newbie-icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:13px;border-radius:14px;background:#e8dfc9;color:var(--forest);font-size:21px}.newbie-card h3{margin:0 0 8px}.newbie-card p{font-size:13px}.tip-source{display:inline-block;margin-top:8px;color:var(--forest);font-weight:800;font-size:11px}.phrase-country{margin:30px 0}.phrase-country>h3{margin:0 0 12px;font:700 clamp(24px,3vw,34px)/1 var(--serif);color:var(--forest)}.phrase-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.phrase-card{overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:0 6px 22px rgba(23,37,31,.035)}.phrase-card h4{margin:0;padding:16px 17px 12px;background:linear-gradient(135deg,#edf1e6,#fbf5e5);font-size:16px}.phrase-label,.phrase-row{display:grid;grid-template-columns:minmax(92px,.8fr) minmax(118px,1.05fr) minmax(0,1.2fr);gap:10px;padding:10px 14px}.phrase-label{padding:9px 14px;background:#1b4e40;color:#d8eadf;font:500 9px var(--mono);letter-spacing:.07em;text-transform:uppercase}.phrase-row{border-top:1px solid var(--line);font-size:12px;align-items:start}.phrase-row b{color:var(--forest)}.phrase-row .say{color:#9b4a30;font-style:italic}.visual-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.visual-card{position:relative;min-height:240px;overflow:hidden;background-image:linear-gradient(0deg,rgba(6,25,20,.55),transparent 58%),url('assets/editorial-africa.jpg');background-size:200% 200%;background-repeat:no-repeat;box-shadow:var(--shadow)}.visual-card::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.32);pointer-events:none}.visual-card span{position:absolute;z-index:1;left:17px;bottom:15px;color:#fff;font:700 clamp(21px,3vw,33px)/1 var(--serif);text-shadow:0 2px 16px rgba(0,0,0,.35)}.visual-card small{display:block;margin-top:6px;color:#f1d7ac;font:500 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}.visual-waterfall{grid-row:span 2;min-height:494px;background-position:left top}.visual-giraffe{background-position:right top}.visual-cape{background-position:left bottom}.visual-zambezi{background-position:right bottom}.warn{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:99px;background:#fff0d7;color:#995b0b;font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.03em}.warn:before{content:"!";display:grid;place-items:center;width:13px;height:13px;border-radius:50%;background:#d58520;color:#fff;font-size:10px}
+    main{padding-bottom:72px}.intro{margin-top:-40px;position:relative;z-index:2;display:grid;grid-template-columns:1.55fr repeat(3,1fr);background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.stat{padding:19px 20px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{display:block;font:700 25px/1 var(--serif);color:var(--forest);margin-top:6px}.stat small{color:var(--muted);font-weight:700}.section{padding-top:76px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.kicker{font:500 11px var(--mono);color:var(--coral);letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px}.section h2{font:700 clamp(30px,5vw,49px)/.98 var(--serif);letter-spacing:-.035em;margin:0}.section-copy{max-width:520px;color:var(--muted);margin:10px 0 0}.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;overflow-x:auto;padding-bottom:8px}.route-step{min-width:178px;padding:17px 18px 16px;border:1px solid var(--line);background:var(--card);position:relative}.route-step:not(:last-child):after{content:"→";position:absolute;right:-12px;top:50%;z-index:2;transform:translateY(-50%);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--sun);color:white;font-weight:800}.route-step .date{font:500 10px var(--mono);color:var(--coral)}.route-step h3{font-size:15px;margin:6px 0 3px}.route-step p{font-size:12px;color:var(--muted);margin:0}.notice{margin-top:17px;padding:14px 16px;border-left:3px solid var(--sun);background:#fff4dc;color:#5b4d36}.notice b{color:#382f22}.crew-card{display:grid;grid-template-columns:1fr;overflow:hidden;border:1px solid #ddc991;background:linear-gradient(135deg,#fff8e8,#f3e4bd);box-shadow:var(--shadow)}.crew-copy{padding:30px}.crew-stamp{display:inline-flex;align-items:center;gap:7px;border-radius:99px;background:#1b4e40;color:#fff;padding:7px 11px;font:700 11px var(--mono);letter-spacing:.07em;text-transform:uppercase}.crew-copy h2{margin:15px 0 12px;font:700 clamp(34px,4vw,55px)/.95 var(--serif);letter-spacing:-.04em;color:var(--deep)}.crew-copy p{max-width:650px;margin:0;color:#536359;font-size:15px}.crew-quote{display:block;margin-top:18px;color:#a45f14;font:600 16px/1.25 var(--serif)}.crew-photo{order:-1;display:block;width:100%;height:auto;min-height:0;object-fit:contain;background:#1d231e}.newbie-card{position:relative;min-height:190px;border-top:4px solid var(--sun);background:linear-gradient(145deg,#fffdf7,#f3efe3)}.newbie-card:nth-child(2n){border-top-color:var(--forest)}.newbie-icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:13px;border-radius:14px;background:#e8dfc9;color:var(--forest);font-size:21px}.newbie-card h3{margin:0 0 8px}.newbie-card p{font-size:13px}.tip-source{display:inline-block;margin-top:8px;color:var(--forest);font-weight:800;font-size:11px}.guide-section{scroll-margin-top:72px}.guide-details{border:1px solid var(--line);background:var(--card);box-shadow:0 6px 22px rgba(23,37,31,.035)}.guide-details>summary{cursor:pointer;list-style:none;padding:18px 20px;color:var(--forest);font-weight:800}.guide-details>summary::-webkit-details-marker{display:none}.guide-details>summary:after{content:"+";float:right;font:700 25px/16px var(--serif);color:var(--coral)}.guide-details[open]>summary{border-bottom:1px solid var(--line)}.guide-details[open]>summary:after{content:"−"}.guide-content{padding:20px}.guide-content h3{margin:26px 0 10px;color:var(--forest);font-size:19px}.guide-content h3:first-child{margin-top:0}.guide-content p,.guide-content li{font-size:13px}.guide-content ul,.guide-content ol{padding-left:21px}.guide-content li+li{margin-top:7px}.guide-content table{width:100%;border-collapse:collapse;table-layout:fixed;margin:14px 0;font-size:12px}.guide-content th,.guide-content td{padding:9px;vertical-align:top;text-align:left;border:1px solid var(--line);overflow-wrap:anywhere}.guide-content th{background:#edf1e6;color:var(--forest)}.guide-content .guide-sources{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.guide-content .guide-sources a{color:var(--forest);font-weight:800}.quiz{margin:12px 0;border:1px dashed #cdbd9d;background:#fff9ee;padding:12px}.quiz summary{cursor:pointer;font-weight:800;color:var(--forest)}.phrase-country{margin:30px 0}.phrase-country>h3{margin:0 0 12px;font:700 clamp(24px,3vw,34px)/1 var(--serif);color:var(--forest)}.phrase-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.phrase-card{overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:0 6px 22px rgba(23,37,31,.035)}.phrase-card h4{margin:0;padding:16px 17px 12px;background:linear-gradient(135deg,#edf1e6,#fbf5e5);font-size:16px}.phrase-label,.phrase-row{display:grid;grid-template-columns:minmax(92px,.8fr) minmax(118px,1.05fr) minmax(0,1.2fr);gap:10px;padding:10px 14px}.phrase-label{padding:9px 14px;background:#1b4e40;color:#d8eadf;font:500 9px var(--mono);letter-spacing:.07em;text-transform:uppercase}.phrase-row{border-top:1px solid var(--line);font-size:12px;align-items:start}.phrase-row b{color:var(--forest)}.phrase-row .say{color:#9b4a30;font-style:italic}.visual-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.visual-card{position:relative;min-height:240px;overflow:hidden;background-image:linear-gradient(0deg,rgba(6,25,20,.55),transparent 58%),url('assets/editorial-africa.jpg');background-size:200% 200%;background-repeat:no-repeat;box-shadow:var(--shadow)}.visual-card::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.32);pointer-events:none}.visual-card span{position:absolute;z-index:1;left:17px;bottom:15px;color:#fff;font:700 clamp(21px,3vw,33px)/1 var(--serif);text-shadow:0 2px 16px rgba(0,0,0,.35)}.visual-card small{display:block;margin-top:6px;color:#f1d7ac;font:500 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}.visual-waterfall{grid-row:span 2;min-height:494px;background-position:left top}.visual-giraffe{background-position:right top}.visual-cape{background-position:left bottom}.visual-zambezi{background-position:right bottom}.warn{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:99px;background:#fff0d7;color:#995b0b;font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.03em}.warn:before{content:"!";display:grid;place-items:center;width:13px;height:13px;border-radius:50%;background:#d58520;color:#fff;font-size:10px}
     .grid{display:grid;gap:16px}.two{grid-template-columns:repeat(2,1fr)}.three{grid-template-columns:repeat(3,1fr)}.card{background:var(--card);border:1px solid var(--line);box-shadow:0 6px 22px rgba(23,37,31,.035);padding:20px}.card h3{font-size:16px;line-height:1.2;margin:0 0 9px}.card p{color:var(--muted);margin:0 0 9px;font-size:13px}.map-link{font-size:12px;font-weight:800;color:var(--forest);text-decoration:none;border-bottom:1px solid currentColor}.small{font-size:12px;color:var(--muted)}.flight{border-top:4px solid var(--blue)}.flight .route-line{display:flex;align-items:center;gap:9px;font:600 19px var(--serif);margin:12px 0}.flight .route-line span{color:var(--coral);font-family:var(--sans);font-size:16px}.flight dl{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:0}.flight dt{font:500 10px var(--mono);text-transform:uppercase;color:var(--muted)}.flight dd{margin:2px 0 0;font-size:13px;font-weight:700}.flight-empty{border-style:dashed;background:#fffdf7}.flight-empty h3{color:#87653a}.hotel{position:relative;overflow:hidden}.hotel:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--forest)}.hotel h3{padding-left:3px}.hotel .date{font:500 11px var(--mono);color:var(--coral);margin-bottom:9px}.hotel .how{padding-top:11px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
     .days{display:grid;gap:13px}.day{display:grid;grid-template-columns:112px minmax(0,1fr);border:1px solid var(--line);background:var(--card)}.day-date{padding:19px 15px;background:var(--deep);color:#fff}.day-date .n{font:600 28px/1 var(--serif)}.day-date .d{font:500 10px var(--mono);display:block;margin-top:6px;color:#b9d5c9;text-transform:uppercase}.day-body{padding:18px 20px}.day-body h3{margin:0 0 10px;font-size:18px}.agenda{margin:0;padding:0;list-style:none;display:grid;gap:7px}.agenda li{display:grid;grid-template-columns:92px 1fr;gap:12px;font-size:13px}.agenda time{font:500 11px var(--mono);color:var(--coral)}.agenda a{color:var(--forest);font-weight:700}.day-note{font-size:12px;color:var(--muted);margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line)}
     #map{height:500px;border:1px solid var(--line);box-shadow:var(--shadow);z-index:0}.map-caption{padding:13px 15px;background:var(--card);border:1px solid var(--line);border-top:0;color:var(--muted);font-size:12px}.leaflet-popup-content{font-family:var(--sans);font-size:13px}.leaflet-popup-content b{color:var(--forest)}
     .practical{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.checklist{padding:0;margin:0;list-style:none;display:grid;gap:9px}.checklist li{padding-left:26px;position:relative;font-size:13px}.checklist li:before{content:"✓";position:absolute;left:0;top:1px;color:var(--forest);font-weight:900}.source{color:var(--forest);font-weight:800;font-size:12px}.cash{background:linear-gradient(135deg,#1d5748,#10382f);color:#fff}.cash p{color:#dbece6}.cash .source{color:#f8c67d}.callout{background:#f5ead5;border-color:#e7ce9e}.callout h3{color:#704318}.risk{background:#fff1ea;border-color:#ebc1b2}.risk h3{color:#9a3e28}.footer{padding:28px 0 44px;color:#6b766f;font-size:12px}.footer strong{color:var(--forest)}
-    @media(max-width:760px){.shell{width:min(100% - 24px,1150px)}.nav{height:55px;gap:12px}.brand{font-size:13px}.navlinks{justify-content:flex-start;gap:13px;font-size:11px}.hero,.hero-inner{min-height:610px}.hero-inner{padding:95px 0 96px}.hero h1{font-size:55px}.hero p{font-size:15px}.intro{grid-template-columns:1fr 1fr;margin-top:-25px}.stat{padding:15px;border-bottom:1px solid var(--line)}.stat:first-child{grid-column:span 2}.stat:nth-child(2){border-left:0}.stat b{font-size:21px}.section{padding-top:55px}.section-head{display:block}.section-copy{font-size:13px}.two,.three,.practical,.visual-grid,.crew-card,.phrase-cards{grid-template-columns:1fr}.crew-copy{padding:24px}.crew-photo{min-height:0;max-height:none;order:-1}.phrase-label,.phrase-row{grid-template-columns:minmax(92px,.85fr) minmax(122px,1.15fr)}.phrase-label span:last-child{display:none}.phrase-row span:last-child{grid-column:1/-1;padding-top:7px;border-top:1px dashed #dcd6c6}.visual-card,.visual-waterfall{min-height:210px;grid-row:auto}.route-step{min-width:198px}.day{grid-template-columns:83px minmax(0,1fr)}.day-date{padding:17px 11px}.day-body{padding:16px 14px}.agenda li{grid-template-columns:73px minmax(0,1fr);gap:7px}.agenda{gap:9px}#map{height:420px;width:100%;max-width:100%;overflow:hidden}.section h2{font-size:35px}}
+    @media(max-width:760px){.shell{width:min(100% - 24px,1150px)}.nav{height:55px;gap:12px}.brand{font-size:13px}.navlinks{justify-content:flex-start;gap:13px;font-size:11px}.hero,.hero-inner{min-height:610px}.hero-inner{padding:95px 0 96px}.hero h1{font-size:55px}.hero p{font-size:15px}.intro{grid-template-columns:1fr 1fr;margin-top:-25px}.stat{padding:15px;border-bottom:1px solid var(--line)}.stat:first-child{grid-column:span 2}.stat:nth-child(2){border-left:0}.stat b{font-size:21px}.section{padding-top:55px}.section-head{display:block}.section-copy{font-size:13px}.two,.three,.practical,.visual-grid,.crew-card,.phrase-cards{grid-template-columns:1fr}.crew-copy{padding:24px}.crew-photo{min-height:0;max-height:none;order:-1}.guide-content{padding:14px}.guide-content h3{font-size:18px}.guide-content table{font-size:11px}.guide-content th,.guide-content td{padding:7px}.guide-content table tr{overflow-wrap:anywhere}.phrase-label,.phrase-row{grid-template-columns:minmax(92px,.85fr) minmax(122px,1.15fr)}.phrase-label span:last-child{display:none}.phrase-row span:last-child{grid-column:1/-1;padding-top:7px;border-top:1px dashed #dcd6c6}.visual-card,.visual-waterfall{min-height:210px;grid-row:auto}.route-step{min-width:198px}.day{grid-template-columns:83px minmax(0,1fr)}.day-date{padding:17px 11px}.day-body{padding:16px 14px}.agenda li{grid-template-columns:73px minmax(0,1fr);gap:7px}.agenda{gap:9px}#map{height:420px;width:100%;max-width:100%;overflow:hidden}.section h2{font-size:35px}}
   </style>
 </head>
 <body>
-  <header class="top"><nav class="shell nav"><a class="brand" href="#top"><span class="seal">S</span><span>ЮАР · Виктория</span></a><div class="navlinks"><a href="#route">Маршрут</a><a href="#flights">Рейсы</a><a href="#stays">Отели</a><a href="#days">Дни</a><a href="#map-section">Карта</a><a href="#victoria">Виктория</a><a href="#practical">Практичное</a><a href="#money">Деньги и обмен</a><a href="#newbie">Африка для новичков</a><a href="#phrasebook">Разговорник</a></div></nav></header>
+  <header class="top"><nav class="shell nav"><a class="brand" href="#top"><span class="seal">S</span><span>ЮАР · Виктория</span></a><div class="navlinks"><a href="#route">Маршрут</a><a href="#flights">Рейсы</a><a href="#stays">Отели</a><a href="#days">Дни</a><a href="#map-section">Карта</a><a href="#victoria">Виктория</a><a href="#practical">Практичное</a><a href="#money">Деньги и обмен</a><a href="#newbie">Африка для новичков</a><a href="#free-time">Свободное</a><a href="#food">Еда</a><a href="#safari-guide">Сафари</a><a href="#photo-guide">Фото-гид</a><a href="#shopping-vat">Шопинг</a><a href="#customs-home">Домой</a><a href="#emergency-card">Экстренно</a><a href="#esim">eSIM</a><a href="#investor-view">Инвестору</a><a href="#history">История</a><a href="#road-games">Игры</a><a href="#phrasebook">Разговорник</a></div></nav></header>
   <section class="hero" id="top"><div class="shell hero-inner"><div class="eyebrow">Золотунчики в Африке · Finance1</div><h1>ЮАР<br><i>и Виктория</i></h1><p>Кейптаун, винные долины, океан, сафари — и продолжение у водопада Виктория. Путеводитель группы на <strong>02–16 ноября 2026</strong>.</p><div class="hero-tags"><a class="tag" href="#crew">Золотунчики ✦</a><a class="tag" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=South+Africa">ЮАР</a><a class="tag" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Zambia">Замбия</a><a class="tag" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Zimbabwe">Зимбабве</a><a class="tag" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Botswana">Ботсвана · day trip</a></div></div></section>
   <main class="shell">
     <div class="intro"><div class="stat"><small>маршрут</small><b>4 страны</b></div><div class="stat"><small>основная программа</small><b>03–11.11</b></div><div class="stat"><small>Виктория</small><b>12–15.11</b></div><div class="stat"><small>возвращение</small><b>16.11</b></div></div>
@@ -77,12 +77,12 @@
     </section>
 
     <section class="section" id="money"><div class="section-head"><div><div class="kicker">07 · деньги и обмен</div><h2>Наличными — спокойно и заранее</h2></div><p class="section-copy">Ориентиры по курсу и обмену — из памятки организатора. Это не живой курс: перед обменом перепроверить.</p></div>
-      <div class="grid three"><article class="card newbie-card"><div class="newbie-icon">💵</div><h3>Основа — новые USD</h3><p>Бери «синие» купюры без надрывов и надписей. Старые или мятые могут принять по худшему курсу, а у Виктории — не принять вовсе.</p></article><article class="card newbie-card"><div class="newbie-icon">↔️</div><h3>Рэнды: где менять</h3><p>Аэропорт — только на первый день. По памятке организатора, обмен у партнёров в лобби планируется 2 ноября для ранних прилётов и 3 ноября для остальных: сумму сообщить координатору заранее.</p><span class="tip-source">Пересчитать деньги при получении — самостоятельно.</span></article><article class="card newbie-card"><div class="newbie-icon">📈</div><h3>Курс — лишь ориентир</h3><p>Плановый ориентир: R1 ≈ 5 ₽, R100 ≈ $6 (около R17 за $1). Курс и комиссии меняются — не привязывать расчёты к этой цифре.</p></article><article class="card newbie-card"><div class="newbie-icon">🧾</div><h3>Сколько на ЮАР</h3><p>Ориентир организатора — около $500 на человека на питание по программе и личные траты. Шопинг, чаевые и Cobra — отдельный запас; Cobra: R9&nbsp;500 за автомобиль.</p></article><article class="card newbie-card"><div class="newbie-icon">🌊</div><h3>Виктория: USD, не рэнды</h3><p>В Замбии и Зимбабве рэнды почти не нужны. Оставь USD на KAZA Univisa, чаевые, напитки и личные траты; мелкие $1, $5 и $10 очень полезны.</p></article><article class="card newbie-card"><div class="newbie-icon">🛎️</div><h3>Чаевые без суеты</h3><p>Ресторан — 10–15%, если service charge не включён. Car guard и заправщик — R5–10; носильщик — R10–20 за сумку. Рейнджер/трекер — спросить ориентир у организатора.</p></article></div>
+      <div class="grid three"><article class="card newbie-card"><div class="newbie-icon">💵</div><h3>Основа — новые USD</h3><p>Бери «синие» купюры без надрывов и надписей. Старые или мятые могут принять по худшему курсу, а у Виктории — не принять вовсе.</p></article><article class="card newbie-card"><div class="newbie-icon">↔️</div><h3>Рэнды: где менять</h3><p>Аэропорт — только на первый день. По памятке организатора, обмен у партнёров в лобби планируется 2 ноября для ранних прилётов и 3 ноября для остальных: сумму сообщить координатору заранее.</p><span class="tip-source">Пересчитать деньги при получении — самостоятельно.</span></article><article class="card newbie-card"><div class="newbie-icon">📈</div><h3>Курс — лишь ориентир</h3><p>Курс-ориентир: <b>~R16,6 за $1 (27.10.2026)</b>. Курс и комиссии меняются — не привязывать расчёты к этой цифре.</p></article><article class="card newbie-card"><div class="newbie-icon">🧾</div><h3>Сколько на ЮАР</h3><p>Ориентир организатора — около $500 на человека на питание по программе и личные траты. Шопинг, чаевые и Cobra — отдельный запас; Cobra: R9&nbsp;500 за автомобиль.</p></article><article class="card newbie-card"><div class="newbie-icon">🌊</div><h3>Виктория: USD, не рэнды</h3><p>В Замбии и Зимбабве рэнды почти не нужны. Оставь USD на KAZA Univisa, чаевые, напитки и личные траты; мелкие $1, $5 и $10 очень полезны.</p></article><article class="card newbie-card"><div class="newbie-icon">🛎️</div><h3>Чаевые без суеты</h3><p>Ресторан — 10–15%, если service charge не включён. Car guard и заправщик — R5–10; носильщик — R10–20 за сумку. Рейнджер/трекер — спросить ориентир у организатора.</p></article></div>
       <div class="notice"><b>Декларация:</b> если ввозишь или вывозишь наличные свыше R100&nbsp;000, их нужно задекларировать; по правилам SARS может потребоваться предварительное разрешение SARB. <a class="map-link" target="_blank" rel="noopener" href="https://www.sars.gov.za/customs-and-excise/travellers/">Правила SARS ↗</a></div>
     </section>
 
     <section class="section" id="newbie"><div class="section-head"><div><div class="kicker">08 · Африка для новичков</div><h2>Чтобы кайфовать, а не героить</h2></div><p class="section-copy">Памятка по маршруту, здоровью, безопасности и бытовым мелочам — без лишней тревоги.</p></div>
-      <div class="grid three"><article class="card newbie-card"><div class="newbie-icon">🛂</div><h3>Документы — офлайн</h3><p>Паспорт: минимум 30 дней после выезда и две чистые страницы. Сохрани в телефоне билеты, страховку, маршрут, адрес первого отеля и подтверждение Traveller Declaration.</p><a class="tip-source" target="_blank" rel="noopener" href="https://www.sars.gov.za/travellerdeclaration/faqs-for-the-required-online-traveller-declarations-from-1-july-2026/">SARS Traveller Declaration ↗</a></article><article class="card newbie-card"><div class="newbie-icon">🦟</div><h3>Малярия — только с врачом</h3><p>Кейптаунская часть маршрута не малярийная; Виктория, Ливингстон и Чобе — другая история. Профилактику обсуждать с врачом, а вечером — DEET 30%+, длинные рукава и брюки.</p><a class="tip-source" target="_blank" rel="noopener" href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/zambia">CDC: Zambia travel health ↗</a></article><article class="card newbie-card"><div class="newbie-icon">💊</div><h3>Аптечка и страховка</h3><p>Лекарства — в оригинальной упаковке; для рецептурных — рецепт или письмо врача на английском. Страховка нужна на весь срок, с вертолётом, лодками, Купелью дьявола и медэвакуацией.</p></article><article class="card newbie-card"><div class="newbie-icon">🟡</div><h3>Жёлтая лихорадка</h3><p>Сертификат может понадобиться при въезде из страны риска. Маршрут через Стамбул и короткая пересадка в ADD обычно не выглядят как такой случай, но финальное правило — у авиакомпании на check-in.</p></article><article class="card newbie-card"><div class="newbie-icon">📱</div><h3>Безопасность — без паники</h3><p>Паспорт, наличные и карты — в разных местах. Банкоматы — внутри банка или ТЦ; после темноты — Uber или трансфер. Уходишь от группы — предупреди координатора.</p><a class="tip-source" target="_blank" rel="noopener" href="https://www.gov.uk/foreign-travel-advice/south-africa/safety-and-security">Официальная памятка по безопасности ↗</a></article><article class="card newbie-card"><div class="newbie-icon">🦒</div><h3>Сафари и океан</h3><p>В открытой машине не вставать, руки не высовывать, рейнджера слушать. Бабуинов и пингвинов не кормить. Атлантика холодная и с течениями — купаться только там, где есть спасатели.</p></article><article class="card newbie-card"><div class="newbie-icon">🌊</div><h3>Виктория в ноябре</h3><p>Низкая вода открывает Купель дьявола, но лучшие виды чаще со стороны Зимбабве. В Замбези купаться вне организованных точек нельзя; вечером у берега не гулять.</p></article><article class="card newbie-card"><div class="newbie-icon">🔌</div><h3>Связь и электричество</h3><p>На Викторию бери региональный eSIM-пакет «Африка»: южноафриканский может не работать. Пауэрбанк обязателен; адаптер — универсальный, с Type M/N и G.</p></article><article class="card newbie-card"><div class="newbie-icon">🚦</div><h3>Местные мелочи</h3><p>Светофор в ЮАР — <i>robot</i>. На 4-way stop едет тот, кто приехал первым. Воду в ЮАР лучше согласовать с отелем; у Виктории и в Чобе — бутилированная.</p></article><article class="card newbie-card"><div class="newbie-icon">✦</div><h3>Режим Золотунчиков</h3><p>Пунктуальность, уважение к личным границам и гибкость к погоде — часть маршрута. Без алкоголя; винная дегустация в программе — только по желанию.</p></article></div>
+      <div class="grid three"><article class="card newbie-card"><div class="newbie-icon">🛂</div><h3>Документы — офлайн</h3><p>Паспорт: минимум 30 дней после выезда и две чистые страницы. Сохрани в телефоне билеты, страховку, маршрут, адрес первого отеля и подтверждение Traveller Declaration.</p><a class="tip-source" target="_blank" rel="noopener" href="https://www.sars.gov.za/travellerdeclaration/faqs-for-the-required-online-traveller-declarations-from-1-july-2026/">SARS Traveller Declaration ↗</a></article><article class="card newbie-card"><div class="newbie-icon">🦟</div><h3>Малярия — только с врачом</h3><p>Кейптаунская часть маршрута не малярийная; Виктория, Ливингстон и Чобе — другая история. Профилактику обсуждать с врачом, а вечером — DEET 30%+, длинные рукава и брюки. Подробнее — в <a class="map-link" href="#safari-guide">сафари-гиде ↓</a>.</p><a class="tip-source" target="_blank" rel="noopener" href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/zambia">CDC: Zambia travel health ↗</a></article><article class="card newbie-card"><div class="newbie-icon">💊</div><h3>Аптечка и страховка</h3><p>Лекарства — в оригинальной упаковке; для рецептурных — рецепт или письмо врача на английском. Страховка нужна на весь срок, с вертолётом, лодками, Купелью дьявола и медэвакуацией.</p></article><article class="card newbie-card"><div class="newbie-icon">🟡</div><h3>Жёлтая лихорадка</h3><p>Сертификат может понадобиться при въезде из страны риска. Маршрут через Стамбул и короткая пересадка в ADD обычно не выглядят как такой случай, но финальное правило — у авиакомпании на check-in.</p></article><article class="card newbie-card"><div class="newbie-icon">📱</div><h3>Безопасность — без паники</h3><p>Паспорт, наличные и карты — в разных местах. Банкоматы — внутри банка или ТЦ; после темноты — Uber или трансфер. Уходишь от группы — предупреди координатора.</p><a class="tip-source" target="_blank" rel="noopener" href="https://www.gov.uk/foreign-travel-advice/south-africa/safety-and-security">Официальная памятка по безопасности ↗</a></article><article class="card newbie-card"><div class="newbie-icon">🦒</div><h3>Сафари и океан</h3><p>В открытой машине не вставать, руки не высовывать, рейнджера слушать. Бабуинов и пингвинов не кормить. Атлантика холодная и с течениями — купаться только там, где есть спасатели.</p></article><article class="card newbie-card"><div class="newbie-icon">🌊</div><h3>Виктория в ноябре</h3><p>Низкая вода открывает Купель дьявола, но лучшие виды чаще со стороны Зимбабве. В Замбези купаться вне организованных точек нельзя; вечером у берега не гулять.</p></article><article class="card newbie-card"><div class="newbie-icon">🔌</div><h3>Связь и электричество</h3><p>На Викторию бери региональный eSIM-пакет «Африка»: южноафриканский может не работать. Подробное сравнение — в разделе <a class="map-link" href="#esim">eSIM ↓</a>. Пауэрбанк обязателен; адаптер — универсальный, с Type M/N и G.</p></article><article class="card newbie-card"><div class="newbie-icon">🚦</div><h3>Местные мелочи</h3><p>Светофор в ЮАР — <i>robot</i>. На 4-way stop едет тот, кто приехал первым. Воду в ЮАР лучше согласовать с отелем; у Виктории и в Чобе — бутилированная.</p></article><article class="card newbie-card"><div class="newbie-icon">✦</div><h3>Режим Золотунчиков</h3><p>Пунктуальность, уважение к личным границам и гибкость к погоде — часть маршрута. Без алкоголя; винная дегустация в программе — только по желанию.</p></article></div>
     </section>
 
     <section class="section" id="victoria"><div class="section-head"><div><div class="kicker">09 · Виктория</div><h2>Три страны вокруг одного водопада</h2></div><p class="section-copy">База — Ливингстон, <b>Замбия</b>. Водопад смотрят с замбийской и зимбабвийской сторон; сафари в Чобе — <b>Ботсвана</b>.</p></div>
@@ -93,6 +93,641 @@
 
     <section class="section"><div class="section-head"><div><div class="kicker">11 · сверка</div><h2>Что ещё уточнить</h2></div></div><div class="notice"><b>Единый список:</b> (1) фактические ночи в AC Hotel 10–12.11 и необходимость смены номера; (2) точный порядок активностей у Виктории 12–15.11; (3) Cornellskop — точное место/время и правила посещения; (4) брони столиков, вертолёта, китов, Cobra и Купели дьявола; (5) финальная проверка KAZA Univisa/виз и требований перевозчика за 48–72 часа.</div></section>
   </main>
+    <section class="section guide-section" id="free-time"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Свободное время</h2></div><p class="section-copy">«Свободные окна в программе — лёгкие и приятные идеи рядом с отелем».</p></div><details class="guide-details"><summary>Открыть идеи рядом с отелями</summary><div class="guide-content"><h3>06.11 вечер · Стелленбос (De Zalze Lodge)</h3>
+<ul>
+<li><strong>Прогулка по старому Стелленбосу</strong> — Dorp Street, площадь Die Braak, дубовые аллеи, кафе. 1–1,5 ч. От De Zalze ~10 мин на машине.</li>
+<li><strong>Закат над виноградниками</strong> прямо у отеля — без поездок.</li>
+</ul>
+<h3>07–08.11 · Kleinmond / Hermanus (Arabella)</h3>
+<ul>
+<li><strong>Тропа над обрывом в Херманусе</strong> — 12 км сплошной дорожки вдоль океана, с 2025 года без разрывов. Можно пройти любой отрезок за 30–90 мин, с берега видно китов. Бесплатно. Удобно 08.11 в свободное время после обеда.</li>
+<li><strong>Пингвины Stony Point, Betty's Bay</strong> — колония африканских пингвинов с настилом, плюс даманы и бакланы. 08:00–16:30, последний вход ~15:45. Взрослый билет R45 (≈ $3), тариф для иностранцев — сверить. ~25 мин от Arabella.</li>
+<li><strong>Ботанический сад Harold Porter</strong> там же, в Betty's Bay — финбош (уникальные капские кустарники и цветы) и тропа к водопаду. Будни 08:00–16:30, выходные 08:00–17:00, взрослый билет ~R60 (≈ $4) — сверить. Хорошо совмещается со Stony Point.</li>
+<li><strong>Закат у лагуны Bot River</strong> — прогулка прямо от Arabella, закат ~19:18. Плюс спа и бассейн отеля.</li>
+</ul>
+<h3>10.11 вечер · V&amp;A Waterfront</h3>
+<ul>
+<li>Возвращаемся из Aquila поздно — рынок Watershed (до 17:00), скорее всего, уже закрыт.</li>
+<li><strong>Прогулка по набережной V&amp;A и закат над гаванью</strong> (~19:23).</li>
+<li><strong>Набережная Sea Point</strong> — 5 км вдоль океана от Granger Bay мимо маяка Mouille Point. 1–1,5 ч, закат ~19:23. Начало рядом с V&amp;A.</li>
+</ul>
+<h3>11.11 · свободный день в Кейптауне — лучшее</h3>
+<ol>
+<li><strong>Kirstenbosch и мост Boomslang.</strong> Ботанический сад на склоне Столовой горы и подвесная тропа над кронами деревьев (130 м). Ежедневно 08:00–19:00. Билет для иностранцев R270 (≈ $16), <strong>только онлайн через Webtickets, наличные не принимают</strong>. 2–3 ч, лучше утром. ~25–30 мин от V&amp;A.</li>
+<li><strong>Lion's Head на рассвете.</strong> ~2 км в одну сторону, подъём 1–1,5 ч, есть участки с цепями, воды на маршруте нет. Рассвет 11.11 ~05:37. Вход бесплатный.
+<ul>
+<li><strong>Безопасность:</strong> парк просит ходить на Lion's Head и Signal Hill только между восходом и закатом. В темноте спуск опасен, в полнолуние — толпы. Идём группой, с налобными фонарями, если на закат — начинаем спуск сразу после захода солнца (~19:24).</li>
+</ul>
+</li>
+<li><strong>Robben Island.</strong> Остров-тюрьма, где Мандела провёл 18 лет. Тур ~3,5 ч вместе с паромом от Nelson Mandela Gateway (на V&amp;A, пешком от отеля). Рейсы в 09:00, 11:00, 13:00, 15:00, при ветре отменяют. <strong>Бронировать заранее</strong> — с ноября билеты заканчиваются. Цена для иностранцев: официальный сайт пишет R600 (≈ $36), Time Out — R1 400 (≈ $84) — <strong>сверить при покупке</strong>.</li>
+<li><strong>Zeitz MOCAA</strong> — крупнейший в Африке музей современного африканского искусства, в бывшем зерновом элеваторе на V&amp;A. 10:00–18:00, последний вход 17:30. R350 (≈ $21) через Webtickets. 1,5–2 ч.</li>
+<li><strong>Вечерний рынок Oranjezicht — только по средам, а 11.11 — среда!</strong> 16:00–21:30, угол Granger Bay Blvd и Dock Rd, V&amp;A. Фермерская еда, живая атмосфера — отличный ужин всей компанией.</li>
+<li><strong>Watershed</strong> — африканский дизайн и ремёсла, 150+ мастеров, ежедневно 10:00–17:00. Food Market рядом — до 18:00.</li>
+<li><strong>Camps Bay на закате</strong> — пляж под горами Двенадцать Апостолов, кафе у воды. Хорошо совместить с Lion's Head.</li>
+<li><strong>Signal Hill на закате</strong> — смотровая над городом, можно доехать на машине. Только до темноты.</li>
+</ol>
+<p>Важно: <strong>Bo-Kaap Market работает только по выходным</strong> — 04.11 и 11.11 он закрыт.</p>
+<p><strong>Пример дня 11.11 «на ногах»:</strong> рассвет на Lion's Head → завтрак → Kirstenbosch → обед → Zeitz MOCAA или Watershed → ужин на рынке Oranjezicht.
+<strong>Пример дня «со смыслом»:</strong> утренний паром на Robben Island → обед на V&amp;A → Zeitz MOCAA → закат на Sea Point → рынок Oranjezicht.</p>
+<h3>12–14.11 · Ливингстон (Замбия)</h3>
+<ul>
+<li><strong>Livingstone Museum</strong> — археология, природа, личные вещи Дэвида Ливингстона. Ежедневно 09:00–16:30. 1–1,5 ч.</li>
+<li><strong>Деревня Mukuni</strong> — настоящая королевская деревня народа леа (~7 000 жителей), не постановка. Тур ~2 ч с трансфером из отеля, через гида. Большой рынок ремёсел — брать наличные USD.</li>
+<li><strong>Рынок Maramba</strong> в городе — яркие ткани читенге.</li>
+<li><strong>Закат на Замбези</strong> — уже в программе (круиз), закат ~18:30.</li>
+</ul>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://sanbi.org">sanbi.org</a> (Kirstenbosch), <a target="_blank" rel="noopener" href="https://sanparks.org">sanparks.org</a> (Lion's Head, тропы), <a target="_blank" rel="noopener" href="https://robben-island.org.za">robben-island.org.za</a>, <a target="_blank" rel="noopener" href="https://timeout.com">timeout.com</a> (Robben Island), <a target="_blank" rel="noopener" href="https://zeitzmocaa.museum">zeitzmocaa.museum</a>, <a target="_blank" rel="noopener" href="https://ozcf.co.za">ozcf.co.za</a> (рынок Oranjezicht), <a target="_blank" rel="noopener" href="https://waterfront.co.za">waterfront.co.za</a>, <a target="_blank" rel="noopener" href="https://capenature.co.za">capenature.co.za</a> (Stony Point), <a target="_blank" rel="noopener" href="https://capetownmagazine.com">capetownmagazine.com</a> (Harold Porter), <a target="_blank" rel="noopener" href="https://ewn.co.za">ewn.co.za</a> (Hermanus cliff path, 2025), <a target="_blank" rel="noopener" href="https://victoriafalls-guide.net">victoriafalls-guide.net</a> (Mukuni). Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="food"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Еда</h2></div><p class="section-copy">«Кухня трёх миров — африканского, голландского и капско-малайского».</p></div><details class="guide-details"><summary>Открыть гастрономический гид</summary><div class="guide-content"><h3>Попробовать в ЮАР</h3>
+<ul>
+<li><strong>Билтонг</strong> — вяленое мясо со специями (говядина, куду, страус). Лучший перекус в дорогу до Aquila 09.11. <strong>Домой не везти</strong> — см. «Домой: таможня».</li>
+<li><strong>Дрёворс</strong> — сухая колбаска, родня билтонга.</li>
+<li><strong>Боботи</strong> — пряная запеканка из фарша с яичной заливкой, капско-малайская классика.</li>
+<li><strong>Капско-малайское карри</strong> — мягкое, сладковато-пряное. Пробовать в Бо-Каапе 04.11.</li>
+<li><strong>Браай и бурворс</strong> — барбекю на углях как национальный ритуал и спиральная колбаса.</li>
+<li><strong>Банни-чау</strong> — полбуханки хлеба, налитая карри. Вариант на 11.11.</li>
+<li><strong>Гэтсби</strong> — огромный багет с картошкой фри и мясом «на компанию», чисто кейптаунская уличная еда.</li>
+<li><strong>Снук</strong> — местная рыба, часто копчёная или паштетом.</li>
+<li><strong>Бреди</strong> — тушёная баранина с овощами.</li>
+<li><strong>Пап и чакалака</strong> — кукурузная каша и острый овощной соус.</li>
+<li><strong>Мальва-пудинг</strong> — тёплый карамельный бисквит. Есть в Kloof Street House.</li>
+<li><strong>Коэксистерс</strong> — жареные косички в сиропе. <strong>Мелктерт</strong> — тарт с молочным кремом и корицей.</li>
+<li><strong>Ройбуш и ханибуш</strong> — травяные чаи без кофеина. Ройбуш растёт только в Западном Капе.</li>
+</ul>
+<h3>Попробовать у Виктории</h3>
+<ul>
+<li><strong>Ншима / садза</strong> — плотная кукурузная каша, едят руками с подливой.</li>
+<li><strong>Капента</strong> — мелкая сушёная рыбка с озера Кариба.</li>
+<li><strong>Лещ с Замбези (bream)</strong> — пресноводная рыба.</li>
+<li><strong>Гусеницы мопане</strong> — местный деликатес для смелых. На ужине The Boma за них, говорят, дают сертификат.</li>
+</ul>
+<h3>Шпаргалка по ресторанам программы</h3>
+<table>
+<thead>
+<tr>
+<th>Когда</th>
+<th>Ресторан</th>
+<th>Что взять</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>03.11</td>
+<td>On The Rocks</td>
+<td>Морской сет «Plate of the Sea» на компанию: кальмар, мидии, креветки, рыба дня. Вид на Столовую гору через залив.</td>
+</tr>
+<tr>
+<td>04.11</td>
+<td>Kloof Street House</td>
+<td>Страус с соусом из зелёного перца (~R275 ≈ $17), креветки чили-чеснок (~R495 ≈ $30), на десерт — мальва-пудинг (~R120 ≈ $7).</td>
+</tr>
+<tr>
+<td>04.11</td>
+<td>GOLD</td>
+<td>Сет из 14 блюд — «вкусовое сафари» по Африке; понравившееся можно заказать ещё раз. В начале — урок игры на барабане джембе. Напитки отдельно.</td>
+</tr>
+<tr>
+<td>05.11</td>
+<td>Black Marlin</td>
+<td>Большие морские сеты (Neptune Platter на двоих), лобстер, хек с кальмаром.</td>
+</tr>
+<tr>
+<td>05.11</td>
+<td>Harbour House Kalk Bay</td>
+<td>Сибас из печи, ризотто с морепродуктами. Рыба — прямо с лодок у причала.</td>
+</tr>
+<tr>
+<td>06.11</td>
+<td>Vergelegen</td>
+<td>⚠️ Ресторан Stables сгорел в марте 2026. Сейчас работает временный <strong>Firehorse</strong> в шатре под дубами: паста с лесными грибами, боботи, кингклип. Где именно наш обед — <strong>сверить у организатора</strong>.</td>
+</tr>
+<tr>
+<td>07.11</td>
+<td>Benguela Cove (Moody Lagoon)</td>
+<td>Сезонная кухня с видом на лагуну. Для компании есть <strong>Family Sharing Lunch</strong> (баранья лопатка или целая рыба, R650 ≈ $39 с человека, от 4 гостей, заказ за 24 ч) — сверить, что в нашем меню.</td>
+</tr>
+<tr>
+<td>08.11</td>
+<td>Bientang's Cave</td>
+<td>Ресторан в пещере на скалах, киты подходят метров на 100. Морская кухня.</td>
+</tr>
+<tr>
+<td>13–14.11</td>
+<td>The Boma (Виктория-Фолс)</td>
+<td>Ужин-шоу с барабанами: суп с костра, буфет-браай — бородавочник, куду, буйвол, страус, лещ с Замбези; есть обычные блюда. Начало 19:00. ⚠️ <strong>The Boma — в Зимбабве, а отель в Замбии</strong>: на ужин пересекаем границу, нужна виза KAZA. <span class="warn">сверить с организатором</span></td>
+</tr>
+</tbody>
+</table>
+<h3>Безалкогольное — местное</h3>
+<ul>
+<li><strong>Appletiser / Grapetiser</strong> — газированный яблочный или виноградный сок родом из долины Elgin (мы проезжаем рядом).</li>
+<li><strong>Stoney</strong> — очень острый имбирный лимонад.</li>
+<li><strong>Iron Brew</strong> — местная газировка.</li>
+<li><strong>Ледяной ройбуш</strong> — почти везде.</li>
+<li>Моктейли на сайтах ресторанов не указаны — <strong>спрашивайте на месте</strong>: «Do you have any mocktails?»</li>
+</ul>
+<h3>Вода</h3>
+<ul>
+<li><strong>Кейптаун:</strong> из-под крана пить можно — город подтверждает соответствие стандарту.</li>
+<li><strong>Мыс Доброй Надежды:</strong> раньше были предупреждения о воде на отдельных точках — взять бутилированную.</li>
+<li><strong>Замбия и Зимбабве:</strong> только бутилированная (проверять, что крышка не вскрыта), зубы — тоже ей. Без льда в напитках, осторожно с сырыми салатами.</li>
+</ul>
+<p class="guide-sources">Источники: сайты ресторанов и <a target="_blank" rel="noopener" href="https://eatout.co.za">eatout.co.za</a>, <a target="_blank" rel="noopener" href="https://vergelegen.co.za/restaurants,">vergelegen.co.za/restaurants,</a> <a target="_blank" rel="noopener" href="https://timeout.com">timeout.com</a> (пожар Stables, Firehorse), <a target="_blank" rel="noopener" href="https://dineplan.com">dineplan.com</a>, <a target="_blank" rel="noopener" href="https://victoria-falls-safari-collection.com">victoria-falls-safari-collection.com</a> (The Boma), <a target="_blank" rel="noopener" href="https://capetown.gov.za">capetown.gov.za</a> (качество воды), <a target="_blank" rel="noopener" href="https://coca-cola.com/za">coca-cola.com/za</a> (Appletiser). Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="safari-guide"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Сафари</h2></div><p class="section-copy">«Кого увидим, как себя вести и как не замёрзнуть».</p></div><details class="guide-details"><summary>Открыть сафари-гид и бинго</summary><div class="guide-content"><h3>Aquila (Карру), 09–10.11</h3>
+<ul>
+<li><strong>Живут:</strong> слон, буйвол, носорог (южный белый — рога спилены заранее, защита от браконьеров), жираф, бегемот, зебра, гну, спрингбок, канна, куду, страус.</li>
+<li><strong>Львы — в отдельном большом вольере.</strong> Их выкупили у «консервированной охоты», на волю выпустить нельзя.</li>
+<li><strong>Леопарда увидеть почти невозможно</strong> — ночной зверь, его фиксируют только фотоловушки.</li>
+<li><strong>Трекеров в Aquila нет</strong> — рейнджер ищет животных сам.</li>
+<li><strong>Ноябрь:</strong> травы и воды много, звери рассредоточены, зато пик птиц и есть детёныши.</li>
+<li><strong>Погода:</strong> днём жарко (+25…+35 °C), ночью и утром около +11 °C. В открытой машине на ходу утром холодно.</li>
+<li><strong>Что надеть:</strong> слоями — футболка + флис или лёгкая куртка, шляпа с полями, очки, SPF, репеллент. Купальник — для бассейна.</li>
+<li><strong>Малярии в Карру нет.</strong></li>
+</ul>
+<h3>Chobe (Ботсвана), день из Ливингстона</h3>
+<ul>
+<li><strong>«Слоновья столица»:</strong> в экосистеме Чобе больше 120 тыс. слонов — ядро крупнейшей популяции Африки.</li>
+<li><strong>С лодки</strong> хорошо видны бегемоты и нильские крокодилы. Плюс стада буйволов, импалы, пуку (редкая антилопа влажных лугов), бабуины, 450+ видов птиц. Львы — нечасто.</li>
+<li><strong>Ноябрь — начало дождей:</strong> днём ~+34…+35 °C, после обеда грозы. С дождями животные постепенно уходят от реки — начало ноября ещё обычно неплохое, но гарантий нет.</li>
+<li><strong>Малярийная зона</strong> — репеллент обязательно.</li>
+</ul>
+<h3>Правила в машине</h3>
+<ul>
+<li>Сидеть, не вставать, руки внутри. Не выходить без команды рейнджера.</li>
+<li>У животных — тишина. Не звать, не стучать, без вспышки.</li>
+<li>Не кормить, не мусорить, слушаться рейнджера без споров.</li>
+<li><strong>Бинокль</strong> 8×42 или 10×42 — один на двоих уже сильно меняет впечатления.</li>
+<li>Одежда приглушённых цветов: хаки, олива, беж.</li>
+</ul>
+<h3>Чаевые рейнджеру</h3>
+<ul>
+<li>Ориентир в ЮАР: <strong>гиду/рейнджеру R120–250 (≈ $7–15) на гостя в день</strong>, трекеру — R60–120 (≈ $4–7). За полдня — половина.</li>
+<li><strong>Для Aquila</strong> (2 выезда, трекера нет): ~R120–250 (≈ $7–15) с человека за визит — рейнджеру, наличными в рэндах, в конверте.</li>
+<li>В Чобе — уточнить у организатора, обычно в долларах.</li>
+</ul>
+<h3>Сафари-бинго</h3>
+<p>Отмечаем, кого увидели. Кто первым соберёт 10 — выбирает ресторан на свободный вечер.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Слон</td>
+<td>Носорог</td>
+<td>Буйвол</td>
+<td>Лев</td>
+</tr>
+<tr>
+<td>Жираф</td>
+<td>Зебра</td>
+<td>Бегемот</td>
+<td>Крокодил</td>
+</tr>
+<tr>
+<td>Спрингбок</td>
+<td>Канна</td>
+<td>Куду</td>
+<td>Гну</td>
+</tr>
+<tr>
+<td>Импала</td>
+<td>Пуку</td>
+<td>Бородавочник</td>
+<td>Бабуин или верветка</td>
+</tr>
+<tr>
+<td>Страус</td>
+<td>Орлан-крикун</td>
+<td>Сизоворонка (lilac-breasted roller)</td>
+<td>Зимородок или щурка</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Бонус-клетка: леопард</strong> — если увидели, вы победили сразу.</p>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://aquilasafari.com">aquilasafari.com</a> (FAQ, Big 5), <a target="_blank" rel="noopener" href="https://discoverafrica.com">discoverafrica.com</a> и <a target="_blank" rel="noopener" href="https://safaribookings.com">safaribookings.com</a> (Chobe, климат), <a target="_blank" rel="noopener" href="https://expertafrica.com">expertafrica.com</a> и <a target="_blank" rel="noopener" href="https://africanbudgetsafaris.com">africanbudgetsafaris.com</a> (чаевые). Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="photo-guide"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Фото-гид</h2></div><p class="section-copy">«Где и когда снимать — по дням программы».</p></div><details class="guide-details"><summary>Открыть точки и правила съёмки</summary><div class="guide-content"><h3>Солнце</h3>
+<table>
+<thead>
+<tr>
+<th>Где</th>
+<th>Даты</th>
+<th>Восход</th>
+<th>Закат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Кейптаун</td>
+<td>03–11.11</td>
+<td>05:44 → 05:37</td>
+<td>19:16 → 19:24</td>
+</tr>
+<tr>
+<td>Hermanus / Kleinmond</td>
+<td>06–08.11</td>
+<td>~05:36</td>
+<td>~19:18</td>
+</tr>
+<tr>
+<td>Aquila</td>
+<td>09–10.11</td>
+<td>~05:33</td>
+<td>~19:15</td>
+</tr>
+<tr>
+<td>Виктория</td>
+<td>12–15.11</td>
+<td>~05:33</td>
+<td>~18:30</td>
+</tr>
+</tbody>
+</table>
+<p>Золотой час — примерно час после восхода и час до заката. Точность ±2 мин.</p>
+<h3>По дням</h3>
+<ul>
+<li><strong>03.11 · Bloubergstrand</strong> — лучший вид на Столовую гору через залив. Закат у On The Rocks.</li>
+<li><strong>04.11</strong> — на Столовой горе в 10:00 свет жёсткий: снимать панорамы. Бо-Каап — яркие дома, но в полдень контраст. Вертолёт в 17:00 — свет уже теплее.</li>
+<li><strong>05.11</strong> — пингвины Боулдерс утром и днём, только с настила. Маяк мыса Кейп-Пойнт — с верхней точки. Калк-Бей — на закате.</li>
+<li><strong>06.11</strong> — Chapman's Peak смотрит на запад: свет лучше во второй половине дня. Виноградники Vergelegen и De Zalze — на закате.</li>
+<li><strong>07–08.11</strong> — киты с лодки (утром море обычно спокойнее), тропа над обрывом и лагуна — на закате.</li>
+<li><strong>09–10.11</strong> — оба сафари попадают в золотой час. Нужен зум: животные далеко.</li>
+<li><strong>10–11.11</strong> — Zeitz MOCAA: атриум и верхнее окно — днём. Lion's Head или Signal Hill — золотой час (с учётом безопасности). Sea Point — закат.</li>
+<li><strong>12–14.11</strong> — водопад утром: спокойнее и меньше людей. В полдень солнце почти в зените — свет жёсткий. Вертолёт — утром или ближе к вечеру. Чобе — лодка после обеда. Замбези — закат.</li>
+</ul>
+<h3>Водопад Виктория в ноябре — какую сторону снимать</h3>
+<ul>
+<li><strong>Ноябрь — низкая вода.</strong> На замбийской стороне восточный каскад может почти пересохнуть — видна голая чёрная базальтовая стена.</li>
+<li><strong>Зимбабвийская сторона</strong> — около 2/3 ширины водопада, вода течёт весь год, широкая панорама. <strong>Главные кадры — здесь.</strong></li>
+<li><strong>Замбийская сторона</strong> — зато только здесь мост Knife-Edge, Boiling Pot, Devil's Pool и остров Ливингстона.</li>
+<li><strong>Вход для иностранцев:</strong> Зимбабве — US$58 (с 13.02.2026), Замбия — US$20–30 (источники расходятся, сверить). Обе стороны открыты 06:00–18:00.</li>
+<li><strong>Лунной радуги не будет:</strong> её видно три ночи вокруг полнолуния (в ноябре — 24.11) и в основном при высокой воде.</li>
+</ul>
+<h3>Что снимать нельзя</h3>
+<ul>
+<li><strong>Дроны — не брать.</strong> В ЮАР над национальными парками и Столовой горой без разрешения запрещено. В Зимбабве ввоз только с разрешением авиавластей (CAAZ) — без него дрон могут задержать в аэропорту, штрафы вплоть до тюрьмы. В Замбии — регистрация и разрешение на каждый полёт.</li>
+<li><strong>Зимбабве и Замбия:</strong> нельзя снимать полицию, военных, аэропорты, госздания, посольства, погранпереходы. Сомневаешься — не снимай.</li>
+<li><strong>Людей</strong> — только с разрешения. В деревне Mukuni — через гида.</li>
+<li><strong>Пингвины</strong> — только с настила, не трогать и не кормить: клюются.</li>
+</ul>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://africageographic.com">africageographic.com</a> (сезоны водопада), <a target="_blank" rel="noopener" href="https://atta.travel">atta.travel</a> (тарифы Zimparks 2026), <a target="_blank" rel="noopener" href="https://victoriafalls-guide.net">victoriafalls-guide.net</a>, <a target="_blank" rel="noopener" href="https://theskylive.com">theskylive.com</a> (полнолуние), <a target="_blank" rel="noopener" href="https://sanparks.org">sanparks.org</a> (дроны, Боулдерс), <a target="_blank" rel="noopener" href="https://travel.gc.ca">travel.gc.ca</a> (правила съёмки в Замбии и Зимбабве), <a target="_blank" rel="noopener" href="https://drone-traveller.com">drone-traveller.com</a>. Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="shopping-vat"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Шопинг и возврат НДС</h2></div><p class="section-copy">«Что везти, где покупать и как вернуть 15%».</p></div><details class="guide-details"><summary>Открыть памятку</summary><div class="guide-content"><h3>Возврат НДС (VAT) — коротко</h3>
+<ul>
+<li>Иностранцам возвращают <strong>НДС 15%</strong> с <strong>товаров</strong>, которые они вывозят. Услуги (отели, рестораны, туры) — не возвращают.</li>
+<li>Покупки за визит — <strong>больше R250 (≈ $15)</strong>. Вывезти в течение 90 дней с даты чека.</li>
+<li><strong>Нужен полный tax invoice, а не кассовый чек.</strong> В магазине говорите: «I'm a foreign tourist, I need a full tax invoice». В чеке должны быть: «Tax Invoice», VAT-номер продавца, номер чека, описание товаров, сумма VAT, <strong>ваше имя и адрес</strong> (на чеки дороже R5 000 ≈ $300 — зарубежный адрес обязательно).</li>
+<li><strong>Где:</strong> в аэропорту Кейптауна <strong>12.11, перед вылетом на Викторию</strong> — это международный вылет, право на возврат есть. Офис VAT на Waterfront закрыт давно — только аэропорт.</li>
+<li><strong>Покупки, которые сдаёте в багаж, покажите до регистрации на рейс.</strong> Держите их сверху. Приезжайте к рейсу 09:45 минимум за 3 часа.</li>
+<li>⚠️ <strong>Деньги, по имеющимся данным, выдают на предоплаченную карту Mastercard</strong>, наличными — скорее нет (сверить). В России такая карта работать не будет — тратить придётся за границей. Крупные суммы SARS проверяет до 3 месяцев.</li>
+<li><strong>Вывод:</strong> возиться стоит, если покупок на несколько тысяч рэндов. На сувениры по мелочи — не стоит.</li>
+</ul>
+<h3>Что везти</h3>
+<ul>
+<li><strong>Ройбуш и ханибуш</strong> — в пачках, лучший подарок.</li>
+<li><strong>Вино</strong> с дегустаций (Vergelegen, De Zalze, Benguela Cove) — в сдаваемом багаже, обернув бутылки. Помним лимит 3 л на человека.</li>
+<li><strong>Соусы и специи:</strong> чатни Mrs Ball's, капско-малайские смеси.</li>
+<li><strong>Ремёсла:</strong> бисер, корзины, ткани, керамика, дерево, украшения, косметика с африканскими ингредиентами.</li>
+<li><strong>У Виктории</strong> — ткани читенге и резьба по дереву.</li>
+</ul>
+<h3>Где покупать</h3>
+<ul>
+<li><strong>Watershed (V&amp;A)</strong> — ежедневно 10:00–17:00, 150+ мастеров: всё ремесленное в одном месте.</li>
+<li><strong>Woolworths и Checkers</strong> — чай, специи, соусы, рассолы.</li>
+<li><strong>Greenmarket Square</strong> — сувенирный рынок в центре, но работает ли сейчас — сверить (город менял управление площадью).</li>
+<li><strong>Bo-Kaap Market</strong> — только по выходным, нам не подходит.</li>
+</ul>
+<h3>Не покупать</h3>
+<ul>
+<li><strong>Слоновая кость, рог носорога, изделия из диких животных</strong> — CITES, на границе конфискуют, в России возможна уголовная ответственность.</li>
+<li><strong>Кораллы, тридакны, морское ушко (perlemoen)</strong> — охраняемые.</li>
+<li><strong>Финбош и протеи из дикой природы</strong> — рвать незаконно (туристов штрафовали на R2 млн). Цветы — только у флориста, с чеком.</li>
+<li><strong>Танзанит и бриллианты на «ювелирных экскурсиях»</strong> — частая ловушка. Только с сертификатом и чеком.</li>
+</ul>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://sars.gov.za">sars.gov.za</a> (VAT refund, стр. обновлена 19.08.2026), <a target="_blank" rel="noopener" href="https://gov.za">gov.za</a>, <a target="_blank" rel="noopener" href="https://tourismupdate.com">tourismupdate.com</a>, <a target="_blank" rel="noopener" href="https://waterfront.co.za">waterfront.co.za</a>, <a target="_blank" rel="noopener" href="https://getaway.co.za">getaway.co.za</a>. Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="customs-home"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Домой: таможня</h2></div><p class="section-copy">«Что можно провезти в Россию — правила ЕАЭС».</p></div><details class="guide-details"><summary>Открыть правила возврата</summary><div class="guide-content"><h3>Лимиты (авиапассажир, 2026)</h3>
+<table>
+<thead>
+<tr>
+<th>Что</th>
+<th>Без пошлины</th>
+<th>Сверх</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Товары</td>
+<td>до <strong>€10 000 и 50 кг</strong></td>
+<td>30% от превышения, не меньше €4 за кг</td>
+</tr>
+<tr>
+<td>Алкоголь</td>
+<td><strong>3 л</strong> на человека (4 бутылки по 0,75)</td>
+<td>3–5 л: €10 за литр сверх 3 л; больше 5 л — нельзя</td>
+</tr>
+<tr>
+<td>Табак</td>
+<td>200 сигарет / 50 сигар / 250 г табака</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Наличные</td>
+<td>до <strong>$10 000</strong> без декларации</td>
+<td>больше — письменная декларация, красный коридор</td>
+</tr>
+</tbody>
+</table>
+<h3>Мясо и молочное — <strong>билтонг не везти</strong></h3>
+<ul>
+<li>Правило: до 5 кг мясной продукции в заводской упаковке — <strong>только из страны, благополучной по болезням животных</strong>.</li>
+<li><strong>В ЮАР в 2026 году — крупнейшая в её истории вспышка ящура</strong>, объявлено национальное бедствие. Билтонг, колбаски и молочку на границе с высокой вероятностью изымут.</li>
+<li><strong>Билтонг — съесть на месте.</strong></li>
+</ul>
+<h3>Растения</h3>
+<ul>
+<li>Цветы — не больше 3 букетов. <strong>Семена, луковицы, черенки, почва — нельзя</strong> (нужен фитосертификат).</li>
+<li>Сухие протеи могут изъять — лучше купить открытки и фото.</li>
+</ul>
+<h3>Изделия из животных</h3>
+<ul>
+<li>Шкуры, рога, трофеи — нужны разрешения CITES ЮАР и России, иначе конфискация и риск уголовного дела.</li>
+<li>Кожа страуса из магазина с чеком обычно проходит.</li>
+</ul>
+<h3>Пересадка в Аддис-Абебе (1 ч 50 мин)</h3>
+<ul>
+<li>Если рейсы в одном билете Ethiopian — багаж обычно проверен до Москвы. <strong>При регистрации в VFA проверьте бирку DME.</strong></li>
+<li>Ручная кладь Ethiopian — до 7 кг + до 5 кг личных вещей.</li>
+<li>На трансфере есть повторный досмотр. <strong>Жидкости из duty free могут не пропустить</strong> — вино и амарулу везите в сдаваемом багаже, в duty free VFA алкоголь не покупайте.</li>
+</ul>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://tks.ru">tks.ru</a> (порядок перемещения товаров, 10.04.2026), Решение Совета ЕЭК № 107, <a target="_blank" rel="noopener" href="https://ewn.co.za">ewn.co.za</a> (ящур, 18.02.2026), <a target="_blank" rel="noopener" href="https://ethiopianairlines.com">ethiopianairlines.com</a> (багаж). Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="emergency-card"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Экстренная карточка</h2></div><p class="section-copy">«Сохраните скриншот этого раздела в телефон».</p></div><details class="guide-details"><summary>Открыть экстренные контакты</summary><div class="guide-content"><h3>Самое важное</h3>
+<ul>
+<li><strong>Первый звонок при любой беде — в ассистанс страховой</strong> (номер на полисе). Они организуют врача, клинику, эвакуацию, переводчика.</li>
+<li><strong>Страховка обязательно с медэвакуацией.</strong> В Ливингстоне и Виктория-Фолс медицина слабая, серьёзные случаи эвакуируют в ЮАР.</li>
+<li><strong>Сканы загранпаспорта и внутреннего паспорта</strong> — в облаке и в телефоне. Внутренний паспорт — взять с собой.</li>
+</ul>
+<h3>ЮАР</h3>
+<ul>
+<li><strong>Полиция 10111 · Скорая 10177 · С мобильного 112</strong></li>
+<li>Частные скорые (быстрее, платно или по страховке): <strong>ER24 — 084 124</strong>, <strong>Netcare 911 — 082 911</strong>.</li>
+<li>Морские спасатели NSRI: 087 094 9774. Горные спасатели (Столовая гора): 021 937 0300.</li>
+<li><strong>Генконсульство России в Кейптауне:</strong> Norton Rose House, 12-й этаж, 8 Riebeeck Street, CBD. Приём пн–пт 08:45–11:30. Тел. +27 21 418 3656, +27 21 418 3657. Telegram: t.me/RusConCT. Сайт: capetown.mid.ru.</li>
+<li><strong>Посольство России в Претории:</strong> +27 12 362 1337.</li>
+<li><strong>Больницы рядом с отелями:</strong>
+<ul>
+<li>V&amp;A Waterfront — <strong>Netcare Christiaan Barnard Memorial Hospital</strong> (Foreshore);</li>
+<li>центр — <strong>Mediclinic Cape Town</strong> (21 Hof Street);</li>
+<li>Bloubergstrand — <strong>Netcare Blaauwberg Hospital</strong> (Sunningdale);</li>
+<li>Стелленбос — <strong>Mediclinic Stellenbosch</strong> (+27 21 861 2000);</li>
+<li>Hermanus — <strong>Mediclinic Hermanus</strong>, приёмное круглосуточно (028 313 0168).</li>
+</ul>
+</li>
+</ul>
+<h3>Замбия (Ливингстон)</h3>
+<ul>
+<li>Экстренный номер — <strong>999</strong> (номера отдельных служб в источниках расходятся). Надёжнее сначала звонить в отель и ассистанс.</li>
+<li>Медэвакуация: <strong>Speciality Emergency Services (SES)</strong> — +260 977 740 306 (сверить).</li>
+<li><strong>Посольство России в Лусаке:</strong> +260 211 252 183, +260 211 252 120. Лусака — в сотнях километров.</li>
+</ul>
+<h3>Зимбабве (Виктория-Фолс)</h3>
+<ul>
+<li>Экстренный: <strong>112</strong> (по данным МИД Великобритании; МИД Австралии пишет 999 — сверить).</li>
+<li>В госбольнице Виктория-Фолс нет реанимации. В городе есть частные клиники и база медэвакуации.</li>
+<li><strong>Посольство России в Хараре:</strong> +263 242 70 19 57, +263 772 12 80 42.</li>
+</ul>
+<h3>Ботсвана (Чобе)</h3>
+<ul>
+<li><strong>Полиция 999 · Скорая 997</strong></li>
+<li><strong>Посольство России в Габороне:</strong> +267 395 3389.</li>
+</ul>
+<h3>Если потеряли или украли паспорт</h3>
+<ol>
+<li>Звонок в ассистанс страховой.</li>
+<li>Заявление в полицию (SAPS), получить <strong>номер дела (case number)</strong>.</li>
+<li>Генконсульство в Кейптауне — <strong>свидетельство на возвращение в Россию</strong>: обычно до 2 дней, анкету можно заполнить заранее на reentry.kdmid.ru. С собой: внутренний паспорт, копия загранпаспорта, бронь отеля, фото 3,5×4,5.</li>
+<li>⚠️ <strong>Свидетельство действует только для въезда в Россию.</strong> Если паспорт пропал в ЮАР до 12.11 — на Викторию по нему не полететь, придётся возвращаться в Москву. <strong>Берегите паспорт особенно первые 9 дней.</strong></li>
+</ol>
+<h3>Если потеряли карту</h3>
+<ul>
+<li>Сразу заблокировать в приложении банка. Запасная карта и наличные USD — отдельно от основного кошелька.</li>
+</ul>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://capetown.mid.ru">capetown.mid.ru</a>, <a target="_blank" rel="noopener" href="https://dirco.gov.za">dirco.gov.za</a>, <a target="_blank" rel="noopener" href="https://mid.ru">mid.ru</a>, <a target="_blank" rel="noopener" href="https://zambia.mid.ru">zambia.mid.ru</a>, <a target="_blank" rel="noopener" href="https://zimbabwe.mid.ru">zimbabwe.mid.ru</a>, <a target="_blank" rel="noopener" href="https://botswana.mid.ru">botswana.mid.ru</a>, <a target="_blank" rel="noopener" href="https://westerncape.gov.za">westerncape.gov.za</a> и <a target="_blank" rel="noopener" href="https://wesgro.co.za">wesgro.co.za</a> (экстренные номера ЮАР), <a target="_blank" rel="noopener" href="https://er24.co.za">er24.co.za</a>, <a target="_blank" rel="noopener" href="https://netcare.co.za">netcare.co.za</a>, <a target="_blank" rel="noopener" href="https://mediclinic.co.za">mediclinic.co.za</a>, <a target="_blank" rel="noopener" href="https://su.ac.za">su.ac.za</a>, <a target="_blank" rel="noopener" href="https://gov.uk">gov.uk</a> и <a target="_blank" rel="noopener" href="https://smartraveller.gov.au">smartraveller.gov.au</a> (Замбия, Зимбабве), <a target="_blank" rel="noopener" href="https://travel.gc.ca">travel.gc.ca</a> (Ботсвана), <a target="_blank" rel="noopener" href="https://livingstonetourism.com">livingstonetourism.com</a>, <a target="_blank" rel="noopener" href="https://kdmid.ru">kdmid.ru</a>. Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="esim"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>eSIM</h2></div><p class="section-copy">«Интернет на четыре страны — что выбрать».</p></div><details class="guide-details"><summary>Открыть варианты связи</summary><div class="guide-content"><ul>
+<li>⚠️ <strong>Ни одна «африканская» eSIM (Airalo, Holafly, Yesim) не включает Зимбабве.</strong> ЮАР, Замбия и Ботсвана — есть.</li>
+<li><strong>Зимбабве отдельно нужна, только если ходим на зимбабвийскую сторону водопада и на ужин The Boma.</strong> Отель в Замбии, в аэропорту VFA обычно есть Wi-Fi.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Вариант</th>
+<th>Что покрывает</th>
+<th>Цена</th>
+<th>Оплата российской картой</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unisim</strong> (российский, советует организатор)</td>
+<td>заявлено 170+ стран, оплата по факту расхода</td>
+<td>наши страны и цены — проверить в приложении</td>
+<td><strong>да — «Мир», СБП</strong></td>
+</tr>
+<tr>
+<td>Airalo Africa</td>
+<td>ЮАР, Замбия, Ботсвана</td>
+<td>5 ГБ / 15 дней — $37</td>
+<td>скорее нет, нужна зарубежная карта</td>
+</tr>
+<tr>
+<td>Holafly Africa</td>
+<td>ЮАР, Замбия, Ботсвана, безлимит</td>
+<td>15 дней — $84,50</td>
+<td>скорее нет</td>
+</tr>
+<tr>
+<td>Yesim Africa</td>
+<td>ЮАР, Замбия, Ботсвана</td>
+<td>10 ГБ / 30 дней — ~$82</td>
+<td>скорее нет</td>
+</tr>
+<tr>
+<td>eSIM Зимбабве (vc.ru)</td>
+<td>только Зимбабве</td>
+<td>2 ГБ / 15 дней — 2 287 ₽</td>
+<td>да, СБП</td>
+</tr>
+<tr>
+<td>Местная SIM в аэропорту CPT</td>
+<td>только ЮАР</td>
+<td>MTN 10 ГБ — R499 (≈ $30), Vodacom 10 ГБ — R699 (≈ $42)</td>
+<td>на месте, нужен <strong>оригинал паспорта</strong> и адрес отеля</td>
+</tr>
+</tbody>
+</table>
+<h3>Как подготовиться</h3>
+<ol>
+<li>Проверить, что телефон поддерживает eSIM и не привязан к оператору.</li>
+<li><strong>Купить и установить eSIM дома по Wi-Fi</strong>, включить и разрешить роуминг данных — уже после посадки.</li>
+<li>Unisim — только интернет, без номера и SMS. Банковские SMS приходят на российскую SIM — держите её в телефоне второй симкой.</li>
+<li><strong>WhatsApp</strong> — главный мессенджер в ЮАР: гиды, трансферы, рестораны. Проверьте, что работает, до вылета.</li>
+<li>В Чобе на дальних маршрутах связь пропадает — нормально.</li>
+</ol>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://esimdb.com">esimdb.com</a>, <a target="_blank" rel="noopener" href="https://kenstechtips.com">kenstechtips.com</a> (Airalo Africa), <a target="_blank" rel="noopener" href="https://esim.holafly.com">esim.holafly.com</a>, <a target="_blank" rel="noopener" href="https://airalo.com">airalo.com</a> (Зимбабве), <a target="_blank" rel="noopener" href="https://iguides.ru">iguides.ru</a> и <a target="_blank" rel="noopener" href="https://freedomchecker.ateo.digital">freedomchecker.ateo.digital</a> (Unisim), <a target="_blank" rel="noopener" href="https://vc.ru/store/esim,">vc.ru/store/esim,</a> <a target="_blank" rel="noopener" href="https://roafly.com">roafly.com</a> (SIM в аэропорту CPT, 07.10.2026), <a target="_blank" rel="noopener" href="https://cellc.co.za">cellc.co.za</a> (RICA). Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="investor-view"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>ЮАР глазами инвестора</h2></div><p class="section-copy">«Цифры, отрасли и вопросы для мастермайнда».</p></div><details class="guide-details"><summary>Открыть цифры и вопросы</summary><div class="guide-content"><h3>Цифры</h3>
+<table>
+<thead>
+<tr>
+<th>Показатель</th>
+<th>Значение</th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Население</td>
+<td>63,5 млн</td>
+<td>середина 2026</td>
+</tr>
+<tr>
+<td>ВВП</td>
+<td>~$427 млрд</td>
+<td>2025 (оценка МВФ)</td>
+</tr>
+<tr>
+<td>Рост ВВП</td>
+<td>+1,1% за 2025; −0,2% кв/кв во 2 кв. 2026; прогноз МВФ на 2026 — +1,0%</td>
+<td></td>
+</tr>
+<tr>
+<td>Безработица</td>
+<td><strong>33,6%</strong>, у молодёжи 15–34 — 47,4%</td>
+<td>2 кв. 2026</td>
+</tr>
+<tr>
+<td>Инфляция</td>
+<td>4,5%</td>
+<td>сентябрь 2026</td>
+</tr>
+<tr>
+<td>Ставка ЦБ (SARB)</td>
+<td><strong>7,25%</strong> (подняли в сентябре из-за нефтяного шока), цель по инфляции — 3%</td>
+<td>23.09.2026</td>
+</tr>
+<tr>
+<td>Рэнд</td>
+<td>15,75–17,15 за $ в 2026; ~16,6 на 27.10</td>
+<td></td>
+</tr>
+<tr>
+<td>Биржа JSE</td>
+<td>~$1,45 трлн — крупнейшая в Африке</td>
+<td>16.10.2026</td>
+</tr>
+</tbody>
+</table>
+<h3>Что важно знать</h3>
+<ul>
+<li><strong>Золото снова король.</strong> В феврале 2026 золотодобытчик <strong>Gold Fields обогнал Naspers</strong> и стал самой дорогой компанией Африки. Другие тяжеловесы JSE: Naspers/Prosus (большая доля в Tencent), FirstRand, Standard Bank, MTN, Anglo American.</li>
+<li><strong>Платина:</strong> ЮАР даёт около <strong>71% мировой добычи</strong> платины и ~37% палладия.</li>
+<li><strong>Агроэкспорт</strong> — рекорд ~$15 млрд в 2025 году: цитрусовые, фрукты, вино.</li>
+<li><strong>Туризм</strong> — рекорд 10,5 млн иностранцев в 2025 году.</li>
+<li><strong>Электричество:</strong> больше <strong>500 дней без отключений</strong> (с мая 2025). Расходы Eskom на дизель упали на 80%. Параллельно — частная солнечная и ветровая генерация.</li>
+<li><strong>Логистика (Transnet):</strong> железная дорога восстанавливается (168 млн т против дна в 149,5 млн т), к сети допустили <strong>11 частных операторов</strong> — первые поезда в 2027. Порты переводят на частно-государственное партнёрство.</li>
+<li><strong>B-BBEE</strong> — система баллов, которая даёт преимущество в госзаказах и лицензиях компаниям с участием чернокожих южноафриканцев. Входной билет для иностранного бизнеса.</li>
+</ul>
+<h3>Соседи по маршруту</h3>
+<ul>
+<li><strong>Замбия — медь:</strong> рекорд 890 тыс. т в 2025 году, №2 в Африке после ДР Конго.</li>
+<li><strong>Зимбабве — валюта ZiG</strong> (с апреля 2024, обеспечена золотом): ~25,6 за $. На деле у водопада правит наличный доллар. Плюс <strong>литий</strong> — крупнейшие запасы в Африке; с февраля 2026 запрещён экспорт литиевого концентрата.</li>
+<li><strong>Ботсвана — алмазы:</strong> около трети бюджета и трёх четвертей валютной выручки. Из-за спада на рынке алмазов (синтетика) ВВП в 2025 году упал ~на 0,9%. Anglo American продаёт De Beers, у Ботсваны 15% и право первого выкупа.</li>
+</ul>
+<h3>8 вопросов для мастермайнда</h3>
+<ol>
+<li>Безработица 33,6% и биржа на $1,45 трлн. Где здесь «две экономики» и как на этом зарабатывать, не беря социальный риск?</li>
+<li>Gold Fields обогнал Naspers. Золото и платина сейчас — защита или пик цикла?</li>
+<li>500 дней без отключений. Что ещё не заложено в цены — стройка, недвижимость, промышленность?</li>
+<li>Частные поезда на сети Transnet с 2027 года. Есть ли здесь инфраструктурная идея, которой не было у нас?</li>
+<li>B-BBEE — налог на вход или защитный ров для тех, кто уже внутри? Как бы вы заходили партнёром?</li>
+<li>ZiG и долларизация Зимбабве. Чему учит страна, где люди не верят своей валюте? Параллели с рублём?</li>
+<li>Ботсвана и алмазы, Замбия и медь. Как не попасть в ловушку одного товара — стране и нашему портфелю?</li>
+<li>Рэнд — классическая «керри»-валюта: ставка 7,25% при инфляции 4,5%. Держать ли часть капитала в ZAR?</li>
+</ol>
+<p class="guide-sources">Источники: Stats SA (через <a target="_blank" rel="noopener" href="https://ewn.co.za">ewn.co.za</a> и <a target="_blank" rel="noopener" href="https://sanews.gov.za">sanews.gov.za</a>), <a target="_blank" rel="noopener" href="https://businessday.co.za">businessday.co.za</a> (МВФ), <a target="_blank" rel="noopener" href="https://techfinancials.co.za">techfinancials.co.za</a> (SARB), <a target="_blank" rel="noopener" href="https://poundsterlinglive.com">poundsterlinglive.com</a> (рэнд), <a target="_blank" rel="noopener" href="https://dabafinance.com">dabafinance.com</a> (JSE), <a target="_blank" rel="noopener" href="https://shore.africa">shore.africa</a> (Gold Fields), <a target="_blank" rel="noopener" href="https://pubs.usgs.gov">pubs.usgs.gov</a> (платина), <a target="_blank" rel="noopener" href="https://sanews.gov.za">sanews.gov.za</a> (Eskom), <a target="_blank" rel="noopener" href="https://miningweekly.com">miningweekly.com</a> (Transnet, De Beers), <a target="_blank" rel="noopener" href="https://mining.com">mining.com</a> (медь Замбии), <a target="_blank" rel="noopener" href="https://tradingeconomics.com">tradingeconomics.com</a> (ZiG), <a target="_blank" rel="noopener" href="https://aljazeera.com">aljazeera.com</a> (литий), <a target="_blank" rel="noopener" href="https://african-markets.com">african-markets.com</a> (Ботсвана). Данные на октябрь 2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="history"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>История за 5 минут</h2></div><p class="section-copy">«Чтобы видеть не только виды, но и смысл».</p></div><details class="guide-details"><summary>Открыть историю</summary><div class="guide-content"><ul>
+<li><strong>Койсаны</strong> — первые жители юга Африки: охотники-собиратели сан и скотоводы кой. История на десятки тысяч лет.</li>
+<li><strong>1652</strong> — Ян ван Рибек основал в Кейптауне станцию снабжения Голландской Ост-Индской компании. Колония держалась на рабском труде.</li>
+<li><strong>Бо-Каап и капские малайцы</strong> — потомки рабов и ссыльных из Индонезии, Индии, Цейлона, Мадагаскара. «Малайцы» — от языка торговли, а не от Малайзии. Первая мечеть Auwal в Бо-Каапе — 1797 год.</li>
+<li><strong>Британцы</strong> — с 1806 года окончательно. 1834 — отмена рабства. Потом Великий трек буров и англо-бурская война 1899–1902.</li>
+<li><strong>Апартеид, 1948–1994</strong> — законная расовая сегрегация: раздельные районы, школы, браки, пропуска.</li>
+<li><strong>Нельсон Мандела</strong> — 27 лет в заключении, из них <strong>18 на острове Роббен</strong>. Освобождён 11.02.1990.</li>
+<li><strong>27.04.1994</strong> — первые всеобщие выборы, Мандела — президент. День свободы.</li>
+<li><strong>«Радужная нация»</strong> — образ архиепископа Десмонда Туту: страна, где разные народы живут вместе.</li>
+<li><strong>Убунту</strong> — «человек становится человеком через других людей». Философия взаимной ответственности. Очень про формат «Путешествий со смыслом».</li>
+<li><strong>Комиссия правды и примирения</strong> (с 1996, председатель — Туту): амнистия в обмен на полное публичное признание. Выбор примирения вместо мести.</li>
+<li><strong>Водопад Виктория</strong> — местное название <strong>Mosi-oa-Tunya, «Дым, который гремит»</strong>. Ширина ~1 708 м, высота ~108 м, объект ЮНЕСКО с 1989.</li>
+<li><strong>Дэвид Ливингстон увидел водопад первым из европейцев 16 ноября 1855 года.</strong> Мы возвращаемся домой <strong>16 ноября 2026 — ровно в 171-ю годовщину.</strong></li>
+<li><strong>Независимость:</strong> Замбия — 24.10.1964, Зимбабве — 18.04.1980.</li>
+</ul>
+<h3>Посмотреть в самолёте</h3>
+<ul>
+<li><strong>«Непокорённый» (Invictus, 2009, Клинт Иствуд)</strong> — как Мандела объединял страну через регби и чемпионат мира 1995 года.</li>
+<li><strong>«Мандела: Долгий путь к свободе» (2013)</strong> — фильм по автобиографии.</li>
+</ul>
+<h3>Почитать</h3>
+<ul>
+<li><strong>Нельсон Мандела, «Долгий путь к свободе»</strong> — от деревни до президентства.</li>
+<li><strong>Тревор Ноа, «Рождённый преступлением» (Born a Crime)</strong> — смешно и горько о детстве ребёнка от смешанного брака, который сам по себе был преступлением.</li>
+<li><strong>Алан Пейтон, «Плачь, любимая страна»</strong> — классика, вышла в 1948 году, в год начала апартеида.</li>
+</ul>
+<p class="guide-sources">Источники: <a target="_blank" rel="noopener" href="https://sahistory.org.za">sahistory.org.za</a> (капские малайцы), <a target="_blank" rel="noopener" href="https://sanews.gov.za">sanews.gov.za</a> (Мандела), <a target="_blank" rel="noopener" href="https://victoriafallshq.com">victoriafallshq.com</a> (водопад). Проверено 29.10.2026.</p>
+<hr /></div></details></section>
+
+    <section class="section guide-section" id="road-games"><div class="section-head"><div><div class="kicker">путеводитель</div><h2>Игры в дорогу</h2></div><p class="section-copy">«Для долгих переездов — 4 часа до Aquila и обратно».</p></div><details class="guide-details"><summary>Открыть игры и квиз</summary><div class="guide-content"><details class="quiz"><summary>Квиз — открыть вопросы и ответы</summary><h3>Квиз о ЮАР и Виктории (ответы — под спойлером <code>&lt;details&gt;</code>)</h3>
+<ol>
+<li>Сколько официальных языков в ЮАР? — <strong>12</strong> (с 2023 года добавлен жестовый язык).</li>
+<li>Сколько столиц у ЮАР? — <strong>Три</strong>: Претория (правительство), Кейптаун (парламент), Блумфонтейн (Верховный апелляционный суд).</li>
+<li>Сколько лет Мандела провёл в заключении и сколько из них на Роббене? — <strong>27 и 18</strong>.</li>
+<li>Мыс Доброй Надежды — самая южная точка Африки? — <strong>Нет</strong>, это мыс Игольный (Agulhas).</li>
+<li>Как переводится Mosi-oa-Tunya? — <strong>«Дым, который гремит»</strong>.</li>
+<li>Кто первым из европейцев увидел водопад и когда? — <strong>Дэвид Ливингстон, 16.11.1855</strong>.</li>
+<li>Где в мире растёт ройбуш? — <strong>Только в Западном Капе ЮАР</strong>.</li>
+<li>Какой пингвин живёт на Боулдерс? — <strong>Африканский</strong> (очковый).</li>
+<li>В каком году Столовую гору выбрали одним из «7 новых чудес природы»? — <strong>2011</strong>.</li>
+<li>Какая компания в 2026 году стала самой дорогой в Африке? — <strong>Gold Fields</strong>, золотодобытчик.</li>
+</ol></details>
+<h3>Разговоры со смыслом — карточки на дорогу</h3>
+<ol>
+<li>Убунту — «я есть, потому что мы есть». Кто из людей больше всего сделал вас тем, кто вы есть?</li>
+<li>Мандела 27 лет ждал и вышел без мести. Что вы давно простили — и что это вам дало?</li>
+<li>Какое решение вы приняли бы иначе, если бы знали, что не можете проиграть?</li>
+<li>Какой «водопад» сейчас в вашей жизни на низкой воде — и что откроется, когда вода поднимется?</li>
+<li>Что из этой поездки вы хотите забрать в обычную жизнь — одну привычку, одну мысль?</li>
+<li>Какой риск вы так и не взяли — и жалеете ли?</li>
+<li>Кому из присутствующих вы хотели бы сказать спасибо — и за что?</li>
+<li>Если бы через 10 лет мы снова собрались здесь — о чём бы вы хотели рассказать?</li>
+</ol></div></details></section>
+
     <section class="section" id="phrasebook"><div class="section-head"><div><div class="kicker">разговорник</div><h2>Пара слов — и уже теплее</h2></div><p class="section-copy">По-английски говорят везде. А вот «спасибо» на родном языке собеседника — лучший способ получить улыбку.</p></div>
       <div class="phrase-country"><h3>ЮАР · Кейптаун и винные долины</h3><div class="phrase-cards">
         <article class="phrase-card"><h4>Африкаанс — язык Западного Капа, его слышно везде</h4><div class="phrase-label"><span>Слово</span><span>Как произносить</span><span>Что значит</span></div><div class="phrase-row"><b>Hallo</b><span class="say">хало́</span><span>Привет</span></div><div class="phrase-row"><b>Môre!</b><span class="say">мо́ре</span><span>Доброе утро</span></div><div class="phrase-row"><b>Hoe gaan dit?</b><span class="say">ху ха́н дит?</span><span>Как дела?</span></div><div class="phrase-row"><b>Goed, dankie</b><span class="say">хут, да́нки</span><span>Хорошо, спасибо</span></div><div class="phrase-row"><b>Dankie / Baie dankie</b><span class="say">да́нки / ба́йе да́нки</span><span>Спасибо / Большое спасибо</span></div><div class="phrase-row"><b>Asseblief</b><span class="say">асэбли́ф</span><span>Пожалуйста (прошу)</span></div><div class="phrase-row"><b>Ja / Nee</b><span class="say">я / нэ</span><span>Да / Нет</span></div><div class="phrase-row"><b>Die rekening, asseblief</b><span class="say">ди рэ́кэнинг, асэбли́ф</span><span>Счёт, пожалуйста</span></div><div class="phrase-row"><b>Baie lekker!</b><span class="say">ба́йе лэ́кер!</span><span>Очень вкусно / очень классно!</span></div><div class="phrase-row"><b>Baie mooi!</b><span class="say">ба́йе мо́й!</span><span>Очень красиво!</span></div><div class="phrase-row"><b>Totsiens</b><span class="say">то́тсинс</span><span>До свидания</span></div></article>
